@@ -21,7 +21,6 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 
 	class WpssoSsb {
 
-		private $plugin_name = 'WPSSO Social Sharing Buttons (SSB)';
 		private $opt_version = 'ssb1';
 		private $min_version = '2.6.1';
 		private $has_min_ver = true;
@@ -82,10 +81,12 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 		// this action is executed once all class objects and addons have been created
 		public function init_addon() {
 			if ( $this->has_min_ver === false ) {
-				$this->p->debug->log( WPSSOSSB_PLUGINBASE.' requires at least WPSSO version '.
-					$this->min_version.' ('.$wpsso_version.' installed)' );
+				$this->p->debug->log( WpssoSsbConfig::$cf['plugin']['wpssossb']['short'].
+					' requires WPSSO version '.$this->min_version.
+					' or newer ('.$wpsso_version.' installed)' );
 				if ( is_admin() )
-					$this->p->notice->err( $this->plugin_name.' v'.WpssoSsbConfig::$cf['plugin']['wpssossb']['version'].
+					$this->p->notice->err( WpssoSsbConfig::$cf['plugin']['wpssossb']['short'].
+						' v'.WpssoSsbConfig::$cf['plugin']['wpssossb']['version'].
 						' requires WPSSO v'.$this->min_version.
 						' or newer (version '.$this->p->cf['plugin']['wpsso']['version'].
 						' is currently installed).', true );

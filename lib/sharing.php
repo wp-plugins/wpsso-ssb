@@ -311,6 +311,9 @@ jQuery("#wpsso-sidebar").click( function(){
 		}
 
 		public function filter_tooltip_side( $text, $idx ) {
+			$lca = $this->p->cf['lca'];
+			$short = $this->p->short;
+			$short_pro = $this->p->cf['plugin'][$lca]['short'].' Pro';
 			switch ( $idx ) {
 				case 'tooltip-side-sharing-buttons':
 					$text = 'Social sharing features include the '.$this->p->cf['menu'].' '.$this->p->util->get_admin_url( 'sharing', 'Buttons' ).
@@ -320,7 +323,7 @@ jQuery("#wpsso-sidebar").click( function(){
 					break;
 				case 'tooltip-side-sharing-shortcode':
 					$text = 'Support for shortcode(s) can be enabled / disabled on the '.
-					$this->p->util->get_admin_url( 'advanced', 'Advanced settings page' ).'. Shortcodes are disabled by default
+					$this->p->util->get_admin_url( 'advanced', 'Advanced' ).' settings page. Shortcodes are disabled by default
 					to optimize WordPress performance and content processing.';
 					break;
 				case 'tooltip-side-sharing-stylesheet':
@@ -334,17 +337,17 @@ jQuery("#wpsso-sidebar").click( function(){
 					<a href="http://surniaulula.com/codex/plugins/wpsso-ssb/notes/constants/" target="_blank">constant</a>.';
 					break;
 				case 'tooltip-side-social-file-cache':
-					$text = $this->p->cf['short_pro'].' can save social sharing images and JavaScript to a cache folder, 
-					and provide URLs to these cached files instead of the originals. The current \'File Cache Expiry\'
-					value, as defined on the '.$this->p->util->get_admin_url( 'advanced', 'Advanced settings page' ).', is '.
+					$text = $short_pro.' can save social sharing images and JavaScript to a cache folder, 
+					and provide URLs to these cached files instead of the originals. The current \'Social File Cache Expiry\'
+					value, as defined on the '.$this->p->util->get_admin_url( 'advanced', 'Advanced' ).' settings page, is '.
 					$this->p->options['plugin_file_cache_hrs'].' hours (the default value of 0 hours disables the 
 					file caching feature).';
 					break;
 				case 'tooltip-side-url-shortener':
-					$text = '<strong>When using the Twitter social sharing button provided by '.$this->p->cf['short_pro'].'</strong>, 
-					the webpage URL (aka the <em>canonical</em> or <em>permalink</em> URL) within the Tweet, can be shortened by one 
-					of the available URL shortening services. Enable URL shortening for Twitter from the '.
-					$this->p->util->get_admin_url( 'sharing', 'Buttons' ).' settings page.';
+					$text = '<strong>When using the Twitter social sharing button provided by this plugin</strong>, 
+					the webpage URL (aka the <em>canonical</em> or <em>permalink</em> URL) within the Tweet, 
+					can be shortened by one of the available URL shortening services. 
+					Enable URL shortening for Twitter from the '.$this->p->util->get_admin_url( 'sharing', 'Buttons' ).' settings page.';
 					break;
 			}
 			return $text;

@@ -23,7 +23,7 @@ if ( ! class_exists( 'WpssoSsbWidgetSharing' ) && class_exists( 'WP_Widget' ) ) 
 			$widget_class = $this->p->cf['lca'].'-widget-buttons';
 			$widget_ops = array( 
 				'classname' => $widget_class,
-				'description' => 'The '.$this->p->cf['short'].' social sharing buttons widget.'
+				'description' => 'The '.$this->p->short.' social sharing buttons widget.'
 			);
 			$this->WP_Widget( $widget_class, $widget_name, $widget_ops );
 		}
