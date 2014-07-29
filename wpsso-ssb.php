@@ -23,7 +23,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 
 		private $plugin_name = 'WPSSO Social Sharing Buttons (SSB)';
 		private $opt_version = 'ssb1';
-		private $min_version = '2.6';
+		private $min_version = '2.6.1';
 		private $has_min_ver = true;
 
 		public $p;		// class object variables
