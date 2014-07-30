@@ -211,9 +211,9 @@ jQuery("#wpsso-sidebar").click( function(){
 			return $opts;
 		}
 
-		public function filter_option_type( $ret, $key ) {
-			if ( ! empty( $ret ) )
-				return $ret;
+		public function filter_option_type( $type, $key ) {
+			if ( ! empty( $type ) )
+				return $type;
 
 			// remove localization for more generic match
 			if ( strpos( $key, '#' ) !== false )
@@ -259,7 +259,7 @@ jQuery("#wpsso-sidebar").click( function(){
 					return 'notblank';
 					break;
 			}
-			return $ret;
+			return $type;
 		}
 
 		public function filter_post_cache_transients( $transients, $post_id, $lang = 'en_US', $sharing_url ) {
