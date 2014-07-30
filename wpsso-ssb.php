@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: WPSSO Social Sharing Buttons
+ * Plugin Name: WPSSO Social Sharing Buttons (SSB)
  * Plugin URI: http://surniaulula.com/extend/plugins/wpsso-ssb/
  * Author: Jean-Sebastien Morisset
  * Author URI: http://surniaulula.com/
