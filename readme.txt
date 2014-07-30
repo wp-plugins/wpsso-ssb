@@ -53,6 +53,8 @@ The Facebook, Google+ and Twitter sharing buttons also support *multiple languag
 
 == Frequently Asked Questions ==
 
+= Frequently Asked Questions =
+
 <ul>
 	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/faq/can-i-share-a-single-image-on-a-webpage/">Can I share a single image on a webpage?</a></li>
 	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/faq/can-i-use-other-social-sharing-buttons/">Can I use other social sharing buttons?</a></li>
