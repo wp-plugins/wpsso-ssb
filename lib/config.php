@@ -104,7 +104,6 @@ if ( ! class_exists( 'WpssoSsbConfig' ) ) {
 			define( 'WPSSOSSB_PLUGINBASE', plugin_basename( $plugin_filepath ) );
 			define( 'WPSSOSSB_TEXTDOM', $slug );
 			define( 'WPSSOSSB_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
-			define( 'WPSSOSSB_NONCE', md5( WPSSOSSB_PLUGINDIR.'-'.$version ) );
 
 			/*
 			 * Allow some constants to be pre-defined in wp-config.php
@@ -119,11 +118,15 @@ if ( ! class_exists( 'WpssoSsbConfig' ) ) {
 			if ( ! defined( 'WPSSOSSB_FOOTER_PRIORITY' ) )
 				define( 'WPSSOSSB_FOOTER_PRIORITY', 100 );
 
-			if ( ! is_admin() )
-				require_once( WPSSOSSB_PLUGINDIR.'lib/functions.php' );
+			if ( ! defined( 'WPSSOSSB_SHARING_SHORTCODE' ) )
+				define( 'WPSSOSSB_SHARING_SHORTCODE', 'ssb' );
 		}
 
 		public static function require_libs( $plugin_filepath ) {
+
+			if ( ! is_admin() )
+				require_once( WPSSOSSB_PLUGINDIR.'lib/functions.php' );
+
 			add_filter( 'wpssossb_load_lib', array( 'WpssoSsbConfig', 'load_lib' ), 10, 3 );
 		}
 

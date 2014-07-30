@@ -13,7 +13,6 @@ if ( ! class_exists( 'WpssoSsbShortcodeSharing' ) ) {
 	class WpssoSsbShortcodeSharing {
 
 		private $p;
-		private $shortcode_tag = 'wpssossb';
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
@@ -46,20 +45,20 @@ if ( ! class_exists( 'WpssoSsbShortcodeSharing' ) ) {
 
 		public function add() {
 			if ( ! empty( $this->p->options['plugin_shortcodes'] ) ) {
-        			add_shortcode( $this->shortcode_tag, array( &$this, 'shortcode' ) );
-				$this->p->debug->log( '['.$this->shortcode_tag.'] sharing shortcode added' );
+        			add_shortcode( WPSSOSSB_SHARING_SHORTCODE, array( &$this, 'shortcode' ) );
+				$this->p->debug->log( '['.WPSSOSSB_SHARING_SHORTCODE.'] sharing shortcode added' );
 			}
 		}
 
 		public function remove() {
 			if ( ! empty( $this->p->options['plugin_shortcodes'] ) ) {
-				remove_shortcode( $this->shortcode_tag );
-				$this->p->debug->log( '['.$this->shortcode_tag.'] sharing shortcode removed' );
+				remove_shortcode( WPSSOSSB_SHARING_SHORTCODE );
+				$this->p->debug->log( '['.WPSSOSSB_SHARING_SHORTCODE.'] sharing shortcode removed' );
 			}
 		}
 
 		public function shortcode( $atts, $content = null ) { 
-			$atts = apply_filters( $this->p->cf['lca'].'_shortcode_'.$this->shortcode_tag, $atts, $content );
+			$atts = apply_filters( $this->p->cf['lca'].'_shortcode_'.WPSSOSSB_SHARING_SHORTCODE, $atts, $content );
 			if ( ( $obj = $this->p->util->get_post_object() ) === false ) {
 				$this->p->debug->log( 'exiting early: invalid object type' );
 				return $content;

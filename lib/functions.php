@@ -8,12 +8,6 @@ Copyright 2012-2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 if ( ! defined( 'ABSPATH' ) ) 
 	die( 'These aren\'t the droids you\'re looking for...' );
 
-if ( ! function_exists( 'wpssossb_get_social_buttons' ) ) {
-	function wpssossb_get_social_buttons( $ids = array(), $atts = array() ) {
-		return wpssossb_get_sharing_buttons( $ids, $atts );
-	}
-}
-
 if ( ! function_exists( 'wpssossb_get_sharing_buttons' ) ) {
 	function wpssossb_get_sharing_buttons( $ids = array(), $atts = array() ) {
 		global $wpsso;
@@ -36,7 +30,7 @@ if ( ! function_exists( 'wpssossb_get_sharing_buttons' ) ) {
 				$wpsso->sharing->get_js( 'sharing-buttons-footer', $ids ) .
 				'<!-- '.$wpsso->cf['lca'].' sharing buttons end -->';
 	
-			if ( ! empty( $cache_id ) ) {
+			if ( $wpsso->is_avail['cache']['transient'] ) {
 				set_transient( $cache_id, $html, $wpsso->cache->object_expire );
 				$wpsso->debug->log( $cache_type.': html saved to transient '.$cache_id.' ('.$wpsso->cache->object_expire.' seconds)');
 			}
