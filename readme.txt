@@ -1,4 +1,4 @@
-=== WPSSO Social Sharing Buttons (SSB) ===
+=== WPSSO Social Sharing Buttons ===
 Contributors: jsmoriss
 Donate Link: http://surniaulula.com/extend/plugins/wpsso-buttons/
 Tags: wpsso, like, send, share, facebook, google, google plus, g+, twitter, linkedin, social, pinterest, tumblr, stumbleupon, widget, shortcode, bbpress, buddypress
