@@ -12,6 +12,8 @@ Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimiza
 
 == Description ==
 
+<p><strong>Make sure social websites present your content in the best possible way, no matter <em>how</em> your webpage is shared</strong> &mdash; from sharing buttons on the webpage, browser add-ons and extensions, or URLs pasted directly on social websites.</p>
+
 WPSSO Social Sharing Buttons (SSB) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](http://wordpress.org/plugins/wpsso/) plugin, extending WPSSO's existing settings with additional pages, tabs, and options with social sharing button features. The new settings allow you to include a selection of social sharing buttons in several locations:
 
 * Above and/or below your content and/or excerpt text.
@@ -23,7 +25,7 @@ WPSSO Social Sharing Buttons (SSB) works in conjunction with the [WordPress Soci
 * From a shortcode within your content and/or excerpt.
 * From a function in your theme's template(s).
 
-Each of the following social sharing buttons can be enabled, configured, and styled individually:
+Each of these social sharing buttons can be enabled, configured, and styled individually:
 
 * Buffer
 * Facebook (Like, Send, and Share)
