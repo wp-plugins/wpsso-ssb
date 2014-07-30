@@ -67,7 +67,14 @@ The Facebook, Google+ and Twitter sharing buttons also support *multiple languag
 
 == Other Notes ==
 
-*None*
+<ul>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/notes/developer/">Developer Resources</a>
+	<ul>
+		<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/notes/developer/sharing-buttons-function/">Sharing Buttons Function</a></li>
+	</ul></li>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/notes/ssb-shortcode/">SSB Shortcode</a></li> 
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/notes/styling-social-buttons/">Styling Social Buttons</a></li>
+</ul>
 
 == Screenshots ==
 
