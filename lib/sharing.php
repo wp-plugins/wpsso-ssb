@@ -226,7 +226,6 @@ jQuery("#wpsso-sidebar").click( function(){
 				case ( preg_match( '/_order$/', $key ) ? true : false ):
 					return 'posnum';
 					break;
-
 				// text strings that can be blank
 				case 'gp_expandto':
 				case 'pin_desc':
@@ -237,7 +236,6 @@ jQuery("#wpsso-sidebar").click( function(){
 				case 'plugin_bitly_api_key':
 					return 'okblank';
 					break;
-
 				// options that cannot be blank
 				case 'fb_markup': 
 				case 'gp_lang': 
