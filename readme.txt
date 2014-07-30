@@ -44,14 +44,33 @@ The Facebook, Google+ and Twitter sharing buttons also support *multiple languag
 
 == Installation ==
 
+= Install and Uninstall =
+
+<ul>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/installation/install-the-plugin/">Install the Plugin</a></li>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/installation/uninstall-the-plugin/">Uninstall the Plugin</a></li>
+</ul>
+
 == Frequently Asked Questions ==
+
+<ul>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/faq/can-i-share-a-single-image-on-a-webpage/">Can I share a single image on a webpage?</a></li>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/faq/can-i-use-other-social-sharing-buttons/">Can I use other social sharing buttons?</a></li>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/faq/how-do-i-turn-on-social-sharing-buttons-for-a-page/">How do I turn on Social Sharing Buttons for a page?</a></li>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/faq/why-are-the-buttons-showing-the-wrong-language/">Why are the buttons showing the wrong language?</a></li>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/faq/why-does-the-facebook-like-button-flyout-get-clipped/">Why does the Facebook “Like” button flyout get clipped?</a></li>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/faq/why-doesnt-the-pinterest-button-show/">Why doesn’t the Pinterest button show?</a></li>
+	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/faq/why-doesnt-the-twitter-count-increase/">Why doesn’t the Twitter count increase?</a></li>
+</ul>
 
 == Other Notes ==
 
+*None*
+
 == Screenshots ==
 
-1. An example showing all social sharing buttons enabled in the CSS sidebar, content, and widget, using the default WPSSO SSB stylesheet.
-2. The extra Sharing Buttons tab added to the Social Settings metabox on admin editing pages.
+1. An example showing all social sharing buttons enabled &ndash; using the default WPSSO SSB stylesheet &ndash; in the CSS sidebar, content text, and widget.
+2. The extra 'Sharing Buttons' tab added to the 'Social Settings' metabox on admin editing pages.
 
 == Changelog ==
 
