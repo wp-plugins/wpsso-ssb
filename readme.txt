@@ -79,7 +79,10 @@ The Facebook, Google+ and Twitter sharing buttons also support *multiple languag
 == Screenshots ==
 
 1. An example showing all social sharing buttons enabled &ndash; using the default WPSSO SSB stylesheet &ndash; in the CSS sidebar, content text, and widget.
-2. The extra 'Sharing Buttons' tab added to the 'Social Settings' metabox on admin editing pages.
+2. The 'Sharing Buttons' widget configuration.
+3. The 'Sharing Buttons' tab added to the 'Social Settings' metabox on admin editing pages.
+4. The 'Sharing Buttons' settings page.
+5. The 'Sharing Styles' settings page.
 
 == Changelog ==
 
