@@ -220,12 +220,6 @@ jQuery("#wpsso-sidebar").click( function(){
 				$key = preg_replace( '/#.*$/', '', $key );
 
 			switch ( $key ) {
-				// css
-				case ( strpos( $key, 'buttons_js_' ) === 0 ? true : false ):
-				case ( strpos( $key, 'buttons_css_' ) === 0 ? true : false ):
-					return 'code';
-					break;
-
 				// integer options that must be 1 or more (not zero)
 				case 'stumble_badge':
 				case 'plugin_min_shorten':
