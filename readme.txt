@@ -42,7 +42,7 @@ Each of these social sharing buttons can be enabled, configured, and styled indi
 * Tumblr (Links, Quotes, Images, Videos)
 * Twitter (Summary, Large Image Summary, Photo, Gallery, Player and Product Cards)
 
-The Facebook, Google+ and Twitter sharing buttons also support *multiple default languages*, and WPSSO SSB can also include a number of hashtags, from WordPress and/or NextGEN Gallery tag names, in Tweet texts and other social captions.
+The Facebook, Google+ and Twitter sharing buttons also support *multiple default languages*, and WPSSO SSB can also include a number of ***hashtags***, from WordPress and/or NextGEN Gallery tag names, in Tweet texts and other social captions.
 
 **Pro / Power-User Version**
 
