@@ -58,7 +58,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/nextgen-facebo
 	* [bbPress](http://wordpress.org/plugins/bbpress/) single pages.
 	* [BuddyPress](http://wordpress.org/plugins/buddypress/) activity entries.
 
-<p><strong>Please note that <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> version 2.6.1+ is required to activate the WPSSO SSB extension.</strong></p>
+<p><strong>Please note that <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> version 2.6.1+ is required to use the WPSSO SSB extension.</strong></p>
 
 == Installation ==
 
