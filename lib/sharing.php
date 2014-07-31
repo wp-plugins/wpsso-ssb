@@ -682,12 +682,12 @@ jQuery("#wpsso-sidebar").click( function(){
 			$filter_id = empty( $atts['filter_id'] ) ? '' : 
 				preg_replace( '/[^a-z0-9\-_]/', '', $atts['filter_id'] );
 
-			// IMPORTANT: possibly dereference the opts variable to prevent passing on changes
+			// important: possibly dereference the opts variable to prevent passing on changes
 			if ( empty( $preset_id ) && empty( $filter_id ) )
 				$custom_opts =& $this->p->options;
 			else $custom_opts = $this->p->options;
 
-			// apply the presets if one is specified
+			// apply the presets to $custom_opts
 			if ( ! empty( $preset_id ) && ! empty( self::$cf['opt']['preset'] ) ) {
 				if ( array_key_exists( $preset_id, self::$cf['opt']['preset'] ) &&
 					is_array( self::$cf['opt']['preset'][$preset_id] ) )

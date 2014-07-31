@@ -18,7 +18,7 @@ if ( ! class_exists( 'WpssoSsbConfig' ) ) {
 					'version' => '1.0',	// plugin version
 					'short' => 'WPSSO SSB',
 					'name' => 'WPSSO Social Sharing Buttons (SSB)',
-					'desc' => 'Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimization (WPSSO) plugin.',
+					'desc' => 'The Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons.',
 					'slug' => 'wpsso-ssb',
 					'base' => 'wpsso-ssb/wpsso-ssb.php',
 					'img' => array(
