@@ -24,8 +24,6 @@ The extended WPSSO settings and features allow you to include a selection of soc
 
 * Above and/or below your content and/or excerpt text.
 * On admin editing pages, including media, product pages, and custom post types.
-* On [bbPress](http://wordpress.org/plugins/bbpress/) single pages.
-* On [BuddyPress](http://wordpress.org/plugins/buddypress/) activity entries.
 * In a WordPress sharing widget.
 * In a CSS / javascript button sidebar.
 * From a shortcode within your content and/or excerpt.
@@ -58,6 +56,9 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/nextgen-facebo
 * URL shortening with Bitly or Google for URLs in Tweet texts.
 * Ability to include / exclude sharing buttons by post type.
 * Selection of preset button options by location (content, excerpt, shortcode, widget, etc.).
+* Additional location and stylesheets for supported addons:
+	* [bbPress](http://wordpress.org/plugins/bbpress/) single pages.
+	* [BuddyPress](http://wordpress.org/plugins/buddypress/) activity entries.
 
 == Installation ==
 
