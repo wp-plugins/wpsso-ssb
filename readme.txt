@@ -56,7 +56,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/nextgen-facebo
 * URL shortening with Bitly or Google for URLs in Tweet texts.
 * Ability to include / exclude sharing buttons by post type.
 * Selection of preset button options by location (content, excerpt, shortcode, widget, etc.).
-* Additional location and stylesheets for supported addons:
+* Additional sharing button locations and stylesheets for supported addons:
 	* [bbPress](http://wordpress.org/plugins/bbpress/) single pages.
 	* [BuddyPress](http://wordpress.org/plugins/buddypress/) activity entries.
 
