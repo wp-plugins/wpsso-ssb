@@ -14,7 +14,7 @@ The Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Opti
 
 <p><strong>Make sure social websites present your content in the best possible way, no matter <em>how</em> your webpage is shared</strong> &mdash; from sharing buttons on the webpage, browser add-ons and extensions, or URLs pasted directly on social websites.</p>
 
-WPSSO Social Sharing Buttons (SSB) works in conjunction with the [WordPress Social Sharing Optimization](http://wordpress.org/plugins/wpsso/) (WPSSO) plugin, extending WPSSO's features with additional settings pages, tabs, and options for social sharing buttons. WPSSO SSB is ***fast***, ***efficient***, and &mdash; using WPSSO as its framework &mdash; ***provides accurate information to social websites about your webpage content***.
+WPSSO Social Sharing Buttons (SSB) works in conjunction with the [WordPress Social Sharing Optimization](http://wordpress.org/plugins/wpsso/) (WPSSO) plugin, extending WPSSO's features with additional settings pages, tabs, and options for social sharing buttons. WPSSO SSB is ***fast***, ***efficient***, and &mdash; using WPSSO as its framework &mdash; provides ***accurate*** information to social websites about your webpage content.
 
 = Quick List of Features =
 
