@@ -46,7 +46,7 @@ The Facebook, Google+ and Twitter sharing buttons also support *multiple default
 
 **Pro / Power-User Version**
 
-The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/nextgen-facebook/) includes a number of additional options and features:
+The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) includes a number of additional options and features:
 
 * File caching for social sharing button images and JavaScript, maximizing performance on VPS and dedicated hardware hosting platforms.
 * A stylesheets editor for each social sharing button locations (content, excerpt, shortcode, widget, etc.).
