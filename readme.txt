@@ -46,6 +46,8 @@ Each of these social sharing buttons can be enabled, configured, and styled indi
 
 The Facebook, Google+ and Twitter sharing buttons also support *multiple default languages*, and WPSSO SSB can also include a number of hashtags, from WordPress and/or NextGEN Gallery tag names, in Tweet texts and other social captions.
 
+**Please note that [WordPress Social Sharing Optimization (WPSSO)](http://wordpress.org/plugins/wpsso/) version 2.6.1+ is required to use the WPSSO SSB extension** (Free or Pro versions).
+
 **Pro / Power-User Version**
 
 The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/nextgen-facebook/) includes a number of additional options and features:
@@ -56,8 +58,6 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/nextgen-facebo
 * URL shortening with Bitly or Google for URLs in Tweet texts.
 * Ability to include / exclude sharing buttons by post type.
 * Selection of preset button options by location (content, excerpt, shortcode, widget, etc.).
-
-**Please note that [WordPress Social Sharing Optimization (WPSSO)](http://wordpress.org/plugins/wpsso/) version 2.6.1+ is required to use the WPSSO SSB extension.**
 
 == Installation ==
 
