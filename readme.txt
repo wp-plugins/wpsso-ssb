@@ -65,7 +65,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/nextgen-facebo
 WPSSO and WPSSO SSB are fast and coded for performance, making full use of all available caching techniques (persistent / non-persistent object and disk caching).
 
 <blockquote>
-<h4>How Fast is WPSSO?</h4>
+<h4>How Fast is WPSSO SSB?</h4>
 
 <p>Plugins that add social sharing buttons should be fairly light and fast &mdash; they generally don't need to fetch information about a page like an SEO / SSO plugin does. Here are a few example metrics from the <a href="http://wordpress.org/plugins/p3-profiler/">P3 (Plugin Performance Profiler)</a> plugin, using <a href="http://wptest.io/">WP Test Data</a> and several popular social sharing plugins (along with the WordPress Core and Twenty Fourteen theme for reference). The plugins were configured to provide the Facebook, Google+, Twitter, and Pinterest sharing buttons at the bottom of singular posts and pages.</p>
 
