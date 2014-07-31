@@ -16,8 +16,6 @@ Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimiza
 
 WPSSO Social Sharing Buttons (SSB) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](http://wordpress.org/plugins/wpsso/) plugin, extending WPSSO's existing settings with additional pages, tabs, and options with social sharing button features. 
 
-<p><strong>Please note that <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> version 2.6.1+ is required to activate the WPSSO SSB extension.</strong></p>
-
 = Quick List of Features =
 
 **Free / Basic Version**
@@ -59,6 +57,8 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/nextgen-facebo
 * Additional sharing button locations and stylesheets for supported addons:
 	* [bbPress](http://wordpress.org/plugins/bbpress/) single pages.
 	* [BuddyPress](http://wordpress.org/plugins/buddypress/) activity entries.
+
+<p><strong>Please note that <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> version 2.6.1+ is required to activate the WPSSO SSB extension.</strong></p>
 
 == Installation ==
 
