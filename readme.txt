@@ -14,7 +14,7 @@ The Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Opti
 
 <p><strong>Make sure social websites present your content in the best possible way, no matter <em>how</em> your webpage is shared</strong> &mdash; from sharing buttons on the webpage, browser add-ons and extensions, or URLs pasted directly on social websites.</p>
 
-WPSSO Social Sharing Buttons (SSB) works in conjunction with the [WordPress Social Sharing Optimization](http://wordpress.org/plugins/wpsso/) (WPSSO) plugin, extending WPSSO's features with additional settings pages, tabs, and options for social sharing buttons. WPSSO SSB is ***fast***, ***efficient***, and &mdash; using WPSSO as its framework &mdash; *provides **accurate** information to social websites about your webpage content*.
+WPSSO Social Sharing Buttons (SSB) works in conjunction with the [WordPress Social Sharing Optimization](http://wordpress.org/plugins/wpsso/) (WPSSO) plugin, extending WPSSO's features with additional settings pages, tabs, and options for social sharing buttons. WPSSO SSB is ***fast***, ***efficient***, and &mdash; using WPSSO as its framework &mdash; ***provides accurate information to social websites about your webpage content***.
 
 = Quick List of Features =
 
@@ -62,12 +62,12 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/nextgen-facebo
 
 = Proven Performance =
 
-WPSSO and WPSSO SSB are fast and coded for performance, making full use of all available caching techniques (persistent / non-persistent object and disk caching).
+WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all available caching techniques (persistent / non-persistent object and disk caching).
 
 <blockquote>
 <h4>How Fast is WPSSO SSB?</h4>
 
-<p>Plugins that add social sharing buttons should be fairly light and fast &mdash; they generally don't need to fetch information about a page like an SEO / SSO plugin does. Here are a few example metrics from the <a href="http://wordpress.org/plugins/p3-profiler/">P3 (Plugin Performance Profiler)</a> plugin, using <a href="http://wptest.io/">WP Test Data</a> and several popular social sharing plugins (along with the WordPress Core and Twenty Fourteen theme for reference). The plugins were configured to provide the Facebook, Google+, Twitter, and Pinterest sharing buttons at the bottom of singular posts and pages.</p>
+<p>Plugins that add social sharing buttons should be fairly *light and fast* &mdash; they generally don't need to fetch much information about a page, like an SEO / SSO plugin does. Here are a few example metrics from the <a href="http://wordpress.org/plugins/p3-profiler/">P3 (Plugin Performance Profiler)</a> plugin, using <a href="http://wptest.io/">WP Test Data</a> and several popular social sharing plugins (along with the WordPress Core and Twenty Fourteen theme for reference). The plugins were configured to include the Facebook, Google+, Twitter, and Pinterest sharing buttons at the bottom of singular posts and pages.</p>
 
 <ul>
 	<li><strong><font color="blue">0.0025</font></strong> secs - ShareThis v7.0.17</li>
