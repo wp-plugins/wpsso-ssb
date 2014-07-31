@@ -16,6 +16,10 @@ Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimiza
 
 WPSSO Social Sharing Buttons (SSB) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](http://wordpress.org/plugins/wpsso/) plugin, extending WPSSO's existing settings with additional pages, tabs, and options with social sharing button features. 
 
+<blockquote>
+<p>Please note that <a href="http://wordpress.org/plugins/wpsso/">[WordPress Social Sharing Optimization (WPSSO)</a> version 2.6.1+ is required to activate the WPSSO SSB extension.</p>
+</blockquote>
+
 = Quick List of Features =
 
 **Free / Basic Version**
@@ -43,8 +47,6 @@ Each of these social sharing buttons can be enabled, configured, and styled indi
 * Twitter (Summary, Large Image Summary, Photo, Gallery, Player and Product Cards)
 
 The Facebook, Google+ and Twitter sharing buttons also support *multiple default languages*, and WPSSO SSB can also include a number of hashtags, from WordPress and/or NextGEN Gallery tag names, in Tweet texts and other social captions.
-
-**Please note that [WordPress Social Sharing Optimization (WPSSO)](http://wordpress.org/plugins/wpsso/) version 2.6.1+ is required to use the WPSSO SSB extension.**
 
 **Pro / Power-User Version**
 
