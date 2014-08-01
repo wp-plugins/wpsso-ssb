@@ -598,14 +598,14 @@ jQuery("#wpsso-sidebar").click( function(){
 					$this->p->debug->log( $type.' filter skipped: front page without buttons_on_front enabled' );
 					return $text;
 				}
-				if ( $this->is_disabled() ) {
-					$this->p->debug->log( $type.' filter skipped: buttons disabled' );
+				if ( $this->is_post_buttons_disabled() ) {
+					$this->p->debug->log( $type.' filter skipped: sharing buttons disabled' );
 					return $text;
 				}
 			}
 
 			if ( ! $this->have_buttons( $type ) ) {
-				$this->p->debug->log( $type.' filter exiting early: no buttons enabled' );
+				$this->p->debug->log( $type.' filter exiting early: no sharing buttons enabled' );
 				return $text;
 			}
 
@@ -721,7 +721,7 @@ jQuery("#wpsso-sidebar").click( function(){
 			// determine which (if any) sharing buttons are enabled
 			// loop through the sharing button option prefixes (fb, gp, etc.)
 			if ( empty( $ids ) ) {
-				if ( ! is_admin() && is_singular() && $this->is_disabled() ) {
+				if ( ! is_admin() && is_singular() && $this->is_post_buttons_disabled() ) {
 					$this->p->debug->log( 'exiting early: buttons disabled' );
 					return;
 				} elseif ( is_admin() && ( empty( $obj->filter ) || $obj->filter !== 'edit' ) ) {
@@ -828,7 +828,7 @@ jQuery("#wpsso-sidebar").click( function(){
 			return 'class="'.$css_class.'" id="'.$css_id.'"';
 		}
 
-		public function is_disabled() {
+		public function is_post_buttons_disabled() {
 			global $post;
 			$ret = false;
 			if ( ! empty( $post ) ) {
@@ -841,7 +841,7 @@ jQuery("#wpsso-sidebar").click( function(){
 					$ret = true;
 				}
 			}
-			return apply_filters( $this->p->cf['lca'].'_is_disabled', $ret );
+			return apply_filters( $this->p->cf['lca'].'_post_buttons_disabled', $ret );
 		}
 
 		public function remove_paragraph_tags( $match = array() ) {

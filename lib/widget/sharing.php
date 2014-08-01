@@ -38,7 +38,7 @@ if ( ! class_exists( 'WpssoSsbWidgetSharing' ) && class_exists( 'WP_Widget' ) ) 
 			if ( ! is_object( $this->p ) )
 				return;
 
-			if ( is_object( $this->p->sharing ) && $this->p->sharing->is_disabled() ) {
+			if ( is_object( $this->p->sharing ) && $this->p->sharing->is_post_buttons_disabled() ) {
 				$this->p->debug->log( 'widget buttons skipped: sharing buttons disabled' );
 				return;
 			}
