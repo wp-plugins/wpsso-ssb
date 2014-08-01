@@ -554,6 +554,7 @@ jQuery("#wpsso-sidebar").click( function(){
 			$classname = apply_filters( $this->p->cf['lca'].'_load_lib', false, 'ext/compressor', 'SuextMinifyCssCompressor' );
 			if ( $classname !== false && class_exists( $classname ) )
 				$css_data = call_user_func( array( $classname, 'process' ), $css_data );
+
 			echo '<style type="text/css">'.$css_data.'</style>', "\n";
 			echo '<table class="sucom-setting side"><tr><td>';
 			if ( get_post_status( $post->ID ) == 'publish' ) {
@@ -713,19 +714,15 @@ jQuery("#wpsso-sidebar").click( function(){
 		// add javascript for enabled buttons in content, widget, shortcode, etc.
 		public function get_js( $pos = 'header', $ids = array() ) {
 
-			if ( ( $obj = $this->p->util->get_post_object() ) === false ) {
-				$this->p->debug->log( 'exiting early: invalid object type' );
-				return;
-			}
-
 			// determine which (if any) sharing buttons are enabled
 			// loop through the sharing button option prefixes (fb, gp, etc.)
 			if ( empty( $ids ) ) {
-				if ( ! is_admin() && is_singular() && $this->is_post_buttons_disabled() ) {
+				if ( is_admin() ) {
+					if ( ( $obj = $this->p->util->get_post_object() ) === false  ||
+						 empty( $obj->filter ) || $obj->filter !== 'edit' )
+							return;
+				} elseif ( is_singular() && $this->is_post_buttons_disabled() ) {
 					$this->p->debug->log( 'exiting early: buttons disabled' );
-					return;
-				} elseif ( is_admin() && ( empty( $obj->filter ) || $obj->filter !== 'edit' ) ) {
-					$this->p->debug->log( 'exiting early: admin non-editing page' );
 					return;
 				}
 
@@ -734,28 +731,30 @@ jQuery("#wpsso-sidebar").click( function(){
 		 			$widget_settings = $widget->get_settings();
 				} else $widget_settings = array();
 
-				foreach ( $this->p->cf['opt']['pre'] as $id => $pre ) {
-					// check for enabled buttons on settings page
-					if ( is_admin() && ! empty( $obj ) ) {
+				if ( is_admin() ) {
+					foreach ( $this->p->cf['opt']['pre'] as $id => $pre ) {
 						foreach ( SucomUtil::preg_grep_keys( '/^'.$pre.'_on_admin_/', $this->p->options ) as $key => $val )
 							if ( ! empty( $val ) )
 								$ids[] = $id;
-					} else {
-						if ( is_singular() 
-							|| ( ! is_singular() && ! empty( $this->p->options['buttons_on_index'] ) ) 
-							|| ( is_front_page() && ! empty( $this->p->options['buttons_on_front'] ) ) ) {
-
-							// exclude buttons enabled for admin editing pages
+					}
+				} else {
+					if ( is_singular() || 
+						( ! is_singular() && ! empty( $this->p->options['buttons_on_index'] ) ) || 
+						( is_front_page() && ! empty( $this->p->options['buttons_on_front'] ) ) ) {
+	
+						// exclude buttons enabled for admin editing pages
+						foreach ( $this->p->cf['opt']['pre'] as $id => $pre ) {
 							foreach ( SucomUtil::preg_grep_keys( '/^'.$pre.'_on_/', $this->p->options ) as $key => $val )
 								if ( strpos( $key, $pre.'_on_admin_' ) === false && ! empty( $val ) )
 									$ids[] = $id;
 						}
-						// check for enabled buttons in ACTIVE widget(s)
-						foreach ( $widget_settings as $num => $instance ) {
-							if ( is_object( $widget ) && 
-								is_active_widget( false, $widget->id_base.'-'.$num, $widget->id_base ) ) {
+					}
+					// check for enabled buttons in ACTIVE widget(s)
+					foreach ( $widget_settings as $num => $instance ) {
+						if ( is_object( $widget ) && is_active_widget( false, $widget->id_base.'-'.$num, $widget->id_base ) ) {
+							foreach ( $this->p->cf['opt']['pre'] as $id => $pre ) {
 								if ( array_key_exists( $id, $instance ) && 
-									(int) $instance[$id] )
+									! empty( $instance[$id] ) )
 										$ids[] = $id;
 							}
 						}
