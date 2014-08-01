@@ -67,7 +67,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 <blockquote>
 <h4>How Fast is WPSSO SSB?</h4>
 
-<p>Plugins that add social sharing buttons should be fairly <em>light and fast</em> &mdash; they generally don't need to fetch much information about a page, like an SEO / SSO plugin does. Here are a few example metrics from the <a href="http://wordpress.org/plugins/p3-profiler/">P3 (Plugin Performance Profiler)</a> plugin, using <a href="http://wptest.io/">WP Test Data</a> and several popular social sharing plugins (along with the WordPress Core and Twenty Fourteen theme for reference). The plugins were configured to include the Facebook, Google+, Twitter, and Pinterest sharing buttons at the bottom of single posts and pages.</p>
+<p>Plugins that add social sharing buttons should be fairly <em>light and fast</em> &mdash; they generally don't need to fetch much information about a page, like an SEO / SSO plugin does. Here are a few example metrics from the <a href="http://wordpress.org/plugins/p3-profiler/">P3 (Plugin Performance Profiler)</a> plugin, using <a href="http://wptest.io/">WP Test Data</a>, and several popular social sharing plugins (along with the WordPress Core and Twenty Fourteen theme for reference). The plugins were configured to include the Facebook, Google+, Twitter, and Pinterest sharing buttons at the bottom of single posts and pages.</p>
 
 <ul>
 	<li><strong><font color="blue">0.0025</font></strong> secs - ShareThis v7.0.17</li>
