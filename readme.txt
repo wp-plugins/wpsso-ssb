@@ -128,12 +128,16 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
-= Version 1.0 =
+= Version 1.0.1 =
 
 * Bugfixes
-	* *None*
+	* Fixed a condition that would prevent JavaScripts from being loaded on index pages without posts.
 * Enhancements
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+
+Fixed a condition that would prevent JavaScripts from being loaded on index pages without posts.
 
