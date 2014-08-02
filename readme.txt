@@ -6,7 +6,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested Up To: 3.9.1
-Stable Tag: 1.0
+Stable Tag: 1.0.1
 
 The Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons.
 
@@ -131,7 +131,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 = Version 1.0.1 =
 
 * Bugfixes
-	* Fixed a condition that would prevent JavaScripts from being loaded on index pages without posts.
+	* Fixed a condition that would prevent sharing button JavaScripts from being loaded on index pages without posts.
 * Enhancements
 	* *None*
 
@@ -139,5 +139,5 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 = 1.0.1 =
 
-Fixed a condition that would prevent JavaScripts from being loaded on index pages without posts.
+Fixed a condition that would prevent sharing button JavaScripts from being loaded on index pages without posts.
 
