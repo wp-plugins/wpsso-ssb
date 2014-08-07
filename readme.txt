@@ -73,6 +73,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	<li><strong><font color="blue">0.0025</font></strong> secs - ShareThis v7.0.17</li>
 	<li><strong><font color="blue">0.0040</font></strong> secs - AddThis Social Bookmarking Widget v3.5.10</li>
 	<li><strong><font color="blue">0.0050</font></strong> secs - <em><strong>WPSSO Social Sharing Buttons (SSB) v1.0</strong></em></li>
+	<li><strong><font color="blue">0.0070</font></strong> secs - Digg Digg v5.3.6</li>
 	<li><strong><font color="blue">0.0081</font></strong> secs - Facebook v1.5.5 (Provides Only Facebook Buttons)</li>
 	<li><strong><font color="blue">0.0096</font></strong> secs - Share Buttons by AddToAny v1.3.4</li>
 
