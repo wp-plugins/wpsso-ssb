@@ -58,7 +58,9 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 	* [bbPress](http://wordpress.org/plugins/bbpress/) single pages.
 	* [BuddyPress](http://wordpress.org/plugins/buddypress/) activity entries.
 
-<p><strong>Please note that <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> version 2.6.1+ is required to use the WPSSO SSB extension</strong>. You can use the *Free version* of WPSSO SSB with either WPSSO Free or Pro, but the <a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro</a> version requires <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a>.</p>
+<blockquote>
+<p><strong>Please note that <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> version 2.6.1+ is required to use the WPSSO SSB extension</strong>. You can use the *Free version* of WPSSO SSB with either WPSSO Free or Pro, but <strong>the <a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro</a> version requires the <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a></strong> version as well.</p>
+</blockquote>
 
 = Proven Performance =
 
