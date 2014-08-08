@@ -131,6 +131,13 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.2 =
+
+* Bugfixes
+	* *None*
+* Enhancements
+	* Minor changes to help popup texts.
+
 = Version 1.0.1 =
 
 * Bugfixes
@@ -139,6 +146,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+
+Minor changes to help popup texts.
 
 = 1.0.1 =
 
