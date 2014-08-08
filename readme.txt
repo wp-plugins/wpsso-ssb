@@ -136,7 +136,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * Bugfixes
 	* *None*
 * Enhancements
-	* Minor changes to help popup texts.
+	* Small updates to the settings help texts.
 
 = Version 1.0.1 =
 
@@ -149,7 +149,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 = 1.0.2 =
 
-Minor changes to help popup texts.
+Small updates to the settings help texts.
 
 = 1.0.1 =
 
