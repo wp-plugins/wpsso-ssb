@@ -25,6 +25,9 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 
 		public function filter_plugin_cache_rows( $rows, $form, $network = false ) {
 
+			if ( $this->p->check->is_aop() )
+				$rows[] = '<td colspan="2" align="center">'.$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssossb' ) ).'</td>';
+
 			$rows[] = $this->p->util->th( 'Social File Cache Expiry', 'highlight', 'plugin_file_cache_hrs' ).
 			'<td nowrap class="blank">'.$form->get_no_input( 'plugin_file_cache_hrs', 'short' ).' hours</td>'.
 			( $network === false ? '' : $this->p->util->th( 'Site Use', 'site_use' ).
@@ -47,7 +50,11 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 			foreach ( $this->p->util->get_post_types( 'buttons' ) as $post_type )
 				$checkboxes .= '<p>'.$form->get_no_checkbox( 'buttons_add_to_'.$post_type->name ).' '.
 					$post_type->label.' '.( empty( $post_type->description ) ? '' : '('.$post_type->description.')' ).'</p>';
+
+			$rows[] = '<td colspan="2" align="center">'.$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssossb' ) ).'</td>';
+
 			$rows[] = $this->p->util->th( 'Include on Post Types', null, 'buttons_add_to' ).'<td class="blank">'.$checkboxes.'</td>';
+
 			return $rows;
 		}
 
@@ -56,6 +63,8 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 			foreach ( SucomUtil::preg_grep_keys( '/^buttons_preset_/', $this->p->options, false, '' ) as $key => $val )
 				$presets[$key] = ucwords( preg_replace( '/_/', ' ', $key ) );
 			asort( $presets );
+
+			$rows[] = '<td colspan="2" align="center">'.$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssossb' ) ).'</td>';
 
 			foreach( $presets as $filter_id => $filter_name )
 				$rows[] = $this->p->util->th( $filter_name.' Preset', null, 'sharing_preset' ).
@@ -78,6 +87,8 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 
 			$twitter_cap_len = $this->p->util->get_tweet_max_len( get_permalink( $post_info['id'] ) );
 			list( $pid, $video_url ) = $this->p->addons['util']['postmeta']->get_media( $post_info['id'] );
+
+			$rows[] = '<td colspan="2" align="center">'.$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssossb' ) ).'</td>';
 
 			$th = $this->p->util->th( 'Pinterest Image Caption', 'medium', 'postmeta-pin_desc' );
 			if ( ! empty( $pid ) ) {

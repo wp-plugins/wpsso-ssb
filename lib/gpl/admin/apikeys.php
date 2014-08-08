@@ -27,6 +27,8 @@ if ( ! class_exists( 'WpssoSsbGplAdminApikeys' ) ) {
 
 		public function filter_plugin_apikeys_rows( $rows, $form ) {
 
+			$rows[] = '<td colspan="2" align="center">'.$this->p->msgs->get( 'pro-feature-msg' ).'</td>';
+
 			if ( $this->p->options['plugin_display'] == 'all' ) {
 				$rows[] = $this->p->util->th( 'Minimum URL Length to Shorten', null, 'plugin_min_shorten' ). 
 				'<td class="blank">'.$form->get_hidden( 'plugin_min_shorten' ).
