@@ -80,8 +80,8 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	<li><strong><font color="blue">0.0096</font></strong> secs - Share Buttons by AddToAny v1.3.4</li>
 
 	<li><strong><font color="green">0.0232</font></strong> secs - Shareaholic | share buttons, analytics, related content v7.5.0.2</li>
-	<li><strong><font color="green">0.0488</font></strong> secs - <strong>WordPress Core v3.9.1</strong></li>
 	<li><strong><font color="green">0.0345</font></strong> secs - <strong>WordPress Twenty Fourteen Theme v1.1</strong></li>
+	<li><strong><font color="green">0.0488</font></strong> secs - <strong>WordPress Core v3.9.1</strong></li>
 </ul>
 
 <p><small><em>Benchmarks were executed on dedicated hardware, using an APC opcode/object cache, WordPress v3.9.1, and P3 v1.5.1 configured with opcode optimization enabled (improves accuracy).</em></small></p>
