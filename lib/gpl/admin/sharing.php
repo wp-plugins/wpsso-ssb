@@ -26,7 +26,8 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 		public function filter_plugin_cache_rows( $rows, $form, $network = false ) {
 
 			if ( $this->p->check->is_aop() )
-				$rows[] = '<td colspan="2" align="center">'.$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssossb' ) ).'</td>';
+				$rows[] = '<td colspan="'.( $network === false ? 2 : 4 ).'" align="center">'.
+					$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssossb' ) ).'</td>';
 
 			$rows[] = $this->p->util->th( 'Social File Cache Expiry', 'highlight', 'plugin_file_cache_hrs' ).
 			'<td nowrap class="blank">'.$form->get_no_input( 'plugin_file_cache_hrs', 'short' ).' hours</td>'.
