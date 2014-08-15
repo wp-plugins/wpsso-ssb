@@ -140,8 +140,7 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 					$this->p->debug->log( 'exiting early: invalid object type' );
 					return false;
 				}
-				if ( ! empty( $obj->ID ) )
-					$post_id = $obj->ID;
+				$post_id = empty( $obj->ID ) || empty( $obj->post_type ) ? 0 : $obj->ID;
 			}
 
 			if ( empty( $atts['size'] ) ) 

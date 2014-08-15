@@ -63,7 +63,7 @@ if ( ! class_exists( 'WpssoSsbShortcodeSharing' ) ) {
 				$this->p->debug->log( 'exiting early: invalid object type' );
 				return $content;
 			}
-			$post_id = empty( $obj->ID ) ? 0 : $obj->ID;
+			$post_id = empty( $obj->ID ) || empty( $obj->post_type ) ? 0 : $obj->ID;
 			$atts['url'] = empty( $atts['url'] ) ? $this->p->util->get_sharing_url( true ) : $atts['url'];
 			$atts['css_id'] = empty( $atts['css_id'] ) && ! empty( $post_id ) ? 'shortcode' : $atts['css_id'];
 			$atts['css_class'] = empty( $atts['css_class'] ) ? 'button' : $atts['css_class'];
