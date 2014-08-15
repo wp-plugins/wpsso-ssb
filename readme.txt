@@ -131,6 +131,13 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.3 =
+
+* Bugfixes
+	* Added a missing 'installed_version' filter to trigger the Free to Pro update.
+* Enhancements
+	* *None*
+
 = Version 1.0.2 =
 
 * Bugfixes
@@ -146,6 +153,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+
+Added a missing 'installed_version' filter to trigger the Free to Pro update.
 
 = 1.0.2 =
 
