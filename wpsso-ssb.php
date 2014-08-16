@@ -93,7 +93,6 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 				$this->p->notice->inf( 'An Authentication ID was entered for '.$short.', 
 				but the Pro version is not installed yet &ndash; 
 				don\'t forget to update the '.$short.' plugin to install the Pro version.', true );
-				update_option( self::$lca.'_umsg', true );
 			}
 
 			WpssoSsbConfig::load_lib( false, 'sharing' );
