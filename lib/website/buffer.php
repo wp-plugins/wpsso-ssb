@@ -54,7 +54,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingBuffer' ) && class_exists( 'WpssoSsb
 			'Append the website\'s @username to the tweet (see the '.
 			$this->p->util->get_admin_url( 'general#sucom-tab_pub_twitter', 'Twitter' ).
 			' options tab on the General settings page).' ).
-			( $this->p->check->is_aop() == true ? 
+			( $this->p->check->aop() == true ? 
 				'<td>'.$this->form->get_checkbox( 'buffer_via' ).'</td>' :
 				'<td class="blank">'.$this->form->get_no_checkbox( 'buffer_via' ).'</td>' );
 
@@ -155,7 +155,7 @@ if ( ! class_exists( 'WpssoSsbSharingBuffer' ) ) {
 			}
 
 			if ( ! array_key_exists( 'via', $atts ) ) {
-				if ( ! empty( $opts['buffer_via'] ) && $this->p->check->is_aop() )
+				if ( ! empty( $opts['buffer_via'] ) && $this->p->check->aop() )
 					$atts['via'] = preg_replace( '/^@/', '', $opts['tc_site'] );
 				else $atts['via'] = '';
 			}

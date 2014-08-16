@@ -294,7 +294,7 @@ jQuery("#wpsso-sidebar").click( function(){
 				if ( ! empty( $info['lib']['submenu']['sharing'] ) ) {
 					$features['Social File Cache'] = array( 
 						'status' => $this->p->is_avail['cache']['file'] ? 'on' : 'off',
-						'td_class' => $this->p->check->is_aop( $lca ) ? '' : 'blank',
+						'td_class' => $this->p->check->aop( $lca ) ? '' : 'blank',
 					);
 					break;	// stop after first match
 				}
@@ -304,8 +304,8 @@ jQuery("#wpsso-sidebar").click( function(){
 
 		public function filter_tooltip_side( $text, $idx ) {
 			$lca = $this->p->cf['lca'];
-			$short = $this->p->short;
-			$short_pro = $this->p->cf['plugin'][$lca]['short'].' Pro';
+			$short = $this->p->cf['plugin'][$lca]['short'];
+			$short_pro = $short.' Pro';
 			switch ( $idx ) {
 				case 'tooltip-side-sharing-buttons':
 					$text = 'Social sharing features include the '.$this->p->cf['menu'].' '.$this->p->util->get_admin_url( 'sharing', 'Buttons' ).

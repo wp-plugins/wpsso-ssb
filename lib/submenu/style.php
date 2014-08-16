@@ -24,10 +24,12 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 
 		public function filter_messages_info( $text, $idx ) {
 			$lca =  $this->p->cf['lca'];
+			$short = $this->p->cf['plugin'][$lca]['short'];
+			$short_pro = $short.' Pro';
 			switch ( $idx ) {
 				case 'info-style-sharing':
 					$notes_url = $this->p->cf['plugin'][$lca]['url']['notes'];
-					$text = '<p>'.$this->p->short.' uses the \''.$lca.'-buttons\' class to wrap all its 
+					$text = '<p>'.$short.' uses the \''.$lca.'-buttons\' class to wrap all its 
 					sharing buttons, and each button has it\'s own individual class name as well. 
 					Refer to the <a href="'.$notes_url.'" target="_blank">Notes</a> 
 					webpage for additional stylesheet information, including how to hide the sharing 

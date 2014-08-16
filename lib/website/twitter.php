@@ -60,13 +60,13 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTwitter' ) && class_exists( 'WpssoSs
 			$this->p->util->get_admin_url( 'general#sucom-tab_pub_twitter', 'Twitter' ).
 			' options tab on the General settings page). '.
 			'The website\'s @username will also be displayed and recommended after the Post / Page is shared.' ).
-			( $this->p->check->is_aop( 'wpssossb' ) ? '<td>'.$this->form->get_checkbox( 'twitter_via' ).'</td>' :
+			( $this->p->check->aop( 'wpssossb' ) ? '<td>'.$this->form->get_checkbox( 'twitter_via' ).'</td>' :
 				'<td class="blank">'.$this->form->get_no_checkbox( 'twitter_via' ).'</td>' );
 
 			$rows[] = $this->p->util->th( 'Recommend Author', 'short', null, 
 			'Recommend following the Author\'s Twitter @username (from their profile) after sharing. 
 			If the \'<em>Add via @username</em>\' option (above) is also checked, the Website\'s @username will be suggested first.' ).
-			( $this->p->check->is_aop( 'wpssossb' ) ? '<td>'.$this->form->get_checkbox( 'twitter_rel_author' ).'</td>' :
+			( $this->p->check->aop( 'wpssossb' ) ? '<td>'.$this->form->get_checkbox( 'twitter_rel_author' ).'</td>' :
 				'<td class="blank">'.$this->form->get_no_checkbox( 'twitter_rel_author' ).'</td>' );
 
 			if ( isset( $this->p->addons['admin']['apikeys'] ) ) {
@@ -74,7 +74,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTwitter' ) && class_exists( 'WpssoSs
 				$rows[] = $this->p->util->th( 'Shorten URLs with', 'short', null, 
 				'If you select a URL shortening service here, <strong>you must also enter its API credentials</strong>
 				on the '.$this->p->util->get_admin_url( 'advanced#sucom-tab_plugin_apikeys', 'Advanced settings page' ).'.' ).
-				( $this->p->check->is_aop( 'wpssossb' ) ?  '<td>'.$this->form->get_select( 'twitter_shortener', $shorteners, 'medium' ).'&nbsp;' :
+				( $this->p->check->aop( 'wpssossb' ) ?  '<td>'.$this->form->get_select( 'twitter_shortener', $shorteners, 'medium' ).'&nbsp;' :
 				'<td class="blank">'.$this->form->get_hidden( 'twitter_shortener' ).$shorteners[$this->p->options['twitter_shortener']].' &mdash; ' ).
 				' using these '.$this->p->util->get_admin_url( 'advanced#sucom-tab_plugin_apikeys', 'API Keys' ).'</td>';
 			}
@@ -158,14 +158,14 @@ if ( ! class_exists( 'WpssoSsbSharingTwitter' ) ) {
 
 			if ( ! array_key_exists( 'via', $atts ) ) {
 				if ( ! empty( $opts['twitter_via'] ) && 
-					$this->p->check->is_aop( 'wpssossb' ) )
+					$this->p->check->aop( 'wpssossb' ) )
 						$atts['via'] = preg_replace( '/^@/', '', $opts['tc_site'] );
 				else $atts['via'] = '';
 			}
 
 			if ( ! array_key_exists( 'related', $atts ) ) {
 				if ( ! empty( $opts['twitter_rel_author'] ) && 
-					$this->p->check->is_aop( 'wpssossb' ) && ! empty( $post ) && $use_post == true )
+					$this->p->check->aop( 'wpssossb' ) && ! empty( $post ) && $use_post == true )
 						$atts['related'] = preg_replace( '/^@/', '', 
 							get_the_author_meta( $opts['plugin_cm_twitter_name'], $post->author ) );
 				else $atts['related'] = '';

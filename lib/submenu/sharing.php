@@ -82,7 +82,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 				$cols++;
 				$class = array_key_exists( $prefix.'_on_'.$suffix.':is', $this->p->options ) &&
 					$this->p->options[$prefix.'_on_'.$suffix.':is'] === 'disabled' &&
-					! $this->p->check->is_aop() ? 'show_on blank' : 'show_on';
+					! $this->p->check->aop() ? 'show_on blank' : 'show_on';
 				$html .= $cols == 1 ? '<tr><td class="'.$class.'">' : '<td class="'.$class.'">';
 				$html .= $this->form->get_checkbox( $prefix.'_on_'.$suffix ).$desc.'&nbsp; ';
 				$html .= $cols == 3 ? '</td></tr>' : '</td>';

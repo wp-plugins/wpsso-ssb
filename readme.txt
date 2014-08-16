@@ -59,7 +59,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 	* [BuddyPress](http://wordpress.org/plugins/buddypress/) activity entries.
 
 <blockquote>
-<p><strong>Please note that the <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin (version 2.6.1 and up) is required to use the WPSSO SSB extension</strong>. You can use the <em>Free version</em> of WPSSO SSB with <em>either</em> WPSSO Free or Pro, but the <strong><a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro</a> version requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a> as well</strong>.</p>
+<p><strong>Please note that the <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin (version 2.6.2.2 and up) is required to use the WPSSO SSB extension</strong>. You can use the <em>Free version</em> of WPSSO SSB with <em>either</em> WPSSO Free or Pro, but the <strong><a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro</a> version requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a> as well</strong>.</p>
 </blockquote>
 
 = Proven Performance =
@@ -131,6 +131,13 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.4 =
+
+* Bugfixes
+	* *None*
+* Enhancements
+	* Refactored code for WPSSO v2.6.2.2.
+
 = Version 1.0.3 =
 
 * Bugfixes
@@ -153,6 +160,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+
+Refactored code for WPSSO v2.6.2.2.
 
 = 1.0.3 =
 

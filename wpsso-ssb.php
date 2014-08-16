@@ -9,7 +9,7 @@
  * Description: The Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons.
  * Requires At Least: 3.0
  * Tested Up To: 3.9.1
- * Version: 1.0.3
+ * Version: 1.0.4
  * 
  * Copyright 2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 */
@@ -22,12 +22,12 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 	class WpssoSsb {
 
 		private $opt_version = 'ssb1';
-		private $min_version = '2.6.1';
+		private $min_version = '2.6.2.2';
 		private $has_min_ver = true;
-		private $has_pro = false;
 
 		public $p;		// class object variables
 		public $cf = array();	// config array defined in construct method
+		public static $lca = 'wpssossb';
 
 		public function __construct() {
 			// don't continue if the social sharing buttons are disabled
@@ -39,8 +39,6 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 			WpssoSsbConfig::set_constants( __FILE__ );
 			WpssoSsbConfig::require_libs( __FILE__ );
 
-			$this->has_pro = file_exists( WPSSOSSB_PLUGINDIR.'lib/pro/admin/sharing.php' ) ? true : false;
-
 			add_filter( 'wpssossb_installed_version', array( &$this, 'filter_installed_version' ), 10, 1 );
 			add_filter( 'wpsso_get_config', array( &$this, 'filter_get_config' ), 10, 1 );
 			add_action( 'wpsso_init_options', array( &$this, 'init_options' ), 10 );
@@ -49,10 +47,12 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 
 		// this filter is executed at init priority -1
 		public function filter_get_config( $cf ) {
+
 			if ( version_compare( $cf['plugin']['wpsso']['version'], $this->min_version, '<' ) ) {
 				$this->has_min_ver = false;
 				return $cf;
 			}
+
 			$cf['opt']['version'] .= $this->opt_version;
 			$cf = SucomUtil::array_merge_recursive_distinct( $cf, WpssoSsbConfig::$cf );
 			return $cf;
@@ -76,27 +76,32 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 
 		// this action is executed once all class objects and addons have been created
 		public function init_addon() {
-			$short = WpssoSsbConfig::$cf['plugin']['wpssossb']['short'];
+			$short = WpssoSsbConfig::$cf['plugin'][self::$lca]['short'];
 
 			if ( $this->has_min_ver === false ) {
 				$this->p->debug->log( $short.' requires WPSSO version '.$this->min_version.' or newer ('.$wpsso_version.' installed)' );
 				if ( is_admin() )
-					$this->p->notice->err( $short.' v'.WpssoSsbConfig::$cf['plugin']['wpssossb']['version'].' requires WPSSO v'.$this->min_version.
-					' or newer (version '.$this->p->cf['plugin']['wpsso']['version'].' is currently installed).', true );
+					$this->p->notice->err( $short.' v'.WpssoSsbConfig::$cf['plugin'][self::$lca]['version'].
+					' requires WPSSO v'.$this->min_version.' or newer (version '.
+					$this->p->cf['plugin']['wpsso']['version'].' is currently installed).', true );
 				return;
 			}
-			if ( is_admin() && ! empty( $this->p->options['plugin_wpssossb_tid'] ) && $this->has_pro === false ) {
+
+			if ( is_admin() && 
+				! empty( $this->p->options['plugin_'.self::$lca.'_tid'] ) && 
+				! $this->p->check->aop( self::$lca, false ) ) {
 				$this->p->notice->inf( 'An Authentication ID was entered for '.$short.', 
 				but the Pro version is not installed yet &ndash; 
 				don\'t forget to update the '.$short.' plugin to install the Pro version.', true );
-				update_option( 'wpssossb_umsg', true );
+				update_option( self::$lca.'_umsg', true );
 			}
+
 			WpssoSsbConfig::load_lib( false, 'sharing' );
 			$this->p->sharing = new WpssoSsbSharing( $this->p, __FILE__ );
 		}
 
 		public function filter_installed_version( $version ) {
-			if ( $this->has_pro === false )
+			if ( ! $this->p->check->aop( self::$lca, false ) )
 				$version = '0.'.$version;
 			return $version;
 		}
