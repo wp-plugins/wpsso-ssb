@@ -8,7 +8,7 @@ Requires At Least: 3.0
 Tested Up To: 3.9.2
 Stable Tag: 1.0.3
 
-The Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons.
+Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons!
 
 == Description ==
 
