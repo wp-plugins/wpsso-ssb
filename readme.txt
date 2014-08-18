@@ -16,7 +16,7 @@ Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimiza
 
 WPSSO Social Sharing Buttons (SSB) works in conjunction with the [WordPress Social Sharing Optimization (WPSSO)](http://wordpress.org/plugins/wpsso/) plugin, extending its features with additional settings pages, tabs, and options for social sharing buttons. WPSSO SSB is ***fast***, ***efficient***, and &mdash; using WPSSO as its framework &mdash; provides ***accurate*** information to social websites about your webpage content.
 
-**You can download the [Free version on WordPress.org](http://wordpress.org/plugins/wpsso-ssb/) and [purchase a Pro license here](http://surniaulula.com/extend/plugins/wpsso-ssb/)**.
+**You can download the [Free version of WPSSO SSB on WordPress.org](http://wordpress.org/plugins/wpsso-ssb/) and [purchase Pro license(s) here](http://surniaulula.com/extend/plugins/wpsso-ssb/)**.
 
 = Quick List of Features =
 
@@ -61,7 +61,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 	* [BuddyPress](http://wordpress.org/plugins/buddypress/) activity entries.
 
 <blockquote>
-<p><strong>Please note that the <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> plugin (version 2.6.2.2 and up) is required to use the WPSSO SSB extension</strong>. You can use the <em>Free version</em> of WPSSO SSB with either the WPSSO Free and Pro versions, but the <strong><a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro version</a> requires the use of the <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro version</a> as well</strong>.</p>
+<p>Please note that the <a href="http://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> plugin (version 2.6.2.2 and up) is required to use the WPSSO SSB extension. You can use the <em>Free version</em> of WPSSO SSB with either the WPSSO Free or Pro versions, but the <strong><a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro version</a> requires the use of the <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro version</a> as well</strong>.</p>
 </blockquote>
 
 = Proven Performance =
