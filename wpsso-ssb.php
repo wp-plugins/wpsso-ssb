@@ -41,18 +41,17 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 
 			add_filter( 'wpssossb_installed_version', array( &$this, 'filter_installed_version' ), 10, 1 );
 			add_filter( 'wpsso_get_config', array( &$this, 'filter_get_config' ), 10, 1 );
+
 			add_action( 'wpsso_init_options', array( &$this, 'init_options' ), 10 );
 			add_action( 'wpsso_init_addon', array( &$this, 'init_addon' ), 10 );
 		}
 
 		// this filter is executed at init priority -1
 		public function filter_get_config( $cf ) {
-
 			if ( version_compare( $cf['plugin']['wpsso']['version'], $this->min_version, '<' ) ) {
 				$this->has_min_ver = false;
 				return $cf;
 			}
-
 			$cf['opt']['version'] .= $this->opt_version;
 			$cf = SucomUtil::array_merge_recursive_distinct( $cf, WpssoSsbConfig::$cf );
 			return $cf;
