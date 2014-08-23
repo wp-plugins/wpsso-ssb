@@ -1,12 +1,12 @@
 <?php
 /*
- * Plugin Name: WPSSO Social Sharing Buttons (SSB)
+ * Plugin Name: WPSSO Social Sharing Buttons (WPSSO SSB)
  * Plugin URI: http://surniaulula.com/extend/plugins/wpsso-ssb/
  * Author: Jean-Sebastien Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: Social Sharing Buttons (SSB) extension for the WordPress Social Sharing Optimization plugin - Fast and accurate social sharing buttons!
+ * Description: Social Sharing Buttons extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons!
  * Requires At Least: 3.0
  * Tested Up To: 3.9.1
  * Version: 1.0.4
