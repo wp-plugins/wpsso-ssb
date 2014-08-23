@@ -25,9 +25,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 		private $min_version = '2.6.2.2';
 		private $has_min_ver = true;
 
-		public $p;		// class object variables
-		public $cf = array();	// config array defined in construct method
-		public static $lca = 'wpssossb';
+		public $p;				// class object variables
 
 		public function __construct() {
 			// don't continue if the social sharing buttons are disabled
@@ -75,20 +73,20 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 
 		// this action is executed once all class objects and addons have been created
 		public function init_addon() {
-			$short = WpssoSsbConfig::$cf['plugin'][self::$lca]['short'];
+			$short = WpssoSsbConfig::$cf['plugin']['wpssossb']['short'];
 
 			if ( $this->has_min_ver === false ) {
 				$this->p->debug->log( $short.' requires WPSSO version '.$this->min_version.' or newer ('.$wpsso_version.' installed)' );
 				if ( is_admin() )
-					$this->p->notice->err( $short.' v'.WpssoSsbConfig::$cf['plugin'][self::$lca]['version'].
+					$this->p->notice->err( $short.' v'.WpssoSsbConfig::$cf['plugin']['wpssossb']['version'].
 					' requires WPSSO v'.$this->min_version.' or newer (version '.
 					$this->p->cf['plugin']['wpsso']['version'].' is currently installed).', true );
 				return;
 			}
 
 			if ( is_admin() && 
-				! empty( $this->p->options['plugin_'.self::$lca.'_tid'] ) && 
-				! $this->p->check->aop( self::$lca, false ) ) {
+				! empty( $this->p->options['plugin_wpssossb_tid'] ) && 
+				! $this->p->check->aop( 'wpssossb', false ) ) {
 				$this->p->notice->inf( 'An Authentication ID was entered for '.$short.', 
 				but the Pro version is not installed yet &ndash; 
 				don\'t forget to update the '.$short.' plugin to install the Pro version.', true );
@@ -99,7 +97,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 		}
 
 		public function filter_installed_version( $version ) {
-			if ( ! $this->p->check->aop( self::$lca, false ) )
+			if ( ! $this->p->check->aop( 'wpssossb', false ) )
 				$version = '0.'.$version;
 			return $version;
 		}
