@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoSsbConfig' ) ) {
 					),
 					'lib' => array(
 						'submenu' => array (
-							'ssb-separator-0' => '',
+							'wpssossb-separator-0' => '',
 							'sharing' => 'Sharing Buttons',
 							'style' => 'Sharing Styles',
 						),
