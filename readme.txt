@@ -141,6 +141,14 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.5 =
+
+* Bugfixes
+	* *None*
+* Enhancements
+	* Updated the 'Minimum URL Length to Shorten' default value from 21 to 22, with auto-adjustment for HTTP and HTTPS URLs.
+	* Allowed for a longer Tweet text when no shortener has been selected, relying on Twitter's own t.co shortener service to shorten the URL.
+
 = Version 1.0.4 =
 
 * Bugfixes
@@ -170,6 +178,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+
+Updated the minimum short URL value from 21 to 22, and allowed for longer Tweet text when using Twitter's shortening service.
 
 = 1.0.4 =
 
