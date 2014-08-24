@@ -15,7 +15,7 @@ if ( ! class_exists( 'WpssoSsbConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssossb' => array(
-					'version' => '1.0.4',	// plugin version
+					'version' => '1.0.5',	// plugin version
 					'short' => 'WPSSO SSB',
 					'name' => 'WPSSO Social Sharing Buttons (WPSSO SSB)',
 					'desc' => 'Social Sharing Buttons extension for the WordPress Social Sharing Optimization plugin - Fast and accurate social sharing buttons.',
@@ -91,6 +91,9 @@ if ( ! class_exists( 'WpssoSsbConfig' ) ) {
 						),
 					),
 				),
+			),
+			'form' => array(
+				'shorteners' => array( 'none' => '[none]', 'bitly' => 'Bit.ly', 'googl' => 'Goo.gl' ),
 			),
 		);
 

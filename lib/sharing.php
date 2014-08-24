@@ -22,11 +22,11 @@ if ( ! class_exists( 'WpssoSsbSharing' ) ) {
 		public static $cf = array(
 			'opt' => array(				// options
 				'defaults' => array(
-					'plugin_min_shorten' => 21,
-					'plugin_google_api_key' => '',
-					'plugin_google_shorten' => 0,
+					'plugin_min_shorten' => 22,
 					'plugin_bitly_login' => '',
 					'plugin_bitly_api_key' => '',
+					'plugin_google_api_key' => '',
+					'plugin_google_shorten' => 0,
 					'buttons_on_index' => 0,
 					'buttons_on_front' => 0,
 					'buttons_add_to_post' => 1,
@@ -232,8 +232,9 @@ jQuery("#wpsso-sidebar").click( function(){
 				case 'tumblr_img_desc':
 				case 'tumblr_vid_desc':
 				case 'twitter_desc':
-				case 'plugin_google_api_key':
+				case 'plugin_bitly_login':
 				case 'plugin_bitly_api_key':
+				case 'plugin_google_api_key':
 					return 'okblank';
 					break;
 				// options that cannot be blank
