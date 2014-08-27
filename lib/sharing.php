@@ -662,13 +662,13 @@ jQuery("#wpsso-sidebar").click( function(){
 				'bottom' : $this->p->options['buttons_pos_'.$type];
 
 			switch ( $buttons_pos ) {
-				case 'top' : 
+				case 'top': 
 					$text = $html.$text; 
 					break;
 				case 'bottom': 
 					$text = $text.$html; 
 					break;
-				case 'both' : 
+				case 'both': 
 					$text = $html.$text.$html; 
 					break;
 			}

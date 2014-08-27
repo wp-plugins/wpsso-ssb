@@ -87,7 +87,7 @@ if ( ! class_exists( 'WpssoSsbGplSocialBuddypressSharing' ) && class_exists( 'Wp
 
 .wpssossb-bp_activity-buttons { 
 	display:block;
-	margin:10px auto 10px auto;
+	margin:10px auto;
 	text-align:center;
 }';
 			// the default 'Show Button in' for 'BP Activity' is unchecked

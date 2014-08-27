@@ -43,7 +43,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 				 */
 				case ( strpos( $idx, 'tooltip-buttons_' ) !== false ? true : false ):
 					switch ( $idx ) {
-						case 'tooltip-buttons_pos_content':
+						case ( strpos( $idx, 'tooltip-buttons_pos_' ) === false ? false : true ):
 							$text = 'Individual social sharing button(s) must also be enabled below.';
 							break;
 						case 'tooltip-buttons_pos_excerpt':
@@ -65,6 +65,12 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 							If your theme (or another plugin) supports additional custom post types, and you would like to include
 							social sharing buttons on these webpages, check the appropriate option(s) here.';
 							break;
+						/*
+						 * Other settings
+						 */
+						default:
+							$text = apply_filters( $this->p->cf['lca'].'_tooltip_buttons', $text, $idx );
+							break;
 					}
 					break;
 			}
@@ -72,7 +78,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 		}
 
 		// called by each website's settings class to display a list of checkboxes
-		// Show Button in: Content, Excerpt, Edit Post/Page, etc.
+		// Show Button in: Content, Excerpt, Admin Edit, etc.
 		protected function show_on_checkboxes( $prefix ) {
 			$cols = 0;
 			$html = '<table>';
@@ -83,9 +89,14 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 				$class = array_key_exists( $prefix.'_on_'.$suffix.':is', $this->p->options ) &&
 					$this->p->options[$prefix.'_on_'.$suffix.':is'] === 'disabled' &&
 					! $this->p->check->aop() ? 'show_on blank' : 'show_on';
-				$html .= $cols == 1 ? '<tr><td class="'.$class.'">' : '<td class="'.$class.'">';
+				if ( $cols == 1 )
+					$html .= '<tr><td class="'.$class.'">';
+				else $html .= '<td class="'.$class.'">';
 				$html .= $this->form->get_checkbox( $prefix.'_on_'.$suffix ).$desc.'&nbsp; ';
-				$html .= $cols == 3 ? '</td></tr>' : '</td>';
+				if ( $cols == 3 ) {
+					$html .= '</td></tr>';
+					$cols = 0;
+				} else $html .= '</td>';
 			}
 			$html .= $cols < 3 ? '</tr>' : '';
 			$html .= '</table>';
