@@ -41,7 +41,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 					$this->p->util->get_admin_url( 'sharing', 'Buttons settings page' ).
 					', are assigned the \''.$lca.'-content-buttons\' class, which itself contains the 
 					\''.$lca.'-buttons\' class -- a common class for all the sharing buttons 
-					(see the Buttons Style tab).</p> 
+					(see the All Buttons tab).</p> 
 					<p>Example:</p><pre>
 .'.$lca.'-content-buttons 
     .'.$lca.'-buttons
@@ -53,7 +53,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 					$this->p->util->get_admin_url( 'sharing', 'Buttons settings page' ).
 					', are assigned the \''.$lca.'-excerpt-buttons\' class, which itself contains the 
 					\''.$lca.'-buttons\' class -- a common class for all the sharing buttons 
-					(see the Buttons Style tab).</p> 
+					(see the All Buttons tab).</p> 
 					<p>Example:</p><pre>
 .'.$lca.'-excerpt-buttons 
     .'.$lca.'-buttons
@@ -64,7 +64,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 					$text = '<p>Social sharing buttons added to the sidebar are assigned the 
 					\'#'.$lca.'-sidebar\' CSS id, which itself contains \'#'.$lca.'-sidebar-header\',
 					\'#'.$lca.'-sidebar-buttons\', and the \''.$lca.'-buttons\' class -- 
-					a common class for all the sharing buttons (see the Buttons Style tab).</p> 
+					a common class for all the sharing buttons (see the All Buttons tab).</p> 
 					<p>Example:</p><pre>
 #'.$lca.'-sidebar
     #'.$lca.'-sidebar-header { }
@@ -79,7 +79,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 					$text = '<p>Social sharing buttons added from a shortcode are assigned the 
 					\''.$lca.'-shortcode-buttons\' class, which itself contains the 
 					\''.$lca.'-buttons\' class -- a common class for all the sharing buttons 
-					(see the Buttons Style tab).</p> 
+					(see the All Buttons tab).</p> 
 					<p>Example:</p><pre>
 .'.$lca.'-shortcode-buttons 
     .'.$lca.'-buttons
@@ -91,7 +91,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 					' Sharing Buttons widget are assigned the 
 					\''.$lca.'-widget-buttons\' class, which itself contains the 
 					\''.$lca.'-buttons\' class -- a common class for all the sharing buttons 
-					(see the Buttons Style tab).</p> 
+					(see the All Buttons tab).</p> 
 					<p>Example:</p><pre>
 .'.$lca.'-widget-buttons 
     .'.$lca.'-buttons
@@ -109,7 +109,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 					$text = '<p>Social sharing buttons within the Admin Post / Page Edit metabox
 					are assigned the \''.$lca.'-admin_edit-buttons\' class, which itself contains the 
 					\''.$lca.'-buttons\' class -- a common class for all the sharing buttons 
-					(see the Buttons Style tab).</p> 
+					(see the All Buttons tab).</p> 
 					<p>Example:</p><pre>
 .'.$lca.'-admin_edit-buttons 
     .'.$lca.'-buttons

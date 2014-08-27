@@ -24,6 +24,7 @@ if ( ! class_exists( 'WpssoSsbGplForumBbpress' ) ) {
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
 			$this->p->debug->mark();
+
 			if ( is_admin() || is_bbpress() ) {
 				// load sharing buttons code if sharing features exist and are enabled
 				if ( array_key_exists( 'ssb', $this->p->is_avail ) &&
@@ -45,9 +46,11 @@ if ( ! class_exists( 'WpssoSsbGplForumBbpressSharing' ) && class_exists( 'WpssoS
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
 			$this->p->debug->mark();
+
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,
 			) );
+
 			if ( is_admin() ) {
 				$this->p->util->add_plugin_filters( $this, array( 
 					'style_tabs' => 1,
@@ -88,7 +91,7 @@ if ( ! class_exists( 'WpssoSsbGplForumBbpressSharing' ) && class_exists( 'WpssoS
 			<p>Social sharing buttons added at the top of bbPress Single Templates are assigned the 
 			\'wpssossb-bbp_single-buttons\' class, which itself contains the 
 			\'wpssossb-buttons\' class -- a common class for all the sharing buttons 
-			(see the Buttons Style tab).</p> 
+			(see the All Buttons tab).</p> 
 			<p>Example:</p><pre>
 .wpssossb-bbp_single-buttons 
     .wpssossb-buttons
