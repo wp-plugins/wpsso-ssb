@@ -141,6 +141,14 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.6 =
+
+* Bugfixes
+	* *None*
+* Enhancements
+	* Added the 'Show Button in: Woo Short' option to support the WooCommerce product Short Description (when the WooCommerce plugin is active).
+	* Added the 'Woo Short' tab on the Sharing Styles settings page (when the WooCommerce plugin is active).
+
 = Version 1.0.5 =
 
 * Bugfixes
@@ -178,6 +186,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.0.6 =
+
+Added the 'Show Button in: Woo Short' option and the 'Woo Short' tab on the Sharing Styles settings page (when the WooCommerce plugin is active).
 
 = 1.0.5 =
 
