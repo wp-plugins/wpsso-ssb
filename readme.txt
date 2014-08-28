@@ -146,6 +146,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * Bugfixes
 	* *None*
 * Enhancements
+	* Added a CSS ID to image dimension warnings.
 	* *When the WooCommerce plugin is active:*
 		* Added the 'Show Button in: Woo Short' option to support the WooCommerce product Short Description.
 		* Added the 'Position in Woo Short Text: Bottom' option select under the Buttons Position tab.
