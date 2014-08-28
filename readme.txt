@@ -56,6 +56,7 @@ The Facebook, Google+ and Twitter sharing buttons also support *multiple default
 
 The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) includes a number of additional options and features:
 
+* <strong>No Risk 30 Day Refund Policy</strong>
 * File caching for social sharing button images and JavaScript, maximizing performance on VPS and dedicated hardware hosting platforms.
 * A stylesheets editor for each social sharing button locations (content, excerpt, shortcode, widget, etc.).
 * Dynamic button language switching based on the current WordPress locale.
@@ -146,7 +147,6 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * Bugfixes
 	* *None*
 * Enhancements
-	* Added a CSS ID to image dimension warnings.
 	* *When the WooCommerce plugin is active:*
 		* Added the 'Show Button in: Woo Short' option to support the WooCommerce product Short Description.
 		* Added the 'Position in Woo Short Text: Bottom' option select under the Buttons Position tab.
