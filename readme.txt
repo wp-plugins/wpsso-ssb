@@ -144,9 +144,9 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 = Version 1.0.6 =
 
-* Bugfixes
+* **Bugfixes**
 	* *None*
-* Enhancements
+* **Enhancements**
 	* *When the WooCommerce plugin is active:*
 		* Added the 'Show Button in: Woo Short' option to support the WooCommerce product Short Description.
 		* Added the 'Position in Woo Short Text: Bottom' option select under the Buttons Position tab.
@@ -155,38 +155,38 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 = Version 1.0.5 =
 
-* Bugfixes
+* **Bugfixes**
 	* *None*
-* Enhancements
+* **Enhancements**
 	* Updated the 'Minimum URL Length to Shorten' default value from 21 to 22, with auto-adjustment for HTTP and HTTPS URLs.
 	* Allowed for a longer Tweet text when no shortener has been selected, relying on Twitter's own t.co shortener service to shorten the URL.
 
 = Version 1.0.4 =
 
-* Bugfixes
+* **Bugfixes**
 	* *None*
-* Enhancements
+* **Enhancements**
 	* Refactored code for WPSSO v2.6.2.2.
 
 = Version 1.0.3 =
 
-* Bugfixes
+* **Bugfixes**
 	* Added a missing 'installed_version' filter to trigger the Free to Pro update.
-* Enhancements
+* **Enhancements**
 	* *None*
 
 = Version 1.0.2 =
 
-* Bugfixes
+* **Bugfixes**
 	* *None*
-* Enhancements
+* **Enhancements**
 	* Small updates to the settings help texts.
 
 = Version 1.0.1 =
 
-* Bugfixes
+* **Bugfixes**
 	* Fixed a condition that would prevent sharing button JavaScripts from being loaded on index pages without posts.
-* Enhancements
+* **Enhancements**
 	* *None*
 
 == Upgrade Notice ==
