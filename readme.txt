@@ -142,6 +142,14 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.6.1 =
+
+* **Bugfixes**
+	* *None*
+* **Enhancements**
+	* Minor code refactoring and changes to some help messages and option titles.
+	* Tested on WordPress 4.0 (no changes required).
+
 = Version 1.0.6 =
 
 * **Bugfixes**
@@ -190,6 +198,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.0.6.1 =
+
+Minor code refactoring and changes to some help messages and option titles.
 
 = 1.0.6 =
 

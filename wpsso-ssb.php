@@ -8,8 +8,8 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Social Sharing Buttons extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons!
  * Requires At Least: 3.0
- * Tested Up To: 3.9.1
- * Version: 1.0.6
+ * Tested Up To: 4.0
+ * Version: 1.0.6.1
  * 
  * Copyright 2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 */
@@ -38,7 +38,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 			WpssoSsbConfig::require_libs( __FILE__ );
 
 			add_filter( 'wpssossb_installed_version', array( &$this, 'filter_installed_version' ), 10, 1 );
-			add_filter( 'wpsso_get_config', array( &$this, 'filter_get_config' ), 10, 1 );
+			add_filter( 'wpsso_get_config', array( &$this, 'filter_get_config' ), 30, 1 );
 
 			add_action( 'wpsso_init_options', array( &$this, 'init_options' ), 10 );
 			add_action( 'wpsso_init_addon', array( &$this, 'init_addon' ), 10 );

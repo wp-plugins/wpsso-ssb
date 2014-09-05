@@ -25,21 +25,17 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 		}
 
 		private function set_objects() {
-			foreach ( $this->p->cf['plugin'] as $lca => $info ) {
-				if ( isset( $info['lib']['website'] ) ) {
-					foreach ( $info['lib']['website'] as $id => $name ) {
-						$classname = apply_filters( $lca.'_load_lib', false, 'website/'.$id, $lca.'submenusharing'.$id );
-						if ( $classname !== false && class_exists( $classname ) )
-							$this->website[$id] = new $classname( $this->p );
-					}
-				}
+			foreach ( $this->p->cf['plugin']['wpssossb']['lib']['website'] as $id => $name ) {
+				$classname = WpssoSsbConfig::load_lib( false, 'website/'.$id, 'wpssossbsubmenusharing'.$id );
+				if ( $classname !== false && class_exists( $classname ) )
+					$this->website[$id] = new $classname( $this->p );
 			}
 		}
 
 		public function filter_messages( $text, $idx ) {
 			switch ( $idx ) {
 				/*
-				 * 'Social Sharing' settings
+				 * 'Social Buttons' settings
 				 */
 				case ( strpos( $idx, 'tooltip-buttons_' ) !== false ? true : false ):
 					switch ( $idx ) {
@@ -104,12 +100,14 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 		}
 
 		protected function add_meta_boxes() {
-			// add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
-			add_meta_box( $this->pagehook.'_sharing', 'Social Sharing Buttons', array( &$this, 'show_metabox_sharing' ), $this->pagehook, 'normal' );
 			$col = 0;
 			$row = 0;
-			foreach ( $this->p->cf['*']['lib']['website'] as $id => $name ) {
-				$classname = __CLASS__.ucfirst( $id );
+
+			// add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
+			add_meta_box( $this->pagehook.'_sharing', 'Social Sharing Buttons', array( &$this, 'show_metabox_sharing' ), $this->pagehook, 'normal' );
+
+			foreach ( $this->p->cf['plugin']['wpssossb']['lib']['website'] as $id => $name ) {
+				$classname = __CLASS__.$id;
 				if ( class_exists( $classname ) ) {
 					$col = $col == 1 ? 2 : 1;
 					$row = $col == 1 ? $row + 1 : $row;
@@ -120,9 +118,10 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 					$this->website[$id]->form = &$this->get_form_ref();
 				}
 			}
+
 			// these metabox ids should be closed by default (array_diff() selects everything except those listed)
-			$closed_ids = array_diff( array_keys( $this->p->cf['*']['lib']['website'] ), array( 'facebook', 'gplus', 'twitter' ) );
-			$this->p->addons['util']['user']->reset_metabox_prefs( $this->pagehook, $closed_ids, 'closed' );
+			$ids = array_diff( array_keys( $this->p->cf['plugin']['wpssossb']['lib']['website'] ), array( 'facebook', 'gplus', 'twitter' ) );
+			$this->p->addons['util']['user']->reset_metabox_prefs( $this->pagehook, $ids, 'closed' );
 		}
 
 		public function add_class_postbox_website( $classes ) {
@@ -150,16 +149,16 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 		}
 
 		public function show_metabox_website() {
-			echo '<table class="sucom-setting">', "\n";
+			echo '<table class="sucom-setting">'."\n";
 			foreach ( $this->get_rows( null, null ) as $row ) 
-				echo '<tr>', $row, '</tr>';
-			echo '</table>', "\n";
+				echo '<tr>'.$row.'</tr>';
+			echo '</table>'."\n";
 		}
 
 		protected function get_rows( $metabox, $key ) {
 			$rows = array();
 			switch ( $metabox.'-'.$key ) {
-				case 'sharing-position' :
+				case 'sharing-position':
 					$rows[] = $this->p->util->th( 'Position in Content Text', null, 'buttons_pos_content' ).
 					'<td>'.$this->form->get_select( 'buttons_pos_content',
 						array( 'top' => 'Top', 'bottom' => 'Bottom', 'both' => 'Both Top and Bottom' ) ).'</td>';
@@ -169,7 +168,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 						array( 'top' => 'Top', 'bottom' => 'Bottom', 'both' => 'Both Top and Bottom' ) ).'</td>';
 					break;
 
-				case 'sharing-include' :
+				case 'sharing-include':
 					$rows[] = '<tr><td colspan="2">'.$this->p->msgs->get( 'info-'.$metabox.'-'.$key ).'</td></tr>';
 
 					$rows[] = $this->p->util->th( 'Include on Index Webpages', null, 'buttons_on_index' ).
