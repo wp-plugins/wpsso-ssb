@@ -5,7 +5,7 @@ Tags: wpsso, like, send, share, facebook, google, google plus, g+, twitter, link
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
-Tested Up To: 3.9.2
+Tested Up To: 4.0
 Stable Tag: 1.0.6
 
 Social Sharing Buttons extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons!
