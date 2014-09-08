@@ -4,6 +4,13 @@
  * buttons can be aligned vertically, horizontally, floated, etc.
  */
 
+/* hide the sidebar if screen width is less than 1000px */
+@media (max-width:1000px) {
+	#wpsso-sidebar {
+		display:none;
+	}
+}
+
 #wpsso-sidebar { 
 	cursor:pointer;
 	text-align:center;
@@ -11,17 +18,16 @@
 	z-index:99;
 
 	/* position 100px down from top and 10% from left */
-	/*
 		top:100px;
 		left:10%;
-	*/
 
 	/* position 100px down from top and 450px left of center 
-	 * by using the right margin to push sidebar left
-	 */
+	 * by using the right margin to push sidebar left */
+	/*
 		top:100px;
 		right:50%;
 		margin:0 450px 0 0;
+	 */
 }
 
 #wpsso-sidebar-header { 
@@ -43,7 +49,7 @@
 	overflow:visible;
 	border-style:solid;
 
-	/* uncomment to hide the buttons by default */
+	/* uncomment to hide the buttons section by default */
 	/*
 		width:0;		
 		height:0;
