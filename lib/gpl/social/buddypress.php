@@ -54,7 +54,7 @@ if ( ! class_exists( 'WpssoSsbGplSocialBuddypress' ) ) {
 	}
 }
 
-if ( ! class_exists( 'WpssoSsbGplSocialBuddypressSharing' ) && class_exists( 'WpssoSsbSharing' ) ) {
+if ( ! class_exists( 'WpssoSsbGplSocialBuddypressSharing' ) ) {
 
 	class WpssoSsbGplSocialBuddypressSharing {
 
