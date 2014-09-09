@@ -175,7 +175,7 @@ jQuery("#wpsso-sidebar").click( function(){
 
 		public function filter_get_defaults( $opts_def ) {
 			$opts_def = array_merge( $opts_def, self::$cf['opt']['defaults'] );
-			$opts_def = $this->p->util->push_add_to_options( $opts_def, array( 'buttons' ) );
+			$opts_def = $this->p->util->push_add_to_options( $opts_def, array( 'buttons' => 'frontend' ) );
 			$plugin_dir = trailingslashit( plugin_dir_path( $this->plugin_filepath ) );
 			$url_path = parse_url( trailingslashit( plugins_url( '', $this->plugin_filepath ) ), PHP_URL_PATH );	// relative URL
 
@@ -806,20 +806,20 @@ jQuery("#wpsso-sidebar").click( function(){
 				};</script>'."\n";
 		}
 
-		public function get_css( $css_name, &$atts = array(), $css_class_extra = '', $css_id_extra = '' ) {
+		public function get_css( $css_name, &$atts = array(), $css_class_extra = '' ) {
 			global $post;
+
 			$css_class = $css_name.'-'.( empty( $atts['css_class'] ) ? 
 				'button' : $atts['css_class'] );
+
 			$css_id = $css_name.'-'.( empty( $atts['css_id'] ) ? 
 				'button' : $atts['css_id'] );
 
+			if ( is_singular() && ! empty( $post->ID ) ) 
+				$css_id .= '-post-'.$post->ID;
+
 			if ( ! empty( $css_class_extra ) ) 
 				$css_class = $css_class_extra.' '.$css_class;
-			if ( ! empty( $css_id_extra ) ) 
-				$css_id = $css_id_extra.' '.$css_id;
-
-			if ( is_singular() && ! empty( $post->ID ) ) 
-				$css_id .= ' '.$css_id.'-post-'.$post->ID;
 
 			return 'class="'.$css_class.'" id="'.$css_id.'"';
 		}

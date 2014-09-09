@@ -28,7 +28,7 @@ if ( ! class_exists( 'WpssoSsbGplEcomWoocommerce' ) ) {
 	}
 }
 
-if ( ! class_exists( 'WpssoSsbGplEcomWoocommerceSharing' ) && class_exists( 'WpssoSsbSharing' ) ) {
+if ( ! class_exists( 'WpssoSsbGplEcomWoocommerceSharing' ) ) {
 
 	class WpssoSsbGplEcomWoocommerceSharing {
 

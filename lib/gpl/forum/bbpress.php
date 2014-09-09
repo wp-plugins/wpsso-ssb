@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoSsbGplForumBbpress' ) ) {
 	}
 }
 
-if ( ! class_exists( 'WpssoSsbGplForumBbpressSharing' ) && class_exists( 'WpssoSsbSharing' ) ) {
+if ( ! class_exists( 'WpssoSsbGplForumBbpressSharing' ) ) {
 
 	class WpssoSsbGplForumBbpressSharing {
 
