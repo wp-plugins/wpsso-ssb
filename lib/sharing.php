@@ -157,11 +157,13 @@ jQuery("#wpsso-sidebar").click( function(){
 					'option_type' => 2,		// identify option type for sanitation
 					'post_cache_transients' => 4,	// flush transients on post save
 					'status_gpl_features' => 1,	// include sharing, shortcode, and widget status
-					'status_pro_features' => 1,	// include social file cache status
 					'tooltip_side' => 2,		// tooltip messages for side boxes
 					'tooltip_plugin' => 2,		// tooltip messages for advanced settings
 					'tooltip_postmeta' => 3,	// tooltip messages for post social settings
 				) );
+				$this->p->util->add_plugin_filters( $this, array( 
+					'status_pro_features' => 3,	// include social file cache status
+				), 10, 'wpssossb' );			// hook into the extension name instead
 			}
 		}
 
@@ -286,15 +288,12 @@ jQuery("#wpsso-sidebar").click( function(){
 			return $features;
 		}
 
-		public function filter_status_pro_features( $features ) {
-			foreach ( $this->p->cf['plugin'] as $lca => $info ) {
-				if ( ! empty( $info['lib']['submenu']['sharing'] ) ) {
-					$features['Social File Cache'] = array( 
-						'status' => $this->p->is_avail['cache']['file'] ? 'on' : 'off',
-						'td_class' => $this->p->check->aop( $lca ) ? '' : 'blank',
-					);
-					break;	// stop after first match
-				}
+		public function filter_status_pro_features( $features = array(), $lca = '', $info = array() ) {
+			if ( ! empty( $lca ) && ! empty( $info['lib']['submenu']['sharing'] ) ) {
+				$features['Social File Cache'] = array( 
+					'status' => $this->p->is_avail['cache']['file'] ? 'on' : 'off',
+					'td_class' => $this->p->check->aop( $lca ) ? '' : 'blank',
+				);
 			}
 			return $features;
 		}
@@ -328,7 +327,7 @@ jQuery("#wpsso-sidebar").click( function(){
 				case 'tooltip-side-social-file-cache':
 					$text = $short_pro.' can save social sharing images and JavaScript to a cache folder, 
 					and provide URLs to these cached files instead of the originals. The current \'Social File Cache Expiry\'
-					value, as defined on the '.$this->p->util->get_admin_url( 'advanced', 'Advanced' ).' settings page, is '.
+					value, as defined on the '.$this->p->util->get_admin_url( 'advanced#sucom-tab_plugin_cache', 'Advanced' ).' settings page, is '.
 					$this->p->options['plugin_file_cache_hrs'].' hours (the default value of 0 hours disables the 
 					file caching feature).';
 					break;
