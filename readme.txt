@@ -147,7 +147,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * **Bugfixes**
 	* Fixed the social buttons CSS id to include only a single value (instead of two).
 * **Enhancements**
-	* *None*
+	* Minor code refactoring for WPSSO v2.6.3.
 
 = Version 1.0.6.1 =
 
