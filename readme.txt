@@ -210,31 +210,3 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 Fixed the social buttons CSS id and minor code refactoring for WPSSO v2.6.3.
 
-= 1.0.6.1 =
-
-Minor code refactoring and changes to some help messages and option titles.
-
-= 1.0.6 =
-
-Added support for social sharing buttons in the WooCommerce product Short Description text (top, bottom, or both).
-
-= 1.0.5 =
-
-Updated the minimum short URL value from 21 to 22, and allowed for longer Tweet text when using Twitter's shortening service.
-
-= 1.0.4 =
-
-Refactored code for WPSSO v2.6.2.2.
-
-= 1.0.3 =
-
-Added a missing 'installed_version' filter to trigger the Free to Pro update.
-
-= 1.0.2 =
-
-Small updates to the settings help texts.
-
-= 1.0.1 =
-
-Fixed a condition that would prevent sharing button JavaScripts from being loaded on index pages without posts.
-
