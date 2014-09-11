@@ -22,7 +22,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 	class WpssoSsb {
 
 		private $opt_version = 'ssb2';
-		private $min_version = '2.6.2.2';
+		private $min_version = '2.6.3';
 		private $has_min_ver = true;
 
 		public $p;				// class object variables
