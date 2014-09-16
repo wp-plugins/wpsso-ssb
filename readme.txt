@@ -6,7 +6,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested Up To: 4.0
-Stable Tag: 1.0.7
+Stable Tag: 1.0.8
 
 Social Sharing Buttons extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons!
 
@@ -142,78 +142,17 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
-= Version 1.0.7 =
+= Version 1.0.8 =
 
 * **Bugfixes**
 	* Added the blog ID number to the minimized CSS stylesheet file name (allowing the same cache folder to be shared with multiple blogs).
+	* Fixed a minor typo in the CSS stylesheet file name variable.
 * **Enhancements**
 	* Added an extra check for the existence of the CSS minification class.
 
-= Version 1.0.6.2 =
-
-* **Bugfixes**
-	* Fixed the social buttons CSS id to include only a single value (instead of two).
-* **Enhancements**
-	* Minor code refactoring for WPSSO v2.6.3.
-
-= Version 1.0.6.1 =
-
-* **Bugfixes**
-	* *None*
-* **Enhancements**
-	* Minor code refactoring and changes to some help messages and option titles.
-	* Tested on WordPress 4.0 (no changes required).
-
-= Version 1.0.6 =
-
-* **Bugfixes**
-	* *None*
-* **Enhancements**
-	* *When the WooCommerce plugin is active:*
-		* Added the 'Show Button in: Woo Short' option to support the WooCommerce product Short Description.
-		* Added the 'Position in Woo Short Text: Bottom' option select under the Buttons Position tab.
-		* Added the 'Woo Short Preset: none' option select under the Preset Options tab.
-		* Added the 'Woo Short' tab on the Sharing Styles settings page.
-
-= Version 1.0.5 =
-
-* **Bugfixes**
-	* *None*
-* **Enhancements**
-	* Updated the 'Minimum URL Length to Shorten' default value from 21 to 22, with auto-adjustment for HTTP and HTTPS URLs.
-	* Allowed for a longer Tweet text when no shortener has been selected, relying on Twitter's own t.co shortener service to shorten the URL.
-
-= Version 1.0.4 =
-
-* **Bugfixes**
-	* *None*
-* **Enhancements**
-	* Refactored code for WPSSO v2.6.2.2.
-
-= Version 1.0.3 =
-
-* **Bugfixes**
-	* Added a missing 'installed_version' filter to trigger the Free to Pro update.
-* **Enhancements**
-	* *None*
-
-= Version 1.0.2 =
-
-* **Bugfixes**
-	* *None*
-* **Enhancements**
-	* Small updates to the settings help texts.
-
-= Version 1.0.1 =
-
-* **Bugfixes**
-	* Fixed a condition that would prevent sharing button JavaScripts from being loaded on index pages without posts.
-* **Enhancements**
-	* *None*
-
 == Upgrade Notice ==
 
-= 1.0.7 =
+= 1.0.8 =
 
 Added the blog ID number to the minimized CSS stylesheet file name, allowing the same cache folder to be shared with multiple blogs.
 

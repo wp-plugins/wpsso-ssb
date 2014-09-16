@@ -9,7 +9,7 @@
  * Description: Social Sharing Buttons extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons!
  * Requires At Least: 3.0
  * Tested Up To: 4.0
- * Version: 1.0.7
+ * Version: 1.0.8
  * 
  * Copyright 2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 */
