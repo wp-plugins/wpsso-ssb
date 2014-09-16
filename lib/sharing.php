@@ -414,7 +414,7 @@ jQuery("#wpsso-sidebar").click( function(){
 			if ( ! empty( $this->p->options['buttons_use_social_css'] ) ) {
 
 				// create the css file if it does not exist
-				if ( ! file_exists( $this->sharing_css_min_file ) ) {
+				if ( ! file_exists( $this->sharing_css_file ) ) {
 					$this->p->debug->log( 'updating '.$this->sharing_css_file );
 					$this->update_sharing_css( $this->p->options );
 				}
@@ -435,7 +435,7 @@ jQuery("#wpsso-sidebar").click( function(){
 						$this->p->debug->log( $this->sharing_css_file.' is not readable' );
 					} else {
 						echo '<style type="text/css">';
-						if ( ( $fsize = @filesize( $this->sharing_min_file ) ) > 0 &&
+						if ( ( $fsize = @filesize( $this->sharing_css_file ) ) > 0 &&
 							$fh = @fopen( $this->sharing_css_file, 'rb' ) ) {
 							echo fread( $fh, $fsize );
 							fclose( $fh );
