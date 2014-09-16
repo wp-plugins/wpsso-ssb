@@ -142,6 +142,13 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.7 =
+
+* **Bugfixes**
+	* Added the blog ID number to the minimized CSS stylesheet file name (allowing the same cache folder to be shared with multiple blogs).
+* **Enhancements**
+	* Added an extra check for the existence of the CSS minification class.
+
 = Version 1.0.6.2 =
 
 * **Bugfixes**

@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoSsbSharing' ) ) {
 		protected $website = array();
 		protected $plugin_filepath;
 
-		public $sharing_css_min_file = '';
-		public $sharing_css_min_url = '';
+		public $sharing_css_file = '';
+		public $sharing_css_url = '';
 
 		public static $cf = array(
 			'opt' => array(				// options
@@ -134,8 +134,11 @@ jQuery("#wpsso-sidebar").click( function(){
 		public function __construct( &$plugin, $plugin_filepath = WPSSOSSB_FILEPATH ) {
 			$this->p =& $plugin;
 			$this->plugin_filepath = $plugin_filepath;
-			$this->sharing_css_min_file = WPSSO_CACHEDIR.'sharing-styles.min.css';
-			$this->sharing_css_min_url = WPSSO_CACHEURL.'sharing-styles.min.css';
+
+			$sharing_css_name = 'sharing-styles-'.get_current_blog_id().'.min.css';
+			$this->sharing_css_file = WPSSO_CACHEDIR.$sharing_css_name;
+			$this->sharing_css_url = WPSSO_CACHEURL.$sharing_css_name;
+
 			$this->set_objects();
 
 			add_action( 'wp_enqueue_scripts', array( &$this, 'wp_enqueue_styles' ) );
@@ -412,7 +415,7 @@ jQuery("#wpsso-sidebar").click( function(){
 
 				// create the css file if it does not exist
 				if ( ! file_exists( $this->sharing_css_min_file ) ) {
-					$this->p->debug->log( 'updating '.$this->sharing_css_min_file );
+					$this->p->debug->log( 'updating '.$this->sharing_css_file );
 					$this->update_sharing_css( $this->p->options );
 				}
 
@@ -420,20 +423,20 @@ jQuery("#wpsso-sidebar").click( function(){
 					$this->p->debug->log( 'wp_enqueue_style = '.$this->p->cf['lca'].'_sharing_buttons' );
 					wp_register_style( 
 						$this->p->cf['lca'].'_sharing_buttons', 
-						$this->sharing_css_min_url, 
+						$this->sharing_css_url, 
 						false, 
 						$this->p->cf['plugin'][$this->p->cf['lca']]['version']
 					);
 					wp_enqueue_style( $this->p->cf['lca'].'_sharing_buttons' );
 				} else {
-					if ( ! is_readable( $this->sharing_css_min_file ) ) {
+					if ( ! is_readable( $this->sharing_css_file ) ) {
 						if ( is_admin() )
-							$this->p->notice->err( $this->sharing_css_min_file.' is not readable.', true );
-						$this->p->debug->log( $this->sharing_css_min_file.' is not readable' );
+							$this->p->notice->err( $this->sharing_css_file.' is not readable.', true );
+						$this->p->debug->log( $this->sharing_css_file.' is not readable' );
 					} else {
 						echo '<style type="text/css">';
-						if ( ( $fsize = @filesize( $this->sharing_css_min_file ) ) > 0 &&
-							$fh = @fopen( $this->sharing_css_min_file, 'rb' ) ) {
+						if ( ( $fsize = @filesize( $this->sharing_min_file ) ) > 0 &&
+							$fh = @fopen( $this->sharing_css_file, 'rb' ) ) {
 							echo fread( $fh, $fsize );
 							fclose( $fh );
 						}
@@ -445,15 +448,15 @@ jQuery("#wpsso-sidebar").click( function(){
 
 		public function update_sharing_css( &$opts ) {
 			if ( ! empty( $opts['buttons_use_social_css'] ) ) {
-				if ( ! $fh = @fopen( $this->sharing_css_min_file, 'wb' ) ) {
+				if ( ! $fh = @fopen( $this->sharing_css_file, 'wb' ) ) {
 					if ( ! is_writable( WPSSO_CACHEDIR ) ) {
 						if ( is_admin() )
 							$this->p->notice->err( WPSSO_CACHEDIR.' is not writable.', true );
 						$this->p->debug->log( WPSSO_CACHEDIR.' is not writable', true );
 					}
 					if ( is_admin() )
-						$this->p->notice->err( 'Failed to open file '.$this->sharing_css_min_file.' for writing.', true );
-					$this->p->debug->log( 'failed opening '.$this->sharing_css_min_file.' for writing' );
+						$this->p->notice->err( 'Failed to open file '.$this->sharing_css_file.' for writing.', true );
+					$this->p->debug->log( 'failed opening '.$this->sharing_css_file.' for writing' );
 				} else {
 					$css_data = '';
 					$style_tabs = apply_filters( $this->p->cf['lca'].'_style_tabs', self::$cf['sharing']['style'] );
@@ -461,22 +464,26 @@ jQuery("#wpsso-sidebar").click( function(){
 						if ( array_key_exists( 'buttons_css_'.$id, $opts ) )
 							$css_data .= $opts['buttons_css_'.$id];
 					$classname = apply_filters( $this->p->cf['lca'].'_load_lib', false, 'ext/compressor', 'SuextMinifyCssCompressor' );
-					if ( $classname !== false && class_exists( $classname ) ) {
+					if ( $classname !== false && class_exists( $classname ) )
 						$css_data = call_user_func( array( $classname, 'process' ), $css_data );
-						if ( fwrite( $fh, $css_data ) === false ) {
-							if ( is_admin() )
-								$this->p->notice->err( 'Failed writing to file '.$this->sharing_css_min_file.'.', true );
-							$this->p->debug->log( 'failed writing to '.$this->sharing_css_min_file );
-						} else $this->p->debug->log( 'updated css file '.$this->sharing_css_min_file );
-						fclose( $fh );
+					else {
+						if ( is_admin() )
+							$this->p->notice->err( 'Failed to load minify class SuextMinifyCssCompressor.', true );
+						$this->p->debug->log( 'failed to load minify class SuextMinifyCssCompressor' );
 					}
+					if ( fwrite( $fh, $css_data ) === false ) {
+						if ( is_admin() )
+							$this->p->notice->err( 'Failed writing to file '.$this->sharing_css_file.'.', true );
+						$this->p->debug->log( 'failed writing to '.$this->sharing_css_file );
+					} else $this->p->debug->log( 'updated css file '.$this->sharing_css_file );
+					fclose( $fh );
 				}
 			} else $this->unlink_sharing_css();
 		}
 
 		public function unlink_sharing_css() {
-			if ( file_exists( $this->sharing_css_min_file ) ) {
-				if ( ! @unlink( $this->sharing_css_min_file ) && is_admin() )
+			if ( file_exists( $this->sharing_css_file ) ) {
+				if ( ! @unlink( $this->sharing_css_file ) && is_admin() )
 					$this->p->notice->err( 'Error removing minimized stylesheet file. Does the web server have sufficient privileges?', true );
 			}
 		}
