@@ -78,7 +78,7 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 			$new_tabs = array();
 			foreach ( $tabs as $key => $val ) {
 				$new_tabs[$key] = $val;
-				if ( $key === 'header' )	// insert the social sharing tab after the header tab
+				if ( $key === 'media' )	// insert the social sharing tab after the media tab
 					$new_tabs['sharing'] = 'Sharing Buttons';
 			}
 			return $new_tabs;

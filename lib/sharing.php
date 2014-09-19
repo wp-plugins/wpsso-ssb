@@ -613,18 +613,18 @@ jQuery("#wpsso-sidebar").click( function(){
 				return $text;
 			}
 
-			// get the post id for the transient cache salt
-			if ( ( $obj = $this->p->util->get_post_object( $use_post ) ) === false ) {
-				$this->p->debug->log( 'exiting early: invalid object type' );
-				return $text;
-			}
-
+			$lca = $this->p->cf['lca'];
+			$obj = $this->p->util->get_post_object( $use_post );
+			$post_id = empty( $obj->ID ) || empty( $obj->post_type ) || 
+				( ! is_singular() && $use_post === false ) ? 0 : $obj->ID;
+			$sharing_url = $this->p->util->get_sharing_url( $use_post );
 			$html = false;
+
 			if ( $this->p->is_avail['cache']['transient'] ) {
-				// if the post id is 0, then add the sharing url to ensure a unique salt string
-				$cache_salt = __METHOD__.'(lang:'.SucomUtil::get_locale().'_obj:'.$obj->ID.'_type:'.$type.
-					( empty( $obj->ID ) ? '_url:'.$this->p->util->get_sharing_url( true ) : '' ).')';
-				$cache_id = $this->p->cf['lca'].'_'.md5( $cache_salt );
+				$cache_salt = __METHOD__.'('.apply_filters( $lca.'_buttons_cache_salt', 
+					'lang:'.SucomUtil::get_locale().'_type:'.$type.'_post:'.$post_id.
+					( empty( $post_id ) ? '_url:'.$sharing_url : '' ), $type, $use_post ).')';
+				$cache_id = $lca.'_'.md5( $cache_salt );
 				$cache_type = 'object cache';
 				$this->p->debug->log( $cache_type.': transient salt '.$cache_salt );
 				$html = get_transient( $cache_id );
@@ -647,11 +647,11 @@ jQuery("#wpsso-sidebar").click( function(){
 
 				$buttons_html = $this->get_html( $sorted_ids, $atts, $this->p->options );
 				if ( ! empty( $buttons_html ) ) {
-					$html = '<!-- '.$this->p->cf['lca'].' '.$css_type.' begin --><div '.
-						( $use_post ? 'class' : 'id' ).'="'.$this->p->cf['lca'].'-'.$css_type.'">'.
-						$buttons_html.'</div><!-- '.$this->p->cf['lca'].' '.$css_type.' end -->';
+					$html = '<!-- '.$lca.' '.$css_type.' begin --><div '.
+						( $use_post ? 'class' : 'id' ).'="'.$lca.'-'.$css_type.'">'.
+						$buttons_html.'</div><!-- '.$lca.' '.$css_type.' end -->';
 
-					if ( ! empty( $cache_id ) ) {
+					if ( $this->p->is_avail['cache']['transient'] ) {
 						set_transient( $cache_id, $html, $this->p->cache->object_expire );
 						$this->p->debug->log( $cache_type.': '.$type.' html saved to transient '.
 							$cache_id.' ('.$this->p->cache->object_expire.' seconds)' );
