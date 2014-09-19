@@ -142,6 +142,13 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.9 =
+
+* **Bugfixes**
+	* *None*
+* **Enhancements**
+	* Added an 'wpsso_buttons_cache_salt' filter to modify the sharing buttons cache salt string.
+
 = Version 1.0.8 =
 
 * **Bugfixes**
