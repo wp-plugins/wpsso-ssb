@@ -159,12 +159,12 @@ jQuery("#wpsso-sidebar").click( function(){
 					'save_options' => 2,		// update the sharing css file
 					'option_type' => 2,		// identify option type for sanitation
 					'post_cache_transients' => 4,	// flush transients on post save
-					'status_gpl_features' => 1,	// include sharing, shortcode, and widget status
 					'tooltip_side' => 2,		// tooltip messages for side boxes
 					'tooltip_plugin' => 2,		// tooltip messages for advanced settings
 					'tooltip_postmeta' => 3,	// tooltip messages for post social settings
 				) );
 				$this->p->util->add_plugin_filters( $this, array( 
+					'status_gpl_features' => 3,	// include sharing, shortcode, and widget status
 					'status_pro_features' => 3,	// include social file cache status
 				), 10, 'wpssossb' );			// hook into the extension name instead
 			}
@@ -275,18 +275,18 @@ jQuery("#wpsso-sidebar").click( function(){
 			return $transients;
 		}
 
-		public function filter_status_gpl_features( $features ) {
-			if ( ! empty( $this->p->cf['*']['lib']['submenu']['sharing'] ) )
-				$features['Sharing Buttons'] = array( 'class' => $this->p->cf['lca'].'Sharing' );
+		public function filter_status_gpl_features( $features, $lca, $info ) {
+			if ( ! empty( $info['lib']['submenu']['sharing'] ) )
+				$features['Sharing Buttons'] = array( 'classname' => $lca.'Sharing' );
 
-			if ( ! empty( $this->p->cf['*']['lib']['shortcode']['sharing'] ) )
-				$features['Sharing Shortcode'] = array( 'class' => $this->p->cf['lca'].'ShortcodeSharing' );
+			if ( ! empty( $info['lib']['shortcode']['sharing'] ) )
+				$features['Sharing Shortcode'] = array( 'classname' => $lca.'ShortcodeSharing' );
 
-			if ( ! empty( $this->p->cf['*']['lib']['submenu']['style'] ) )
+			if ( ! empty( $info['lib']['submenu']['style'] ) )
 				$features['Sharing Stylesheet'] = array( 'status' => $this->p->options['buttons_use_social_css'] ? 'on' : 'off' );
 
-			if ( ! empty( $this->p->cf['*']['lib']['widget']['sharing'] ) )
-				$features['Sharing Widget'] = array( 'class' => $this->p->cf['lca'].'WidgetSharing' );
+			if ( ! empty( $info['lib']['widget']['sharing'] ) )
+				$features['Sharing Widget'] = array( 'classname' => $lca.'WidgetSharing' );
 
 			return $features;
 		}
