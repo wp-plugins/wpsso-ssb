@@ -293,9 +293,14 @@ jQuery("#wpsso-sidebar").click( function(){
 
 		public function filter_status_pro_features( $features = array(), $lca = '', $info = array() ) {
 			if ( ! empty( $lca ) && ! empty( $info['lib']['submenu']['sharing'] ) ) {
+				$aop = $this->p->check->aop( $lca );
 				$features['Social File Cache'] = array( 
-					'status' => $this->p->is_avail['cache']['file'] ? 'on' : 'off',
-					'td_class' => $this->p->check->aop( $lca ) ? '' : 'blank',
+					'status' => $this->p->is_avail['cache']['file'] ? ( $aop ? 'on' : 'rec' ) : 'off',
+					'td_class' => $aop ? '' : 'blank',
+				);
+				$features['Sharing Styles Editor'] = array( 
+					'status' => $this->p->options['plugin_display'] === 'all' ? ( $aop ? 'on' : 'rec' ) : 'off',
+					'td_class' => $aop ? '' : 'blank',
 				);
 			}
 			return $features;
@@ -306,6 +311,9 @@ jQuery("#wpsso-sidebar").click( function(){
 			$short = $this->p->cf['plugin'][$lca]['short'];
 			$short_pro = $short.' Pro';
 			switch ( $idx ) {
+				case 'tooltip-side-sharing-styles-editor':
+					$text = 'When showing <em>All Plugin Options</em>, the Sharing Styles settings page includes an editor for the various social sharing buttons.';
+					break;
 				case 'tooltip-side-sharing-buttons':
 					$text = 'Social sharing features include the '.$this->p->cf['menu'].' '.$this->p->util->get_admin_url( 'sharing', 'Buttons' ).
 					' and '.$this->p->util->get_admin_url( 'style', 'Styles' ).' settings pages, the Social Settings -&gt; Sharing Buttons tab on Post 
