@@ -129,8 +129,8 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 						case 'tooltip-buttons_use_social_css':
 							$text = 'Add the CSS from all style tabs to webpages (default is checked).
 							The CSS will be <strong>minimized</strong>, and saved to a single 
-							stylesheet with the URL of <a href="'.$this->p->sharing->sharing_css_min_url.'">'.
-							$this->p->sharing->sharing_css_min_url.'</a>. The minimized stylesheet can be 
+							stylesheet with the URL of <a href="'.$this->p->sharing->sharing_css_url.'">'.
+							$this->p->sharing->sharing_css_url.'</a>. The minimized stylesheet can be 
 							enqueued by WordPress, or included directly in the webpage header.';
 							break;
 		
@@ -159,8 +159,8 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 			echo '<table class="sucom-setting"><tr>';
 			echo $this->p->util->th( 'Use the Social Stylesheet', 'highlight', 'buttons_use_social_css' );
 			echo '<td>'.$this->form->get_checkbox( 'buttons_use_social_css' );
-			if ( file_exists( $this->p->sharing->sharing_css_min_file ) &&
-				( $fsize = filesize( $this->p->sharing->sharing_css_min_file ) ) !== false )
+			if ( file_exists( $this->p->sharing->sharing_css_file ) &&
+				( $fsize = filesize( $this->p->sharing->sharing_css_file ) ) !== false )
 					echo ' css is '.$fsize.' bytes minimized';
 			echo '</td>';
 			echo '</tr><tr>';
