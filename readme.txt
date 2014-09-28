@@ -159,6 +159,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Upgrade Notice ==
 
+= 1.0.9 =
+
+Adds a 'wpsso_buttons_cache_salt' filter to modify the sharing buttons cache salt string.
+
 = 1.0.8 =
 
 Added the blog ID number to the minimized CSS stylesheet file name, allowing the same cache folder to be shared with multiple blogs.
