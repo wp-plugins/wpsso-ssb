@@ -13,7 +13,7 @@ Social Sharing Buttons extension for the WordPress Social Sharing Optimization (
 == Description ==
 
 <table><tr><td valign="top">
-<p><img src="//ps.w.org/wpsso-ssb/assets/icon-256x256.png?rev=" width="256" height="256" style="max-width:none;margin-right:30px;" /></p>
+<p><img src="//ps.w.org/wpsso-ssb/assets/icon-256x256.png?rev=" width="256" height="256" style="max-width:none;margin-right:40px;" /></p>
 </td><td valign="top">
 
 <p><strong>Make sure social websites present your content in the best possible way, no matter <em>how</em> your webpage is shared</strong> &mdash; from sharing buttons on the webpage, browser add-ons and extensions, or URLs pasted directly on social websites.</p>
