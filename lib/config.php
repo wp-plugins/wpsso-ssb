@@ -22,8 +22,8 @@ if ( ! class_exists( 'WpssoSsbConfig' ) ) {
 					'slug' => 'wpsso-ssb',
 					'base' => 'wpsso-ssb/wpsso-ssb.php',
 					'img' => array(
-						'icon-small' => '//ps.w.org/wpsso-ssb/assets/icon-128x128.jpg?rev=',
-						'icon-medium' => '//ps.w.org/wpsso-ssb/assets/icon-256x256.jpg?rev=',
+						'icon-small' => '//ps.w.org/wpsso-ssb/assets/icon-128x128.png?rev=',
+						'icon-medium' => '//ps.w.org/wpsso-ssb/assets/icon-256x256.png?rev=',
 					),
 					'url' => array(
 						'download' => 'https://wordpress.org/plugins/wpsso-ssb/',
