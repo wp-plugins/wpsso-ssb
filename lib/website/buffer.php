@@ -104,7 +104,7 @@ if ( ! class_exists( 'WpssoSsbSharingBuffer' ) ) {
 				$opts =& $this->p->options;
 			$prot = empty( $_SERVER['HTTPS'] ) ? 'http:' : 'https:';
 			$use_post = array_key_exists( 'use_post', $atts ) ? $atts['use_post'] : true;
-			$source_id = $this->p->util->get_source_id( 'twitter', $atts );
+			$source_id = $this->p->util->get_source_id( 'buffer', $atts );
 			$atts['add_page'] = array_key_exists( 'add_page', $atts ) ? $atts['add_page'] : true;	// get_sharing_url argument
 
 			$atts['url'] = empty( $atts['url'] ) ? 
@@ -144,13 +144,18 @@ if ( ! class_exists( 'WpssoSsbSharingBuffer' ) ) {
 				$atts['caption'] = $atts['tweet'];
 
 			if ( ! array_key_exists( 'caption', $atts ) ) {
-				if ( ! empty( $post_id ) && $use_post == true ) 
-					$atts['caption'] = $this->p->addons['util']['postmeta']->get_options( $post_id, 'twitter_desc' );
-
 				if ( empty( $atts['caption'] ) ) {
-					// get_tweet_max_len() needs the long URL as input
-					$cap_len = $this->p->util->get_tweet_max_len( $atts['url'], 'buffer' );	
-					$atts['caption'] = $this->p->webpage->get_caption( $opts['buffer_caption'], $cap_len, $use_post );
+					$cap_len = $this->p->util->get_tweet_max_len( $atts['url'], 'buffer' );	// get_tweet_max_len() needs the long URL as input
+					$atts['caption'] = $this->p->webpage->get_caption( 
+						$opts['buffer_caption'],	// title, excerpt, both
+						$cap_len,			// max caption length 
+						$use_post,			// 
+						true,				// use_cache
+						true, 				// add_hashtags
+						true, 				// encode
+						'twitter_desc',			// custom post meta
+						$source_id			// 
+					);
 				}
 			}
 

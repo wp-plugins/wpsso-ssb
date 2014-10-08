@@ -161,12 +161,18 @@ if ( ! class_exists( 'WpssoSsbSharingPinterest' ) ) {
 				return false;
 			}
 
-			if ( empty( $atts['caption'] ) && $post_id > 0 ) 
-				$atts['caption'] = $this->p->addons['util']['postmeta']->get_options( $post_id, 'pin_desc' );
-
-			// html encode param is false to use url encoding instead
-			if ( empty( $atts['caption'] ) ) 
-				$atts['caption'] = $this->p->webpage->get_caption( $opts['pin_caption'], $opts['pin_cap_len'], $use_post, true, true, false );
+			if ( empty( $atts['caption'] ) ) {
+				$atts['caption'] = $this->p->webpage->get_caption(
+					$opts['pin_caption'],		// title, excerpt, both
+					$opts['pin_cap_len'],		// max caption length
+					$use_post,			//
+					true,				// use_cache
+					true,				// add_hashtags
+					false,				// encode (false for later url encoding)
+					'pin_desc',			// custom post meta
+					$source_id
+				);
+			}
 
 			$query = 'url='.urlencode( $atts['url'] );
 			$query .= '&amp;media='.urlencode( $atts['photo'] );

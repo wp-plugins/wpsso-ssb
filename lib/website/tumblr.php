@@ -182,19 +182,42 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 
 			// we only need the caption, title, or description for some types of shares
 			if ( ! empty( $atts['photo'] ) || ! empty( $atts['embed'] ) ) {
-				// check for custom image or video caption
-				if ( empty( $atts['caption'] ) && ! empty( $post ) && $use_post == true ) 
-					$atts['caption'] = $this->p->addons['util']['postmeta']->get_options( $post_id, 
-						( ! empty( $atts['photo'] ) ? 'tumblr_img_desc' : 'tumblr_vid_desc' ) );
 				// html encode param is false to use url encoding instead
 				if ( empty( $atts['caption'] ) ) 
-					$atts['caption'] = $this->p->webpage->get_caption( $opts['tumblr_caption'], $opts['tumblr_cap_len'], $use_post, true, true, false );
+					$atts['caption'] = $this->p->webpage->get_caption(
+						$opts['tumblr_caption'],	// title, excerpt, both
+						$opts['tumblr_cap_len'],	// max caption length
+						$use_post,			//
+						true,				// use_cache
+						true,				// add_hashtags
+						false,				// encode (false for later url encoding)
+						( ! empty( $atts['photo'] ) ? 'tumblr_img_desc' : 'tumblr_vid_desc' ),	// custom post meta
+						$source_id
+					);
+
 			} else {
 				if ( empty( $atts['title'] ) ) 
-					$atts['title'] = $this->p->webpage->get_title( null, null, $use_post);
-				// html encode param is false to use url encoding instead
+					$atts['title'] = $this->p->webpage->get_title(
+						null,				// max length
+						null,				// trailing
+						$use_post,			//
+						true,				// use_cache
+						false,				// add_hashtags
+						false,				// encode (false for later url encoding)
+						null,				// custom post meta
+						$source_id
+					);
 				if ( empty( $atts['description'] ) ) 
-					$atts['description'] = $this->p->webpage->get_description( $opts['tumblr_desc_len'], '...', $use_post, true, true, false );
+					$atts['description'] = $this->p->webpage->get_description(
+						$opts['tumblr_desc_len'],	// max length
+						'...',				// trailing
+						$use_post,			//
+						true,				// use_cache
+						true,				// add_hashtags
+						false,				// encode (false for later url encoding)
+						null,				// custom post meta
+						$source_id
+					);
 			}
 
 			// define the button, based on what we have

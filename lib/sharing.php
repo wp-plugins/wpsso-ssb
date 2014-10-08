@@ -730,7 +730,7 @@ jQuery("#wpsso-sidebar").click( function(){
 			if ( empty( $ids ) ) {
 				if ( is_admin() ) {
 					if ( ( $obj = $this->p->util->get_post_object() ) === false  ||
-						 empty( $obj->filter ) || $obj->filter !== 'edit' )
+						$obj->post_status !== 'publish' )
 							return;
 				} elseif ( is_singular() && $this->is_post_buttons_disabled() ) {
 					$this->p->debug->log( 'exiting early: buttons disabled' );
