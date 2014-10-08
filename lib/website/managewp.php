@@ -82,8 +82,17 @@ if ( ! class_exists( 'WpssoSsbSharingManagewp' ) ) {
 				apply_filters( $this->p->cf['lca'].'_sharing_url', $atts['url'], 
 					$use_post, $atts['add_page'], $source_id );
 
-			if ( empty( $atts['title'] ) ) 
-				$atts['title'] = $this->p->webpage->get_title( null, null, $use_post);
+			if ( empty( $atts['title'] ) )
+				$atts['title'] = $this->p->webpage->get_title( 
+					null,				// max length
+					null,				// trailing
+					$use_post,			//
+					true,				// use_cache
+					false,				// add_hashtags
+					true,				// encode
+					null,				// custom post meta
+					$source_id
+				);
 
 			$script_src = $this->p->util->get_cache_url( $prot.'//managewp.org/share.js' ).'#'.$prot.'//managewp.org/share';
 

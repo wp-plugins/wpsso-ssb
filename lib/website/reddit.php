@@ -84,7 +84,16 @@ if ( ! class_exists( 'WpssoSsbSharingReddit' ) ) {
 					$use_post, $atts['add_page'], $source_id );
 
 			if ( empty( $atts['title'] ) ) 
-				$atts['title'] = $this->p->webpage->get_title( null, null, $use_post);
+				$atts['title'] = $this->p->webpage->get_title( 
+					null,				// max length
+					null,				// trailing
+					$use_post,			//
+					true,				// use_cache
+					false,				// add_hashtags
+					true,				// encode
+					null,				// custom post meta
+					$source_id
+				);
 
 			switch ( $opts['reddit_type'] ) {
 				case 'static-wide':

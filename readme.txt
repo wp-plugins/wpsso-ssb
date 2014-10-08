@@ -6,7 +6,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested Up To: 4.0
-Stable Tag: 1.0.9
+Stable Tag: 1.0.10
 
 Social Sharing Buttons extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons.
 
@@ -68,7 +68,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 	* [BuddyPress](https://wordpress.org/plugins/buddypress/) activity entries.
 
 <blockquote>
-<p><a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> (WPSSO) plugin (version 2.6.3 and up) is required to use the WPSSO SSB extension. You can use the <em>Free version</em> of WPSSO SSB with either WPSSO Free or Pro, but the <strong><a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro version</a> requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a></strong> (ie. you must purchase WPSSO Pro as well).</p>
+<p><a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> (WPSSO) plugin (version 2.6.8 and up) is required to use the WPSSO SSB extension. You can use the <em>Free version</em> of WPSSO SSB with either WPSSO Free or Pro, but the <strong><a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro version</a> requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a></strong> (ie. you must purchase WPSSO Pro as well).</p>
 </blockquote>
 
 = Proven Performance =
@@ -163,6 +163,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* Added an extra check for the existence of the CSS minification class.
 
 == Upgrade Notice ==
+
+= 1.0.10 =
+
+Update for changes WPSSO v2.6.8 SucomWebpage class get_caption(), get_title(), and get_description() methods.
 
 = 1.0.9 =
 
