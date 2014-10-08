@@ -140,6 +140,13 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.10 =
+
+* **Bugfixes**
+	* *None*
+* **Enhancements**
+	* Updated the Twitter, Tumblr, Pinterest sharing buttons code to include the source_id argument when calling the SucomWebpage class `get_caption()`, `get_title()`, and `get_description()` methods.
+
 = Version 1.0.9 =
 
 * **Bugfixes**
