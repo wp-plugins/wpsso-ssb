@@ -68,7 +68,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 	* [BuddyPress](https://wordpress.org/plugins/buddypress/) activity entries.
 
 <blockquote>
-<p><a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> (WPSSO) plugin (version 2.6.8 and up) is required to use the WPSSO SSB extension. You can use the <em>Free version</em> of WPSSO SSB with either WPSSO Free or Pro, but the <strong><a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro version</a> requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a></strong> (ie. you must purchase WPSSO Pro as well).</p>
+<p><a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> (WPSSO) plugin (version 2.6.9.1 and up) is required to use the WPSSO SSB extension. You can use the <em>Free version</em> of WPSSO SSB with either WPSSO Free or Pro, but the <strong><a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro version</a> requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a></strong> (ie. you must purchase WPSSO Pro as well).</p>
 </blockquote>
 
 = Proven Performance =
@@ -140,39 +140,17 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
-= Version 1.0.10 =
+= Version 1.0.10.1 =
 
 * **Bugfixes**
 	* *None*
 * **Enhancements**
 	* Updated the Twitter, Tumblr, Pinterest sharing buttons code to include the source_id argument when calling the SucomWebpage class `get_caption()`, `get_title()`, and `get_description()` methods.
-
-= Version 1.0.9 =
-
-* **Bugfixes**
-	* *None*
-* **Enhancements**
-	* Added an 'wpsso_buttons_cache_salt' filter to modify the sharing buttons cache salt string.
-
-= Version 1.0.8 =
-
-* **Bugfixes**
-	* Added the blog ID number to the minimized CSS stylesheet file name (allowing the same cache folder to be shared with multiple blogs).
-	* Fixed a minor typo in the CSS stylesheet file name variable.
-* **Enhancements**
-	* Added an extra check for the existence of the CSS minification class.
+	* Tested with WPSSO v2.6.9.1.
 
 == Upgrade Notice ==
 
-= 1.0.10 =
+= 1.0.10.1 =
 
-Update for changes WPSSO v2.6.8 SucomWebpage class get_caption(), get_title(), and get_description() methods.
-
-= 1.0.9 =
-
-Adds a 'wpsso_buttons_cache_salt' filter to modify the sharing buttons cache salt string.
-
-= 1.0.8 =
-
-Added the blog ID number to the minimized CSS stylesheet file name, allowing the same cache folder to be shared with multiple blogs.
+Update for changes in SucomWebpage class get_caption(), get_title(), and get_description() methods. Tested with WPSSO v2.6.9.1.
 
