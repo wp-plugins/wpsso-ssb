@@ -87,7 +87,7 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 		public function filter_meta_sharing_rows( $rows, $form, $post_info ) {
 
 			$twitter_cap_len = $this->p->util->get_tweet_max_len( get_permalink( $post_info['id'] ) );
-			list( $pid, $video_url ) = $this->p->addons['util']['postmeta']->get_media( $post_info['id'] );
+			list( $pid, $video_url ) = $this->p->sharing->get_sharing_media( $post_info['id'] );
 
 			$rows[] = '<td colspan="2" align="center">'.$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssossb' ) ).'</td>';
 

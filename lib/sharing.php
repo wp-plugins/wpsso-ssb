@@ -152,6 +152,10 @@ jQuery("#wpsso-sidebar").click( function(){
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,	// add sharing options and css file contents to defaults
 			) );
+			$this->p->util->add_plugin_filters( $this, array( 
+				'pre_filter_remove' => 2,	// remove the buttons filter from content, excerpt, etc.
+				'post_filter_add' => 2,		// re-add the buttons filter to content, excerpt, etc.
+			), 10, 'wpssossb' );
 
 			if ( is_admin() ) {
 				add_action( 'add_meta_boxes', array( &$this, 'add_post_metaboxes' ) );
@@ -225,7 +229,7 @@ jQuery("#wpsso-sidebar").click( function(){
 				case 'stumble_badge':
 				case 'plugin_min_shorten':
 				case ( preg_match( '/_order$/', $key ) ? true : false ):
-					return 'posnum';
+					return 'pos_num';
 					break;
 				// text strings that can be blank
 				case 'gp_expandto':
@@ -236,7 +240,7 @@ jQuery("#wpsso-sidebar").click( function(){
 				case 'plugin_bitly_login':
 				case 'plugin_bitly_api_key':
 				case 'plugin_google_api_key':
-					return 'okblank';
+					return 'ok_blank';
 					break;
 				// options that cannot be blank
 				case 'fb_markup': 
@@ -258,7 +262,7 @@ jQuery("#wpsso-sidebar").click( function(){
 				case 'tumblr_caption':
 				case ( strpos( $key, 'buttons_pos_' ) === 0 ? true : false ):
 				case ( preg_match( '/^[a-z]+_js_loc$/', $key ) ? true : false ):
-					return 'notblank';
+					return 'not_blank';
 					break;
 			}
 			return $type;
@@ -517,14 +521,23 @@ jQuery("#wpsso-sidebar").click( function(){
 			}
 		}
 
+		public function filter_pre_filter_remove( $ret, $filter ) {
+			return ( $this->remove_buttons_filter( $filter ) ? true : $ret );
+		}
+
+		public function filter_post_filter_add( $ret, $filter ) {
+			return ( $this->add_buttons_filter( $filter ) ? true : $ret );
+		}
+
 		public function add_buttons_filter( $type = 'the_content' ) {
-			add_filter( $type, array( &$this, 'get_buttons_'.$type ), WPSSOSSB_SOCIAL_PRIORITY );
-			$this->p->debug->log( 'buttons filter for '.$type.' added' );
+			$rc = add_filter( $type, array( &$this, 'get_buttons_'.$type ), WPSSOSSB_SOCIAL_PRIORITY );
+			$this->p->debug->log( 'buttons filter '.$type.' added ('.( $rc  ? 'true' : 'false' ).')' );
+			return $rc;
 		}
 
 		public function remove_buttons_filter( $type = 'the_content' ) {
 			$rc = remove_filter( $type, array( &$this, 'get_buttons_'.$type ), WPSSOSSB_SOCIAL_PRIORITY );
-			$this->p->debug->log( 'buttons filter for '.$type.' removed ('.( $rc  ? 'true' : 'false' ).')' );
+			$this->p->debug->log( 'buttons filter '.$type.' removed ('.( $rc  ? 'true' : 'false' ).')' );
 			return $rc;
 		}
 
@@ -875,6 +888,35 @@ jQuery("#wpsso-sidebar").click( function(){
 				$ids[$id] = $this->p->cf['plugin']['wpssossb']['lib']['website'][$id];
 			return $ids;
 		}
+
+		public function get_sharing_media( $post_id ) {
+			$opts = $this->p->addons['util']['postmeta']->get_options( $post_id );
+			foreach ( array(
+				'og_img_id',
+				'og_img_id_pre',
+				'og_vid_url',
+				'og_vid_embed',
+			) as $key )
+				if ( ! isset( $opts[$key] ) )
+					$opts[$key] = '';
+
+			if ( empty( $opts['og_img_id'] ) ) {
+				if ( $this->p->is_avail['postthumb'] == true && 
+					has_post_thumbnail( $post_id ) )
+						$opts['og_img_id'] = get_post_thumbnail_id( $post_id );
+				else $opts['og_img_id'] = $this->p->media->get_first_attached_image_id( $post_id );
+			} elseif ( $opts['og_img_id_pre'] === 'ngg' )
+				$opts['og_img_id'] = $opts['og_img_id_pre'].'-'.$opts['og_img_id'];
+
+			if ( empty( $opts['og_vid_url'] ) ) {
+				$videos = $this->p->media->get_content_videos( 1, $post_id, false, $opts['og_vid_embed'] );
+				if ( ! empty( $videos[0]['og:video'] ) ) 
+					$opts['og_vid_url'] = $videos[0]['og:video'];
+			}
+
+			return array( $opts['og_img_id'], $opts['og_vid_url'] );
+		}
+
 	}
 }
 
