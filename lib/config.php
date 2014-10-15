@@ -110,10 +110,8 @@ if ( ! class_exists( 'WpssoSsbConfig' ) ) {
 		);
 
 		public static function set_constants( $plugin_filepath ) { 
-
 			$lca = 'wpssossb';
 			$slug = self::$cf['plugin'][$lca]['slug'];
-			$version = self::$cf['plugin'][$lca]['version'];
 
 			define( 'WPSSOSSB_FILEPATH', $plugin_filepath );						
 			define( 'WPSSOSSB_PLUGINDIR', trailingslashit( plugin_dir_path( $plugin_filepath ) ) );
@@ -139,10 +137,8 @@ if ( ! class_exists( 'WpssoSsbConfig' ) ) {
 		}
 
 		public static function require_libs( $plugin_filepath ) {
-
 			if ( ! is_admin() )
 				require_once( WPSSOSSB_PLUGINDIR.'lib/functions.php' );
-
 			add_filter( 'wpssossb_load_lib', array( 'WpssoSsbConfig', 'load_lib' ), 10, 3 );
 		}
 
