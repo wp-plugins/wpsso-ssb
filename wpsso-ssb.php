@@ -80,7 +80,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 				$this->p->debug->log( $shortname.' requires WPSSO version '.$this->min_version.' or newer ('.$wpsso_version.' installed)' );
 				if ( is_admin() )
 					$this->p->notice->err( $shortname.' v'.WpssoSsbConfig::$cf['plugin']['wpssossb']['version'].
-					' requires WPSSO v'.$this->min_version.' or newer (version '.$wpsso_version.' is currently installed).', true );
+					' requires WPSSO v'.$this->min_version.' or newer ('.$wpsso_version.' is currently installed).', true );
 				return;
 			}
 
