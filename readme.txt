@@ -6,7 +6,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested Up To: 4.0
-Stable Tag: 1.0.10.1
+Stable Tag: 1.0.10.2
 
 Social Sharing Buttons extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons.
 
@@ -143,7 +143,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 = Version 1.0.10.2 =
 
 * **Bugfixes**
-	* Fixed the short URL return value when shorting fails (should have been false instead of an empty string).
+	* Fixed a return value when URL shortening fails (should have been false instead of an empty string).
 * **Improvements**
 	* *None*
 * **New Features**
@@ -158,6 +158,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* Tested with WPSSO v2.6.9.1.
 
 == Upgrade Notice ==
+
+= 1.0.10.2 =
+
+Fixed a return value when URL shortening fails (should have been false instead of an empty string).
 
 = 1.0.10.1 =
 
