@@ -140,6 +140,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.10.2 =
+
+* **Bugfixes**
+	* Fixed the short URL return value when shorting fails (should have been false instead of an empty string).
+* **Improvements**
+	* *None*
+* **New Features**
+	* *None*
+
 = Version 1.0.10.1 =
 
 * **Bugfixes**
