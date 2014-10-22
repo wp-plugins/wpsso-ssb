@@ -1,7 +1,7 @@
 === WPSSO Social Sharing Buttons - Fast and accurate social sharing buttons ===
 Contributors: jsmoriss
 Donate Link: http://surniaulula.com/extend/plugins/wpsso-ssb/
-Tags: wpsso, like, send, share, facebook, google, google plus, g+, twitter, linkedin, social, pinterest, tumblr, stumbleupon, widget, shortcode, bbpress, buddypress, bitly, shorten
+Tags: wpsso, like, send, share, facebook, google, google plus, g+, twitter, linkedin, social, pinterest, tumblr, stumbleupon, widget, shortcode, bbpress, buddypress, bitly, shorten, woocommerce
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
@@ -18,7 +18,7 @@ WPSSO extension to provide fast and accurate Social Sharing Buttons with support
 
 <p><strong>Make sure social websites present your content in the best possible way, no matter <em>how</em> your webpage is shared</strong> &mdash; from sharing buttons on the webpage, browser add-ons and extensions, or URLs pasted directly on social websites.</p>
 
-<p>WPSSO Social Sharing Buttons (WPSSO SSB) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> plugin, extending its features with additional settings pages, tabs, and options for social sharing buttons. WPSSO SSB is <strong><em>fast</em></strong>, <strong><em>efficient</em></strong>, and &mdash; using WPSSO as its framework &mdash; provides <strong><em>accurate</em></strong> information about your content to social websites.</p>
+<p>WPSSO Social Sharing Buttons (WPSSO SSB) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> plugin, extending its features with additional settings pages, tabs, and options for social sharing buttons. Add social buttons to your <em>content</em>, <em>excerpt</em>, <em>admin edit pages</em>, using a <em>CSS sidebar</em>, <em>shortcode</em>, <em>widget</em>, <em>function</em>, on <em>custom post types</em>, <em>bbPress</em>, <em>BuddyPress</em>, and <em>WooCommerce</em> pages. WPSSO SSB is <strong><em>fast</em></strong>, <strong><em>efficient</em></strong>, and &mdash; using WPSSO as its framework &mdash; provides <strong><em>accurate</em></strong> information about your content to social websites.</p>
 
 <p>You can download the <a href="https://wordpress.org/plugins/wpsso-ssb/">Free version of WPSSO SSB on WordPress.org</a> and <a href="(http://surniaulula.com/extend/plugins/wpsso-ssb/">purchase Pro license(s) on SurniaUlula.com</a> (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
 
@@ -50,7 +50,7 @@ Each of these social sharing buttons can be enabled, configured, and styled indi
 * Tumblr (Links, Quotes, Images, Videos)
 * Twitter (Summary, Large Image Summary, Photo, Gallery, Player and Product Cards)
 
-The Facebook, Google+ and Twitter sharing buttons also support *multiple default languages*, and WPSSO SSB can also include a number of ***hashtags***, from WordPress and/or NextGEN Gallery tag names, in Tweet texts and other social captions.
+The Facebook, Google+ and Twitter sharing buttons also support *multiple default languages*, and WPSSO SSB can also include a number of ***hashtags*** &mdash; from WordPress and/or NextGEN Gallery tag names &mdash; in Tweet texts and other social captions.
 
 **Pro / Power-User Version**
 
