@@ -8,7 +8,7 @@ Requires At Least: 3.0
 Tested Up To: 4.0
 Stable Tag: 1.0.10.2
 
-WPSSO extension to provide fast and accurate Social Sharing Buttons - with support for hashtags, shortening, bbPress, and BuddyPress.
+WPSSO extension to provide fast and accurate Social Sharing Buttons, with support for hashtags, shortening, bbPress, BuddyPress, and WooCommerce.
 
 == Description ==
 
@@ -64,8 +64,9 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 * Ability to include / exclude sharing buttons by post type.
 * Selection of preset button options by location (content, excerpt, shortcode, widget, etc.).
 * Additional sharing button locations and stylesheets for supported addons:
-	* [bbPress](https://wordpress.org/plugins/bbpress/) single pages.
-	* [BuddyPress](https://wordpress.org/plugins/buddypress/) activity entries.
+	* [bbPress](https://wordpress.org/plugins/bbpress/)
+	* [BuddyPress](https://wordpress.org/plugins/buddypress/)
+	* [WooCommerce](https://wordpress.org/plugins/woocommerce/)
 
 <blockquote>
 <p><a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> (WPSSO) plugin (version 2.6.9.1 and up) is required to use the WPSSO SSB extension. You can use the <em>Free version</em> of WPSSO SSB with either WPSSO Free or Pro, but the <a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro version</a> requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a> as well.</p>
