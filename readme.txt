@@ -8,7 +8,7 @@ Requires At Least: 3.0
 Tested Up To: 4.0
 Stable Tag: 1.0.10.2
 
-WPSSO extension to provide fast and accurate Social Sharing Buttons, with support for hashtags, shortening, bbPress, BuddyPress, and WooCommerce.
+WPSSO extension to provide fast and accurate Social Sharing Buttons with support for hashtags, shortening, bbPress, BuddyPress, and WooCommerce.
 
 == Description ==
 
