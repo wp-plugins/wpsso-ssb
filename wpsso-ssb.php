@@ -6,7 +6,7 @@
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: Social Sharing Buttons extension for the WordPress Social Sharing Optimization (WPSSO) plugin - Fast and accurate social sharing buttons!
+ * Description: WPSSO extension to provide fast and accurate Social Sharing Buttons - with support for hashtags, shortening, bbPress, and BuddyPress.
  * Requires At Least: 3.0
  * Tested Up To: 4.0
  * Version: 1.0.10.2
