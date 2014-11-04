@@ -141,6 +141,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.10.3 =
+
+* **Bugfixes**
+	* Fixed the sharing URL for buttons in a BuddyPress activity loop by including the `$source_id` value in the transient cache object id (Pro version).
+* **Improvements**
+	* *None*
+* **New Features**
+	* *None*
+
 = Version 1.0.10.2 =
 
 * **Bugfixes**
