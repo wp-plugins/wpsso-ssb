@@ -71,6 +71,7 @@ if ( ! class_exists( 'WpssoSsbSharingReddit' ) ) {
 		}
 
 		public function get_html( $atts = array(), &$opts = array() ) {
+			$this->p->debug->mark();
 			if ( empty( $opts ) ) 
 				$opts =& $this->p->options;
 			$prot = empty( $_SERVER['HTTPS'] ) ? 'http:' : 'https:';
