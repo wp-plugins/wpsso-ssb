@@ -1,4 +1,4 @@
-=== WPSSO Social Sharing Buttons - Fast and accurate social sharing buttons ===
+=== WPSSO Social Sharing Buttons - Buffer, Facebook, Google+, LinkedIn, ManageWP, Pinterest, Reddit, StumbleUpon, Tumblr, Twitter ===
 Contributors: jsmoriss
 Donate Link: http://surniaulula.com/extend/plugins/wpsso-ssb/
 Tags: wpsso, like, send, share, facebook, google, google plus, g+, twitter, linkedin, social, pinterest, tumblr, stumbleupon, widget, shortcode, bbpress, buddypress, bitly, shorten, woocommerce
