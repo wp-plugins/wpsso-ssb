@@ -1,4 +1,4 @@
-=== WPSSO Social Sharing Buttons - Facebook G+ LinkedIn Pinterest Reddit Twitter + Many More ===
+=== WPSSO Social Sharing Buttons - Hashtags, URL Shortening, bbPress, BuddyPress, WooCommerce and More ===
 Contributors: jsmoriss
 Donate Link: http://surniaulula.com/extend/plugins/wpsso-ssb/
 Tags: wpsso, like, send, share, facebook, google, google plus, g+, twitter, linkedin, social, pinterest, tumblr, stumbleupon, widget, shortcode, bbpress, buddypress, bitly, shorten, woocommerce
