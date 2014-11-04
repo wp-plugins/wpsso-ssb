@@ -6,7 +6,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested Up To: 4.0
-Stable Tag: 1.0.10.2
+Stable Tag: 1.0.10.3
 
 WPSSO extension to provide fast and accurate Social Sharing Buttons, including support for hashtags, shortening, bbPress, BuddyPress, and WooCommerce.
 
@@ -145,7 +145,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 * **Bugfixes**
 	* Fixed the sharing URL for buttons in a BuddyPress activity loop by including the `$source_id` value in the transient cache object id (Pro version).
-	* Fixed a possible infinite loop with the content/excerpt filters.
+	* Fixed a possible infinite loop with the content/excerpt filters (affected the Twitter, Tumblr, and Pinterest buttons).
 * **Improvements**
 	* *None*
 * **New Features**
@@ -169,6 +169,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* Tested with WPSSO v2.6.9.1.
 
 == Upgrade Notice ==
+
+= 1.0.10.3 =
+
+Fixes for the BuddyPress activity buttons (Pro version), along with a possible infinite loop condition affecting the Twitter, Tumblr, and Pinterest buttons.
 
 = 1.0.10.2 =
 
