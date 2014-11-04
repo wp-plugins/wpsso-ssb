@@ -122,6 +122,7 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 		}
 
 		public function get_html( $atts = array(), &$opts = array() ) {
+			$this->p->debug->mark();
 			if ( empty( $opts ) ) 
 				$opts =& $this->p->options;
 			$prot = empty( $_SERVER['HTTPS'] ) ? 'http:' : 'https:';
@@ -190,7 +191,7 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 						$use_post,			//
 						true,				// use_cache
 						true,				// add_hashtags
-						false,				// encode (false for later url encoding)
+						false,				// encode is false for later url encoding)
 						( ! empty( $atts['photo'] ) ? 'tumblr_img_desc' : 'tumblr_vid_desc' ),	// custom post meta
 						$source_id
 					);
