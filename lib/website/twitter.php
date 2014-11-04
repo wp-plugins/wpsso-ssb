@@ -130,11 +130,9 @@ if ( ! class_exists( 'WpssoSsbSharingTwitter' ) ) {
 
 			$long_url = empty( $atts['url'] ) ? 
 				$this->p->util->get_sharing_url( $use_post, $atts['add_page'], $source_id ) : 
-				apply_filters( $this->p->cf['lca'].'_sharing_url', $atts['url'], 
-					$use_post, $atts['add_page'], $source_id );
+				apply_filters( $this->p->cf['lca'].'_sharing_url', $atts['url'], $use_post, $atts['add_page'], $source_id );
 
-			$short_url = apply_filters( $this->p->cf['lca'].'_shorten_url', 
-				$long_url, $opts['twitter_shortener'] );
+			$short_url = apply_filters( $this->p->cf['lca'].'_shorten_url', $long_url, $opts['twitter_shortener'] );
 
 			if ( ! array_key_exists( 'lang', $atts ) )
 				$atts['lang'] = empty( $opts['twitter_lang'] ) ? 'en' : $opts['twitter_lang'];
