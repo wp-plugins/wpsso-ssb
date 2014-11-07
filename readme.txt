@@ -141,6 +141,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.0.10.4 =
+
+* **Bugfixes**
+	* Added a check to disable social sharing buttons in RSS feeds.
+* **Improvements**
+	* *None*
+* **New Features**
+	* *None*
+
 = Version 1.0.10.3 =
 
 * **Bugfixes**
