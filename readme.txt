@@ -179,6 +179,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Upgrade Notice ==
 
+= 1.0.10.4 =
+
+Added a check to disable social sharing buttons in RSS feeds.
+
 = 1.0.10.3 =
 
 Fixes for the BuddyPress activity buttons (Pro version), along with a possible infinite loop condition affecting the Twitter, Tumblr, and Pinterest buttons.
