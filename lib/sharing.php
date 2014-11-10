@@ -613,6 +613,9 @@ jQuery("#wpsso-sidebar").click( function(){
 					$this->p->debug->log( $type.' filter skipped: '.$type.' ignored with is_admin()'  );
 					return $text;
 				}
+			} elseif ( is_feed() ) {
+				$this->p->debug->log( $type.' filter skipped: no buttons allowed in RSS feeds'  );
+				return $text;
 			} else {
 				if ( ! is_singular() && empty( $this->p->options['buttons_on_index'] ) ) {
 					$this->p->debug->log( $type.' filter skipped: index page without buttons_on_index enabled' );
@@ -852,6 +855,7 @@ jQuery("#wpsso-sidebar").click( function(){
 		public function is_post_buttons_disabled() {
 			global $post;
 			$ret = false;
+
 			if ( ! empty( $post ) ) {
 				$post_type = $post->post_type;
 				if ( $this->p->addons['util']['postmeta']->get_options( $post->ID, 'buttons_disabled' ) ) {

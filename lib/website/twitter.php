@@ -72,7 +72,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTwitter' ) && class_exists( 'WpssoSs
 				$rows[] = $this->p->util->th( 'Shorten URLs with', 'short', null, 
 				'If you select a URL shortening service here, <strong>you must also enter its API credentials</strong>
 				on the '.$this->p->util->get_admin_url( 'advanced#sucom-tab_plugin_apikeys', 'Advanced settings page' ).'.' ).
-				( $this->p->check->aop( 'wpssossb' ) ?  '<td>'.$this->form->get_select( 'twitter_shortener', $this->p->cf['form']['shorteners'], 'medium' ).'&nbsp;' :
+				( $this->p->check->aop( 'wpssossb' ) ? '<td>'.$this->form->get_select( 'twitter_shortener', $this->p->cf['form']['shorteners'], 'medium' ).'&nbsp;' :
 				'<td class="blank">'.$this->form->get_hidden( 'twitter_shortener' ).$this->p->cf['form']['shorteners'][$this->p->options['twitter_shortener']].' &mdash; ' ).
 				' using these '.$this->p->util->get_admin_url( 'advanced#sucom-tab_plugin_apikeys', 'API Keys' ).'</td>';
 			}
