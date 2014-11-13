@@ -69,7 +69,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 	* [WooCommerce](https://wordpress.org/plugins/woocommerce/)
 
 <blockquote>
-<p><a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> (WPSSO) plugin (version 2.6.9.1 and up) is required to use the WPSSO SSB extension. You can use the <em>Free version</em> of WPSSO SSB with either WPSSO Free or Pro, but the <a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro version</a> requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a> as well.</p>
+<p><a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> (WPSSO) plugin (version 2.7 and up) is required to use the WPSSO SSB extension. You can use the <em>Free version</em> of WPSSO SSB with either WPSSO Free or Pro, but the <a href="http://surniaulula.com/extend/plugins/wpsso-ssb/">WPSSO SSB Pro version</a> requires the use of <a href="http://surniaulula.com/extend/plugins/wpsso/">WPSSO Pro</a> as well.</p>
 </blockquote>
 
 = Proven Performance =
@@ -141,57 +141,20 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
-= Version 1.0.10.4 =
+= Version 1.1 =
 
 * **Bugfixes**
-	* Added a check to disable social sharing buttons in RSS feeds.
-* **Improvements**
 	* *None*
+* **Improvements**
+	* Added support for the new 'wpsso_plugin_image_sizes' filter.
 * **New Features**
 	* *None*
 
-= Version 1.0.10.3 =
-
-* **Bugfixes**
-	* Fixed the sharing URL for buttons in a BuddyPress activity loop by including the `$source_id` value in the transient cache object id (Pro version).
-	* Fixed a possible infinite loop with the content/excerpt filters (affected the Twitter, Tumblr, and Pinterest buttons).
-* **Improvements**
-	* *None*
-* **New Features**
-	* *None*
-
-= Version 1.0.10.2 =
-
-* **Bugfixes**
-	* Fixed a return value when URL shortening fails (should have been false instead of an empty string).
-* **Improvements**
-	* *None*
-* **New Features**
-	* *None*
-
-= Version 1.0.10.1 =
-
-* **Bugfixes**
-	* *None*
-* **Enhancements**
-	* Updated the Twitter, Tumblr, Pinterest sharing buttons code to include the source_id argument when calling the SucomWebpage class `get_caption()`, `get_title()`, and `get_description()` methods.
-	* Tested with WPSSO v2.6.9.1.
+Tested with WPSSO version 2.7.
 
 == Upgrade Notice ==
 
-= 1.0.10.4 =
+= 1.1 =
 
-Added a check to disable social sharing buttons in RSS feeds.
-
-= 1.0.10.3 =
-
-Fixes for the BuddyPress activity buttons (Pro version), along with a possible infinite loop condition affecting the Twitter, Tumblr, and Pinterest buttons.
-
-= 1.0.10.2 =
-
-Fixed a return value when URL shortening fails (should have been false instead of an empty string).
-
-= 1.0.10.1 =
-
-Update for changes in SucomWebpage class get_caption(), get_title(), and get_description() methods. Tested with WPSSO v2.6.9.1.
+Tested with WPSSO version 2.7.
 
