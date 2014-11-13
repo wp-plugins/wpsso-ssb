@@ -91,8 +91,15 @@ if ( ! class_exists( 'WpssoSsbSharingBuffer' ) ) {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
-			$this->p->util->add_plugin_filters( $this, array( 'get_defaults' => 1 ) );
-			$this->p->util->add_img_sizes_from_opts( array( 'buffer_img' => 'buffer' ) );
+			$this->p->util->add_plugin_filters( $this, array( 
+				'plugin_image_sizes' => 1,
+				'get_defaults' => 1,
+			) );
+		}
+
+		public function filter_plugin_image_sizes( $sizes ) {
+			$sizes['buffer_img'] = array( 'name' => 'buffer', 'label' => 'Buffer Button Image Dimensions' );
+			return $sizes;
 		}
 
 		public function filter_get_defaults( $opts_def ) {

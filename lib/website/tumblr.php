@@ -113,8 +113,15 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
-			$this->p->util->add_plugin_filters( $this, array( 'get_defaults' => 1 ) );
-			$this->p->util->add_img_sizes_from_opts( array( 'tumblr_img' => 'tumblr' ) );
+			$this->p->util->add_plugin_filters( $this, array( 
+				'plugin_image_sizes' => 1,
+				'get_defaults' => 1,
+			) );
+		}
+
+		public function filter_plugin_image_sizes( $sizes ) {
+			$sizes['tumblr_img'] = array( 'name' => 'tumblr', 'label' => 'Tumblr Button Image Dimensions' );
+			return $sizes;
 		}
 
 		public function filter_get_defaults( $opts_def ) {
