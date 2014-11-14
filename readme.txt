@@ -6,7 +6,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested Up To: 4.0
-Stable Tag: 1.0.10.4
+Stable Tag: 1.1
 
 WPSSO extension to provide fast and accurate Social Sharing Buttons, including support for hashtags, shortening, bbPress, BuddyPress, and WooCommerce.
 
@@ -156,5 +156,5 @@ Tested with WPSSO version 2.7.
 
 = 1.1 =
 
-Tested with WPSSO version 2.7.
+Update for WPSSO version 2.7.
 
