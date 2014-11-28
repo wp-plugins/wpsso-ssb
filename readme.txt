@@ -144,7 +144,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 = Version 1.1.0.1 =
 
 * **Bugfixes**
-	* Moved the `is_bbpress()` test from `__construct()` to each filter (Pro version)
+	* Moved the `is_bbpress()` test from `__construct()` to each filter for bbPress v2.5.4 (Pro version)
 * **Improvements**
 	* *None*
 * **New Features**
@@ -159,9 +159,11 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * **New Features**
 	* *None*
 
-Tested with WPSSO version 2.7.
-
 == Upgrade Notice ==
+
+= 1.1.0.1 =
+
+Moved the is_bbpress() test from __construct() to each filter for bbPress v2.5.4 (Pro version).
 
 = 1.1 =
 
