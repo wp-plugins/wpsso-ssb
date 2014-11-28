@@ -141,6 +141,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.1.0.1 =
+
+* **Bugfixes**
+	* Moved the `is_bbpress()` test from `__construct()` to each filter (Pro version)
+* **Improvements**
+	* *None*
+* **New Features**
+	* *None*
+
 = Version 1.1 =
 
 * **Bugfixes**
