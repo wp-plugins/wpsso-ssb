@@ -141,6 +141,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.1.1 =
+
+* **Bugfixes**
+	* *None*
+* **Improvements**
+	* *None*
+* **New Features**
+	* Added the 'Position in bbPress Single' option on the SSO Sharing Buttons settings page (Pro version).
+
 = Version 1.1.0.1 =
 
 * **Bugfixes**
@@ -160,6 +169,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* *None*
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+
+Added the 'Position in bbPress Single' option on the SSO Sharing Buttons settings page (Pro version).
 
 = 1.1.0.1 =
 
