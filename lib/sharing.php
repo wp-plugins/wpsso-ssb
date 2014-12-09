@@ -605,7 +605,7 @@ jQuery("#wpsso-sidebar").click( function(){
 			return $this->get_buttons( $text, 'content' );
 		}
 
-		public function get_buttons( &$text, $type = 'content', $use_post = true ) {
+		public function get_buttons( &$text, $type = 'content', $use_post = true, $buttons_pos = '' ) {
 
 			// should we skip the sharing buttons for this content type or webpage?
 			if ( is_admin() ) {
@@ -681,9 +681,10 @@ jQuery("#wpsso-sidebar").click( function(){
 				}
 			}
 
-			// just in case
-			$buttons_pos = empty( $this->p->options['buttons_pos_'.$type] ) ? 
-				'bottom' : $this->p->options['buttons_pos_'.$type];
+			if ( empty( $buttons_pos ) ) {
+				$buttons_pos = empty( $this->p->options['buttons_pos_'.$type] ) ? 
+					'bottom' : $this->p->options['buttons_pos_'.$type];
+			}
 
 			switch ( $buttons_pos ) {
 				case 'top': 

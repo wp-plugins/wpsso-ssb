@@ -42,9 +42,6 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 						case ( strpos( $idx, 'tooltip-buttons_pos_' ) === false ? false : true ):
 							$text = 'Individual social sharing button(s) must also be enabled below.';
 							break;
-						case 'tooltip-buttons_pos_excerpt':
-							$text = 'Individual social sharing button(s) must also be enabled below.';
-							break;
 						case 'tooltip-buttons_on_index':
 							$text = 'Add the following social sharing buttons to each entry of an index webpage (<strong>non-static</strong> 
 							homepage, category, archive, etc.). By Default, social sharing buttons are <em>not</em> included on index webpages 
