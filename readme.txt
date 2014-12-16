@@ -141,6 +141,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.1.2 =
+
+* **Bugfixes**
+	* *None*
+* **Improvements**
+	* Added a check on the admin side to make sure WPSSO is installed and active.
+* **New Features**
+	* *None*
+
 = Version 1.1.1 =
 
 * **Bugfixes**
@@ -150,35 +159,13 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * **New Features**
 	* Added the 'Position in bbPress Single' option on the SSO Sharing Buttons settings page (Pro version).
 
-= Version 1.1.0.1 =
-
-* **Bugfixes**
-	* Moved the `is_bbpress()` test from `__construct()` to each filter for bbPress v2.5.4 (Pro version)
-* **Improvements**
-	* *None*
-* **New Features**
-	* *None*
-
-= Version 1.1 =
-
-* **Bugfixes**
-	* *None*
-* **Improvements**
-	* Added support for the new 'wpsso_plugin_image_sizes' filter.
-* **New Features**
-	* *None*
-
 == Upgrade Notice ==
+
+= 1.1.2 =
+
+Added a check on the admin side to make sure the WPSSO plugin is installed and active.
 
 = 1.1.1 =
 
 Added the 'Position in bbPress Single' option on the SSO Sharing Buttons settings page (Pro version).
-
-= 1.1.0.1 =
-
-Moved the is_bbpress() test from __construct() to each filter for bbPress v2.5.4 (Pro version).
-
-= 1.1 =
-
-Update for WPSSO version 2.7.
 
