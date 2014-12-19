@@ -717,14 +717,17 @@ jQuery("#wpsso-sidebar").click( function(){
 			// apply the presets to $custom_opts
 			if ( ! empty( $preset_id ) && ! empty( self::$cf['opt']['preset'] ) ) {
 				if ( array_key_exists( $preset_id, self::$cf['opt']['preset'] ) &&
-					is_array( self::$cf['opt']['preset'][$preset_id] ) )
-						$custom_opts = array_merge( $custom_opts, self::$cf['opt']['preset'][$preset_id] );
-				else $this->p->debug->log( $preset_id.' preset missing or not array'  );
+					is_array( self::$cf['opt']['preset'][$preset_id] ) ) {
+					$this->p->debug->log( 'applying preset_id '.$preset_id.' to options' );
+					$custom_opts = array_merge( $custom_opts, self::$cf['opt']['preset'][$preset_id] );
+				} else $this->p->debug->log( $preset_id.' preset_id missing or not array'  );
 			} 
 
 			$filter_name = $this->p->cf['lca'].'_sharing_html_'.$filter_id.'_options';
-			if ( ! empty( $filter_id ) && has_filter( $filter_name ) )
+			if ( ! empty( $filter_id ) && has_filter( $filter_name ) ) {
+				$this->p->debug->log( 'applying filter_id '.$filter_id.' to options ('.$filter_name.')' );
 				$custom_opts = apply_filters( $filter_name, $custom_opts );
+			}
 
 			$html = '';
 			foreach ( $ids as $id ) {
