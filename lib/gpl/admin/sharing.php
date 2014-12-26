@@ -93,10 +93,9 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 
 			$th = $this->p->util->th( 'Pinterest Image Caption', 'medium', 'postmeta-pin_desc' );
 			if ( ! empty( $pid ) ) {
-				$img = $this->p->media->get_attachment_image_src( $pid, $this->p->cf['lca'].'-pinterest', false );
+				$img = $this->p->media->get_attachment_image_src( $pid, $this->p->cf['lca'].'-pinterest-button', false );
 				if ( empty( $img[0] ) )
-					$rows[] = $th.'<td class="blank"><em>Caption disabled - image ID '.$pid.' is too small for \''.
-					$this->p->cf['lca'].'-pinterest\' image dimensions.</em></td>';
+					$rows[] = $th.'<td class="blank"><em>Caption disabled - image ID '.$pid.' is too small for the Pinterest button Image Dimensions.</em></td>';
 				else $rows[] = $th.'<td class="blank">'.
 					$this->p->webpage->get_caption( $this->p->options['pin_caption'], $this->p->options['pin_cap_len'] ).'</td>';
 			} else $rows[] = $th.'<td class="blank"><em>Caption disabled - no custom Image ID, featured or attached image found.</em></td>';
@@ -105,10 +104,9 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 			if ( empty( $this->p->options['tumblr_photo'] ) ) {
 				$rows[] = $th.'<td class="blank"><em>\'Use Featured Image\' option is disabled.</em></td>';
 			} elseif ( ! empty( $pid ) ) {
-				$img = $this->p->media->get_attachment_image_src( $pid, $this->p->cf['lca'].'-tumblr', false );
+				$img = $this->p->media->get_attachment_image_src( $pid, $this->p->cf['lca'].'-tumblr-button', false );
 				if ( empty( $img[0] ) )
-					$rows[] = $th.'<td class="blank"><em>Caption disabled - image ID '.$pid.' is too small for \''.
-					$this->p->cf['lca'].'-tumblr\' image dimensions.</em></td>';
+					$rows[] = $th.'<td class="blank"><em>Caption disabled - image ID '.$pid.' is too small for the Tumblr button Image Dimensions.</em></td>';
 				else $rows[] = $th.'<td class="blank">'.
 					$this->p->webpage->get_caption( $this->p->options['tumblr_caption'], $this->p->options['tumblr_cap_len'] ).'</td>';
 			} else $rows[] = $th.'<td class="blank"><em>Caption disabled - no custom Image ID, featured or attached image found.</em></td>';

@@ -44,9 +44,9 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTumblr' ) && class_exists( 'WpssoSsb
 
 			$rows[] = $this->p->util->th( 'Show Button in', 'short highlight', null,
 			'The Tumblr button shares a <em>custom image ID</em>, a <em>featured</em> image, 
-			or an <em>attached</em> image that is equal to or larger than the \'Image Dimensions\' 
+			or an <em>attached</em> image that is equal to (or larger) than the \'Image Dimensions\' 
 			you have chosen (when the <em>Use Attached Image</em> option is checked), embedded video, 
-			the content of <em>quote</em> custom Posts, or (lastly) the webpage link.' ).'<td>'.
+			the content of <em>quote</em> custom Posts, or the webpage link.' ).'<td>'.
 			( $this->show_on_checkboxes( 'tumblr' ) ).'</td>';
 
 			$rows[] = $this->p->util->th( 'Preferred Order', 'short' ).'<td>'.
@@ -61,13 +61,13 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTumblr' ) && class_exists( 'WpssoSsb
 
 			$rows[] = $this->p->util->th( 'Button Style', 'short' ).'<td>'.$buttons_html.'</td>';
 
-			$rows[] = $this->p->util->th( 'Use Attached Image', 'short' ).'<td>'.
-			$this->form->get_checkbox( 'tumblr_photo' ).'</td>';
+			if ( $this->p->options['plugin_display'] == 'all' ) {
+				$rows[] = $this->p->util->th( 'Use Attached as Photo', 'short' ).'<td>'.
+				$this->form->get_checkbox( 'tumblr_photo' ).'</td>';
+			}
 
 			$rows[] = $this->p->util->th( 'Image Dimensions', 'short' ).
-			'<td>Width '.$this->form->get_input( 'tumblr_img_width', 'short' ).' x '.
-			'Height '.$this->form->get_input( 'tumblr_img_height', 'short' ).' &nbsp; '.
-			'Crop '.$this->form->get_checkbox( 'tumblr_img_crop' ).'</td>';
+			'<td>'.$this->form->get_image_dimensions_input( 'tumblr_img', false, true, $this->p->options['plugin_display'] ).'</td>';
 
 			$rows[] = $this->p->util->th( 'Media Caption', 'short' ).'<td>'.
 			$this->form->get_select( 'tumblr_caption', $this->p->cf['form']['caption_types'] ).'</td>';
@@ -103,6 +103,8 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 					'tumblr_img_width' => 800,
 					'tumblr_img_height' => 800,
 					'tumblr_img_crop' => 0,
+					'tumblr_img_crop_x' => 'center',
+					'tumblr_img_crop_y' => 'center',
 					'tumblr_caption' => 'both',
 					'tumblr_cap_len' => 400,
 				),
@@ -120,7 +122,7 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 		}
 
 		public function filter_plugin_image_sizes( $sizes ) {
-			$sizes['tumblr_img'] = array( 'name' => 'tumblr', 'label' => 'Tumblr Button Image Dimensions' );
+			$sizes['tumblr_img'] = array( 'name' => 'tumblr-button', 'label' => 'Tumblr Button Image Dimensions' );
 			return $sizes;
 		}
 
@@ -152,7 +154,7 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 			}
 
 			if ( empty( $atts['size'] ) ) 
-				$atts['size'] = $this->p->cf['lca'].'-tumblr';
+				$atts['size'] = $this->p->cf['lca'].'-tumblr-button';
 
 			// only use an image if the 'tumblr_photo' option allows it
 			if ( empty( $atts['photo'] ) && $opts['tumblr_photo'] ) {

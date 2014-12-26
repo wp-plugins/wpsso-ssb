@@ -20,7 +20,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingPinterest' ) && class_exists( 'Wpsso
 		protected function get_rows( $metabox, $key ) {
 			$rows = array();
 
-			$rows[] = $this->p->util->th( 'Show Button in', 'short highlight', null,
+			$rows[] = $this->p->util->th( 'Show Button in', 'short', null,
 			'The Pinterest "Pin It" button will only appear on Posts and Pages with a <em>custom image ID</em>, 
 			a <em>featured</em> image, or an <em>attached</em> image that is equal to or larger than the 
 			\'Image Dimensions\' you have chosen.' ).'<td>'.
@@ -58,9 +58,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingPinterest' ) && class_exists( 'Wpsso
 			).'</td>';
 
 			$rows[] = $this->p->util->th( 'Image Dimensions', 'short' ).
-			'<td>Width '.$this->form->get_input( 'pin_img_width', 'short' ).' x '.
-			'Height '.$this->form->get_input( 'pin_img_height', 'short' ).' &nbsp; '.
-			'Crop '.$this->form->get_checkbox( 'pin_img_crop' ).'</td>';
+			'<td>'.$this->form->get_image_dimensions_input( 'pin_img', false, true, $this->p->options['plugin_display'] ).'</td>';
 
 			$rows[] = $this->p->util->th( 'Image Caption Text', 'short' ).'<td>'.
 			$this->form->get_select( 'pin_caption', $this->p->cf['form']['caption_types'] ).'</td>';
@@ -96,6 +94,8 @@ if ( ! class_exists( 'WpssoSsbSharingPinterest' ) ) {
 					'pin_img_width' => 800,
 					'pin_img_height' => 800,
 					'pin_img_crop' => 0,
+					'pin_img_crop_x' => 'center',
+					'pin_img_crop_y' => 'center',
 					'pin_caption' => 'both',
 					'pin_cap_len' => 400,
 				),
@@ -113,7 +113,7 @@ if ( ! class_exists( 'WpssoSsbSharingPinterest' ) ) {
 		}
 
 		public function filter_plugin_image_sizes( $sizes ) {
-			$sizes['pin_img'] = array( 'name' => 'pinterest', 'label' => 'Pinterest Button Image Dimensions' );
+			$sizes['pin_img'] = array( 'name' => 'pinterest-button', 'label' => 'Pinterest Button Image Dimensions' );
 			return $sizes;
 		}
 
@@ -145,7 +145,7 @@ if ( ! class_exists( 'WpssoSsbSharingPinterest' ) ) {
 			}
 
 			if ( empty( $atts['size'] ) ) 
-				$atts['size'] = $this->p->cf['lca'].'-pinterest';
+				$atts['size'] = $this->p->cf['lca'].'-pinterest-button';
 
 			if ( empty( $atts['photo'] ) ) {
 				if ( empty( $atts['pid'] ) && $post_id > 0 ) {

@@ -141,6 +141,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.1.3 =
+
+* **Bugfixes**
+	* *None*
+* **Improvements**
+	* Renamed the button shared image sizes from (as an example) wpsso-pinterest to wpsso-pinterest-button.
+* **New Features**
+	* Added a cropping area selection for all Image Dimension options. The cropping area selection is shown only when viewing 'All Plugin Options', and only if you are using WordPress 3.9 and up (previous WordPress versions did not support cropping areas).
+
 = Version 1.1.2 =
 
 * **Bugfixes**
@@ -161,11 +170,11 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Upgrade Notice ==
 
+= 1.1.3 =
+
+Added a cropping area selection for all Image Dimension options.
+
 = 1.1.2 =
 
 Added a check on the admin side to make sure the WPSSO plugin is installed and active.
-
-= 1.1.1 =
-
-Added the 'Position in bbPress Single' option on the SSO Sharing Buttons settings page (Pro version).
 

@@ -22,7 +22,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingFacebook' ) && class_exists( 'WpssoS
 			$tabs = array( 
 				'all' => 'All Buttons',
 				'like' => 'Like and Send',
-				'share' => 'Share (Deprecated)',
+				'share' => 'Share',
 			);
 			$rows = array();
 			foreach ( $tabs as $key => $title )
@@ -34,32 +34,23 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingFacebook' ) && class_exists( 'WpssoS
 			$rows = array();
 			switch ( $metabox.'-'.$key ) {
 				case 'fb-all':
-					$rows[] = $this->p->util->th( 'Show Button in', 'short' ).'<td>'.
-					( $this->show_on_checkboxes( 'fb' ) ).'</td>';
+					$rows[] = $this->p->util->th( 'Show Button in', 'short' ).
+					'<td>'.( $this->show_on_checkboxes( 'fb' ) ).'</td>';
 
-					$rows[] = $this->p->util->th( 'Preferred Order', 'short' ).'<td>'.
-					$this->form->get_select( 'fb_order', 
-						range( 1, count( $this->p->admin->submenu['sharing']->website ) ), 
-							'short' ).'</td>';
+					$rows[] = $this->p->util->th( 'Preferred Order', 'short' ).
+					'<td>'.$this->form->get_select( 'fb_order', 
+						range( 1, count( $this->p->admin->submenu['sharing']->website ) ), 'short' ).'</td>';
 	
 					if ( $this->p->options['plugin_display'] == 'all' ) {
-						$rows[] = $this->p->util->th( 'JavaScript in', 'short' ).'<td>'.
-						$this->form->get_select( 'fb_js_loc', $this->p->cf['form']['js_locations'] ).'</td>';
+						$rows[] = $this->p->util->th( 'JavaScript in', 'short' ).
+						'<td>'. $this->form->get_select( 'fb_js_loc', $this->p->cf['form']['js_locations'] ).'</td>';
 					}
 	
-					$rows[] = $this->p->util->th( 'Default Language', 'short' ).'<td>'.
-					$this->form->get_select( 'fb_lang', SucomUtil::get_pub_lang( 'facebook' ) ).'</td>';
+					$rows[] = $this->p->util->th( 'Default Language', 'short' ).
+					'<td>'.$this->form->get_select( 'fb_lang', SucomUtil::get_pub_lang( 'facebook' ) ).'</td>';
 	
-					$rows[] = $this->p->util->th( 'Button Type', 'short highlight', null,
-					'The Share button has been deprecated and replaced by the Facebook Like and Send buttons. 
-					It is still available and functional, but no longer supported. The Share button offers the 
-					additional option of posting to a Facebook Page.' ).
-					'<td>'.$this->form->get_select( 'fb_button', 
-						array(
-							'like' => 'Like and Send',
-							'share' => 'Share (deprecated)',
-						) 
-					).'</td>';
+					$rows[] = $this->p->util->th( 'Button Type', 'short' ).
+					'<td>'.$this->form->get_select( 'fb_button', array( 'like' => 'Like and Send', 'share' => 'Share' ) ).'</td>';
 					break;
 
 				case 'fb-like':
