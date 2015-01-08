@@ -63,7 +63,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 * URL shortening with Bitly or Google for URLs in Tweet texts.
 * Ability to include / exclude sharing buttons by post type.
 * Selection of preset button options by location (content, excerpt, shortcode, widget, etc.).
-* Additional sharing button locations and stylesheets for supported addons:
+* Additional sharing button locations and stylesheets for:
 	* [bbPress](https://wordpress.org/plugins/bbpress/)
 	* [BuddyPress](https://wordpress.org/plugins/buddypress/)
 	* [WooCommerce](https://wordpress.org/plugins/woocommerce/)
@@ -141,6 +141,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.1.4 =
+
+* **Bugfixes**
+	* *None*
+* **Improvements**
+	* Refactored code to rename the $addons array variable to $mods for WPSSO v2.7.5.
+* **New Features**
+	* *None*
+
 = Version 1.1.3 =
 
 * **Bugfixes**
@@ -173,8 +182,4 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 = 1.1.3 =
 
 Added a cropping area selection for all Image Dimension options.
-
-= 1.1.2 =
-
-Added a check on the admin side to make sure the WPSSO plugin is installed and active.
 
