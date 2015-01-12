@@ -862,7 +862,7 @@ jQuery("#wpsso-sidebar").click( function(){
 
 			if ( ! empty( $post ) ) {
 				$post_type = $post->post_type;
-				if ( $this->p->addons['util']['postmeta']->get_options( $post->ID, 'buttons_disabled' ) ) {
+				if ( $this->p->mods['util']['postmeta']->get_options( $post->ID, 'buttons_disabled' ) ) {
 					$this->p->debug->log( 'post '.$post->ID.': sharing buttons disabled by custom meta option' );
 					$ret = true;
 				} elseif ( ! empty( $post_type ) && empty( $this->p->options['buttons_add_to_'.$post_type] ) ) {
@@ -896,7 +896,7 @@ jQuery("#wpsso-sidebar").click( function(){
 		}
 
 		public function get_sharing_media( $post_id ) {
-			$opts = $this->p->addons['util']['postmeta']->get_options( $post_id );
+			$opts = $this->p->mods['util']['postmeta']->get_options( $post_id );
 			foreach ( array(
 				'og_img_id',
 				'og_img_id_pre',

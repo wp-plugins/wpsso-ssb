@@ -8,8 +8,8 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: WPSSO extension to provide fast and accurate Social Sharing Buttons - with support for hashtags, shortening, bbPress, and BuddyPress.
  * Requires At Least: 3.0
- * Tested Up To: 4.0
- * Version: 1.1.3
+ * Tested Up To: 4.1
+ * Version: 1.1.4
  * 
  * Copyright 2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 */
@@ -22,7 +22,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 	class WpssoSsb {
 
 		private $opt_version = 'ssb3';
-		private $min_version = '2.7.2';
+		private $min_version = '2.7.5';
 		private $has_min_ver = true;
 
 		public $p;				// class object variables
@@ -44,7 +44,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 				add_action( 'admin_init', array( &$this, 'check_for_wpsso' ) );
 
 			add_action( 'wpsso_init_options', array( &$this, 'init_options' ), 10 );
-			add_action( 'wpsso_init_addon', array( &$this, 'init_addon' ), 10 );
+			add_action( 'wpsso_init_plugin', array( &$this, 'init_plugin' ), 10 );
 		}
 
 		// this filter is executed at init priority -1
@@ -84,8 +84,8 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 				$this->p->options['twitter_shortener'] !== 'none' ? true : false );
 		}
 
-		// this action is executed once all class objects and addons have been created
-		public function init_addon() {
+		// this action is executed once all class objects have been defined and modules have been loaded
+		public function init_plugin() {
 			$shortname = WpssoSsbConfig::$cf['plugin']['wpssossb']['short'];
 
 			if ( $this->has_min_ver === false ) {

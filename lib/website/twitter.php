@@ -68,7 +68,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTwitter' ) && class_exists( 'WpssoSs
 			( $this->p->check->aop( 'wpssossb' ) ? '<td>'.$this->form->get_checkbox( 'twitter_rel_author' ).'</td>' :
 				'<td class="blank">'.$this->form->get_no_checkbox( 'twitter_rel_author' ).'</td>' );
 
-			if ( isset( $this->p->addons['admin']['apikeys'] ) ) {
+			if ( isset( $this->p->mods['admin']['apikeys'] ) ) {
 				$rows[] = $this->p->util->th( 'Shorten URLs with', 'short', null, 
 				'If you select a URL shortening service here, <strong>you must also enter its API credentials</strong>
 				on the '.$this->p->util->get_admin_url( 'advanced#sucom-tab_plugin_apikeys', 'Advanced settings page' ).'.' ).

@@ -118,7 +118,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 
 			// these metabox ids should be closed by default (array_diff() selects everything except those listed)
 			$ids = array_diff( array_keys( $this->p->cf['plugin']['wpssossb']['lib']['website'] ), array( 'facebook', 'gplus', 'twitter' ) );
-			$this->p->addons['util']['user']->reset_metabox_prefs( $this->pagehook, $ids, 'closed' );
+			$this->p->mods['util']['user']->reset_metabox_prefs( $this->pagehook, $ids, 'closed' );
 		}
 
 		public function add_class_postbox_website( $classes ) {

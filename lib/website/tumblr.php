@@ -160,8 +160,8 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 			if ( empty( $atts['photo'] ) && $opts['tumblr_photo'] ) {
 				if ( empty( $atts['pid'] ) && $post_id > 0 ) {
 					// check for meta, featured, and attached images
-					$pid = $this->p->addons['util']['postmeta']->get_options( $post_id, 'og_img_id' );
-					$pre = $this->p->addons['util']['postmeta']->get_options( $post_id, 'og_img_id_pre' );
+					$pid = $this->p->mods['util']['postmeta']->get_options( $post_id, 'og_img_id' );
+					$pre = $this->p->mods['util']['postmeta']->get_options( $post_id, 'og_img_id_pre' );
 					if ( ! empty( $pid ) )
 						$atts['pid'] = $pre == 'ngg' ? 'ngg-'.$pid : $pid;
 					elseif ( $this->p->is_avail['postthumb'] == true && has_post_thumbnail( $post_id ) )
@@ -175,7 +175,7 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 
 			// check for custom or embedded videos
 			if ( empty( $atts['photo'] ) && empty( $atts['embed'] ) && $post_id > 0 ) {
-				$atts['embed'] = $this->p->addons['util']['postmeta']->get_options( $post_id, 'og_vid_url' );
+				$atts['embed'] = $this->p->mods['util']['postmeta']->get_options( $post_id, 'og_vid_url' );
 				if ( empty( $atts['embed'] ) ) {
 					$videos = array();
 					$videos = $this->p->media->get_content_videos( 1, $post_id, false );
