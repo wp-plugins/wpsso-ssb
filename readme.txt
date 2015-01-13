@@ -179,6 +179,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Upgrade Notice ==
 
+= 1.1.4 =
+
+Refactored code to rename the $addons array variable to $mods for WPSSO v2.7.5.
+
 = 1.1.3 =
 
 Added a cropping area selection for all Image Dimension options.
