@@ -133,11 +133,11 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Screenshots ==
 
-1. An example showing all social sharing buttons enabled &ndash; using the default WPSSO SSB stylesheet &ndash; in the CSS sidebar, content text, and widget.
-2. The 'Sharing Buttons' widget configuration.
-3. The 'Sharing Buttons' tab added to the 'Social Settings' metabox on admin editing pages.
-4. The 'Sharing Buttons' settings page.
-5. The 'Sharing Styles' settings page.
+01. An example showing all social sharing buttons enabled &ndash; using the default WPSSO SSB stylesheet &ndash; in the CSS sidebar, content text, and widget.
+02. The 'Sharing Buttons' widget configuration.
+03. The 'Sharing Buttons' tab added to the 'Social Settings' metabox on admin editing pages.
+04. The 'Sharing Buttons' settings page.
+05. The 'Sharing Styles' settings page.
 
 == Changelog ==
 
