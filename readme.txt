@@ -188,7 +188,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Upgrade Notice ==
 
-= 1.1.4 =
+= 1.1.5 =
 
-Refactored code to rename the $addons array variable to $mods for WPSSO v2.7.5.
+Added a check for attachment pages to include the attachment image for the Pinterest, Tumblr, and Buffer buttons.
 
