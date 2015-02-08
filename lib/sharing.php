@@ -579,7 +579,9 @@ jQuery("#wpsso-sidebar").click( function(){
 
 			echo '<style type="text/css">'.$css_data.'</style>', "\n";
 			echo '<table class="sucom-setting side"><tr><td>';
-			if ( get_post_status( $post->ID ) == 'publish' ) {
+			if ( get_post_status( $post->ID ) === 'publish' || 
+				get_post_type( $post->ID ) === 'attachment' ) {
+
 				$content = '';
 				echo $this->get_js_loader();
 				echo $this->get_js( 'header' );
@@ -748,8 +750,9 @@ jQuery("#wpsso-sidebar").click( function(){
 			if ( empty( $ids ) ) {
 				if ( is_admin() ) {
 					if ( ( $obj = $this->p->util->get_post_object() ) === false  ||
-						$obj->post_status !== 'publish' )
-							return;
+						( get_post_status( $obj->ID ) !== 'publish' &&
+							get_post_type( $obj->ID ) !== 'attachment' ) )
+								return;
 				} elseif ( is_singular() && $this->is_post_buttons_disabled() ) {
 					$this->p->debug->log( 'exiting early: buttons disabled' );
 					return;
@@ -907,9 +910,10 @@ jQuery("#wpsso-sidebar").click( function(){
 					$opts[$key] = '';
 
 			if ( empty( $opts['og_img_id'] ) ) {
-				if ( $this->p->is_avail['postthumb'] == true && 
-					has_post_thumbnail( $post_id ) )
-						$opts['og_img_id'] = get_post_thumbnail_id( $post_id );
+				if ( is_attachment( $post_id ) || get_post_type( $post_id ) === 'attachment' )
+					$opts['og_img_id'] = $post_id;
+				elseif ( $this->p->is_avail['postthumb'] == true && has_post_thumbnail( $post_id ) )
+					$opts['og_img_id'] = get_post_thumbnail_id( $post_id );
 				else $opts['og_img_id'] = $this->p->media->get_first_attached_image_id( $post_id );
 			} elseif ( $opts['og_img_id_pre'] === 'ngg' )
 				$opts['og_img_id'] = $opts['og_img_id_pre'].'-'.$opts['og_img_id'];
