@@ -164,8 +164,9 @@ if ( ! class_exists( 'WpssoSsbSharingTumblr' ) ) {
 					$pre = $this->p->mods['util']['postmeta']->get_options( $post_id, 'og_img_id_pre' );
 					if ( ! empty( $pid ) )
 						$atts['pid'] = $pre == 'ngg' ? 'ngg-'.$pid : $pid;
-					elseif ( is_attachment( $post_id ) || get_post_type( $post_id ) === 'attachment' )
-						$atts['pid'] = $post_id;
+					elseif ( ( is_attachment( $post_id ) || get_post_type( $post_id ) === 'attachment' ) &&
+						wp_attachment_is_image( $post_id ) )
+							$atts['pid'] = $post_id;
 					elseif ( $this->p->is_avail['postthumb'] == true && has_post_thumbnail( $post_id ) )
 						$atts['pid'] = get_post_thumbnail_id( $post_id );
 					else $atts['pid'] = $this->p->media->get_first_attached_image_id( $post_id );

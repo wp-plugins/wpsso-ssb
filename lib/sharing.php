@@ -910,8 +910,9 @@ jQuery("#wpsso-sidebar").click( function(){
 					$opts[$key] = '';
 
 			if ( empty( $opts['og_img_id'] ) ) {
-				if ( is_attachment( $post_id ) || get_post_type( $post_id ) === 'attachment' )
-					$opts['og_img_id'] = $post_id;
+				if ( ( is_attachment( $post_id ) || get_post_type( $post_id ) === 'attachment' ) && 
+					wp_attachment_is_image( $post_id ) )
+						$opts['og_img_id'] = $post_id;
 				elseif ( $this->p->is_avail['postthumb'] == true && has_post_thumbnail( $post_id ) )
 					$opts['og_img_id'] = get_post_thumbnail_id( $post_id );
 				else $opts['og_img_id'] = $this->p->media->get_first_attached_image_id( $post_id );
