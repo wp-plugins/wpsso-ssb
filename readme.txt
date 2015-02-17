@@ -141,6 +141,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.1.7 =
+
+* **Bugfixes**
+	* *None*
+* **Improvements**
+	* Renamed a call to the `NgfbAdmin::get_form_ref()` method to `get_form_reference()` for WPSSO v2.7.6.
+* **New Features**
+	* *None*
+
 = Version 1.1.6 =
 
 * **Bugfixes**
@@ -200,8 +209,4 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 = 1.1.6 =
 
 Added a wp_attachment_is_image() check for attachment page media.
-
-= 1.1.5 =
-
-Added a check for attachment pages to include the attachment image for the Pinterest, Tumblr, and Buffer buttons.
 
