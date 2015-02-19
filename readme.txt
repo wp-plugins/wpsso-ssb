@@ -148,7 +148,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * **Improvements**
 	* Renamed a call to the `NgfbAdmin::get_form_ref()` method to `get_form_reference()` for WPSSO v2.7.6.
 	* Added the buttons preset option value as a CSS class to the sharing buttons container.
-	* Updated the default buttons stylesheets to include the preset class button attributes (width, height, etc.).
+	* Updated the default buttons stylesheets to include the preset class attributes (width, height, etc.).
 * **New Features**
 	* *None*
 
