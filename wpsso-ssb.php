@@ -9,7 +9,7 @@
  * Description: WPSSO extension to provide fast and accurate Social Sharing Buttons - with support for hashtags, shortening, bbPress, and BuddyPress.
  * Requires At Least: 3.0
  * Tested Up To: 4.1
- * Version: 1.1.6
+ * Version: 1.1.7
  * 
  * Copyright 2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 */
@@ -22,7 +22,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 	class WpssoSsb {
 
 		private $opt_version = 'ssb3';
-		private $min_version = '2.7.5';
+		private $min_version = '2.7.6';
 		private $has_min_ver = true;
 
 		public $p;				// class object variables

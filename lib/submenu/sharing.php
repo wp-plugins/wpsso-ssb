@@ -112,7 +112,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 					$name = $name == 'GooglePlus' ? 'Google+' : $name;
 					add_meta_box( $this->pagehook.'_'.$id, $name, array( &$this->website[$id], 'show_metabox_website' ), $this->pagehook, $pos_id );
 					add_filter( 'postbox_classes_'.$this->pagehook.'_'.$this->pagehook.'_'.$id, array( &$this, 'add_class_postbox_website' ) );
-					$this->website[$id]->form = &$this->get_form_ref();
+					$this->website[$id]->form = &$this->get_form_reference();
 				}
 			}
 

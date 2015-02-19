@@ -152,63 +152,9 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * **New Features**
 	* *None*
 
-= Version 1.1.6 =
-
-* **Bugfixes**
-	* *None*
-* **Improvements**
-	* Added a `wp_attachment_is_image()` check for attachment page media.
-* **New Features**
-	* *None*
-
-= Version 1.1.5 =
-
-* **Bugfixes**
-	* Added a check for attachment pages to include the attachment image for the Pinterest, Tumblr, and Buffer buttons.
-* **Improvements**
-	* *None*
-* **New Features**
-	* *None*
-
-= Version 1.1.4 =
-
-* **Bugfixes**
-	* *None*
-* **Improvements**
-	* Refactored code to rename the $addons array variable to $mods for WPSSO v2.7.5.
-* **New Features**
-	* *None*
-
-= Version 1.1.3 =
-
-* **Bugfixes**
-	* *None*
-* **Improvements**
-	* Renamed the button shared image sizes from (as an example) wpsso-pinterest to wpsso-pinterest-button.
-* **New Features**
-	* Added a cropping area selection for all Image Dimension options. The cropping area selection is shown only when viewing 'All Plugin Options', and only if you are using WordPress 3.9 and up (previous WordPress versions did not support cropping areas).
-
-= Version 1.1.2 =
-
-* **Bugfixes**
-	* *None*
-* **Improvements**
-	* Added a check on the admin side to make sure WPSSO is installed and active.
-* **New Features**
-	* *None*
-
-= Version 1.1.1 =
-
-* **Bugfixes**
-	* *None*
-* **Improvements**
-	* *None*
-* **New Features**
-	* Added the 'Position in bbPress Single' option on the SSO Sharing Buttons settings page (Pro version).
-
 == Upgrade Notice ==
 
-= 1.1.6 =
+= 1.1.7 =
 
-Added a wp_attachment_is_image() check for attachment page media.
+Refactoring for WPSSO v2.7.6. Improved the sharing buttons CSS to include attributes for button presets.
 

@@ -666,13 +666,16 @@ jQuery("#wpsso-sidebar").click( function(){
 
 				$atts['use_post'] = $use_post;
 				$css_type = $atts['css_id'] = $type.'-buttons';
-				if ( ! empty( $this->p->options['buttons_preset_'.$type] ) )
+				if ( ! empty( $this->p->options['buttons_preset_'.$type] ) ) {
 					$atts['preset_id'] = $this->p->options['buttons_preset_'.$type];
+					$css_preset = $lca.'-preset-'.$atts['preset_id'];
+				} else $css_preset = '';
 
 				$buttons_html = $this->get_html( $sorted_ids, $atts, $this->p->options );
 				if ( ! empty( $buttons_html ) ) {
-					$html = '<!-- '.$lca.' '.$css_type.' begin --><div '.
-						( $use_post ? 'class' : 'id' ).'="'.$lca.'-'.$css_type.'">'.
+					$html = '<!-- '.$lca.' '.$css_type.' begin --><div class="'.
+						( $css_preset ? $css_preset.' ' : '' ).
+						( $use_post ? $lca.'-'.$css_type.'">' : '" id="'.$lca.'-'.$css_type.'">' ).
 						$buttons_html.'</div><!-- '.$lca.' '.$css_type.' end -->';
 
 					if ( $this->p->is_avail['cache']['transient'] ) {
