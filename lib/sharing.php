@@ -473,7 +473,8 @@ jQuery("#wpsso-sidebar").click( function(){
 					foreach ( $style_tabs as $id => $name )
 						if ( array_key_exists( 'buttons_css_'.$id, $opts ) )
 							$css_data .= $opts['buttons_css_'.$id];
-					$classname = apply_filters( $this->p->cf['lca'].'_load_lib', false, 'ext/compressor', 'SuextMinifyCssCompressor' );
+					$classname = apply_filters( $this->p->cf['lca'].'_load_lib', 
+						false, 'ext/compressor', 'SuextMinifyCssCompressor' );
 					if ( $classname !== false && class_exists( $classname ) )
 						$css_data = call_user_func( array( $classname, 'process' ), $css_data );
 					else {
