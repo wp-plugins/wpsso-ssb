@@ -16,11 +16,11 @@ WPSSO extension to provide fast and accurate Social Sharing Buttons, including s
 <p><img src="https://ps.w.org/wpsso-ssb/assets/icon-256x256.png?rev=" width="256" height="256" style="max-width:none;margin-right:40px;" /></p>
 </td><td valign="top">
 
-<p><strong>Add social sharing buttons to your <em>content</em>, <em>excerpts</em>, <em>admin editing pages</em>, using a <em>CSS floating sidebar</em>, <em>shortcode</em>, <em>widget</em>, <em>function</em>, on <em>Custom Post Types</em>, <em>bbPress</em>, <em>BuddyPress</em>, and <em>WooCommerce</em> pages</strong>.</p>
+<p><strong>Add social sharing buttons to your content, excerpts, admin editing pages, using a floating sidebar, shortcode, widget, and/or function, on Posts / Pages, Custom Post Types, bbPress, BuddyPress, and WooCommerce pages, and many more.</p>
 
 <p>WPSSO Social Sharing Buttons (WPSSO SSB) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> plugin, extending its features with additional settings pages, tabs, and options for social sharing buttons. WPSSO SSB is <strong><em>fast</em></strong>, <strong><em>efficient</em></strong>, and &mdash; using WPSSO as its framework &mdash; provides <strong><em>accurate</em></strong> information about your content to social websites.</p>
 
-<p>You can download the <a href="https://wordpress.org/plugins/wpsso-ssb/">Free version of WPSSO SSB on WordPress.org</a> and <a href="(http://surniaulula.com/extend/plugins/wpsso-ssb/">purchase Pro license(s) on SurniaUlula.com</a> (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
+<p>You can download the <a href="https://wordpress.org/plugins/wpsso-ssb/">Free version of WPSSO SSB on wordpress.org</a> and <a href="(http://surniaulula.com/extend/plugins/wpsso-ssb/">purchase Pro license(s) on surniaulula.com</a> (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
 
 </td></tr></table>
 
