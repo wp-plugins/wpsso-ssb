@@ -830,19 +830,20 @@ jQuery("#wpsso-sidebar").click( function(){
 			$lang = empty( $this->p->options['gp_lang'] ) ? 'en-US' : $this->p->options['gp_lang'];
 			$lang = apply_filters( $this->p->cf['lca'].'_lang', $lang, SucomUtil::get_pub_lang( 'gplus' ) );
 			return '<script type="text/javascript" id="wpssossb-header-script">
-				window.___gcfg = { lang: "'.$lang.'" };
-				function '.$this->p->cf['lca'].'_insert_js( script_id, url, async ) {
-					if ( document.getElementById( script_id + "-js" ) ) return;
-					var async = typeof async !== "undefined" ? async : true;
-					var script_pos = document.getElementById( script_id );
-					var js = document.createElement( "script" );
-					js.id = script_id + "-js";
-					js.async = async;
-					js.type = "text/javascript";
-					js.language = "JavaScript";
-					js.src = url;
-					script_pos.parentNode.insertBefore( js, script_pos );
-				};</script>'."\n";
+	window.___gcfg = { lang: "'.$lang.'" };
+	function '.$this->p->cf['lca'].'_insert_js( script_id, url, async ) {
+		if ( document.getElementById( script_id + "-js" ) ) return;
+		var async = typeof async !== "undefined" ? async : true;
+		var script_pos = document.getElementById( script_id );
+		var js = document.createElement( "script" );
+		js.id = script_id + "-js";
+		js.async = async;
+		js.type = "text/javascript";
+		js.language = "JavaScript";
+		js.src = url;
+		script_pos.parentNode.insertBefore( js, script_pos );
+	};
+</script>'."\n";
 		}
 
 		public function get_css( $css_name, &$atts = array(), $css_class_extra = '' ) {
