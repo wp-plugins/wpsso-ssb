@@ -141,6 +141,15 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Changelog ==
 
+= Version 1.1.8 =
+
+* **Bugfixes**
+	* *None*
+* **Improvements**
+	* Moved the WpssoSsbSharing class object instantiation to the new 'wpsso_init_objects' action.
+* **New Features**
+	* *None*
+
 = Version 1.1.7 =
 
 * **Bugfixes**
@@ -154,7 +163,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Upgrade Notice ==
 
-= 1.1.7 =
+= 1.1.8 =
 
-Refactoring for WPSSO v2.7.6. Improved the sharing buttons CSS to include attributes for button presets.
+Moved the WpssoSsbSharing class object instantiation to the new 'wpsso_init_objects' action.
 
