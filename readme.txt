@@ -76,27 +76,6 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 
 WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all available caching techniques (persistent / non-persistent object and disk caching).
 
-<blockquote>
-<h4>How Fast is WPSSO SSB?</h4>
-
-<p>Plugins that add social sharing buttons should be fairly <em>light and fast</em> &mdash; they generally don't need to fetch much information about a page, like an SEO / SSO plugin does. Here are a few example metrics from the <a href="https://wordpress.org/plugins/p3-profiler/">P3 (Plugin Performance Profiler)</a> plugin, using <a href="http://wptest.io/">WP Test Data</a>, and several popular social sharing plugins (along with the WordPress Core and Twenty Fourteen theme for reference). The plugins were configured to include the Facebook, Google+, Twitter, and Pinterest sharing buttons at the bottom of single posts and pages.</p>
-
-<ul>
-	<li><strong><font color="blue">0.0025</font></strong> secs - ShareThis v7.0.17</li>
-	<li><strong><font color="blue">0.0040</font></strong> secs - AddThis Social Bookmarking Widget v3.5.10</li>
-	<li><strong><font color="blue">0.0050</font></strong> secs - <em><strong>WPSSO Social Sharing Buttons (SSB) v1.0.9</strong></em></li>
-	<li><strong><font color="blue">0.0070</font></strong> secs - Digg Digg v5.3.6</li>
-	<li><strong><font color="blue">0.0081</font></strong> secs - Facebook v1.5.5 (Provides Only Facebook Buttons)</li>
-	<li><strong><font color="blue">0.0096</font></strong> secs - Share Buttons by AddToAny v1.3.4</li>
-
-	<li><strong><font color="green">0.0232</font></strong> secs - Shareaholic | share buttons, analytics, related content v7.5.0.2</li>
-	<li><strong><font color="green">0.0345</font></strong> secs - <strong>WordPress Twenty Fourteen Theme v1.1</strong></li>
-	<li><strong><font color="green">0.0488</font></strong> secs - <strong>WordPress Core v3.9.1</strong></li>
-</ul>
-
-<p><small><em>Benchmarks were executed on dedicated hardware, using an APC opcode/object cache, WordPress v3.9.1, and P3 v1.5.1 configured with opcode optimization enabled (improves accuracy).</em></small></p>
-</blockquote>
-
 == Installation ==
 
 = Install and Uninstall =
