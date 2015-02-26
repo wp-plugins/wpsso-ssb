@@ -122,6 +122,8 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Other Notes ==
 
+= Additional Documentation =
+
 <ul>
 	<li><a href="http://surniaulula.com/codex/plugins/wpsso-ssb/notes/developer/">Developer Resources</a>
 	<ul>
