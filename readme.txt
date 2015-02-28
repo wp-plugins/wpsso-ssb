@@ -8,21 +8,15 @@ Requires At Least: 3.0
 Tested Up To: 4.1.1
 Stable Tag: 1.1.8
 
-WPSSO extension to provide fast and accurate Social Sharing Buttons, including support for hashtags, shortening, bbPress, BuddyPress, and WooCommerce.
+WPSSO extension for fast and accurate Social Sharing Buttons with support for hashtags, short URLs, bbPress, BuddyPress, WooCommerce, and much more.
 
 == Description ==
 
-<table><tr><td valign="top">
-<p><img src="https://ps.w.org/wpsso-ssb/assets/icon-256x256.png?rev=" width="256" height="256" style="max-width:none;margin-right:40px;" /></p>
-</td><td valign="top">
+<p><img src="https://ps.w.org/wpsso-ssb/assets/icon-256x256.png?rev=" width="256" height="256" style="max-width:33%;float:left;margin:0 40px 20px 0;" /><strong>Add social sharing buttons to Posts / Pages, Custom Post Types, bbPress, BuddyPress, WooCommerce pages, and many more</strong>. The sharing buttons can be shown in the content, excerpt, widget, CSS floating sidebar, and admin editing pages.</p>
 
-<p><strong>Add social sharing buttons to your content, excerpts, admin editing pages, using a floating sidebar, shortcode, widget, and/or function, on Posts / Pages, Custom Post Types, bbPress, BuddyPress, and WooCommerce pages, and many more.</p>
+<p>WPSSO Social Sharing Buttons (WPSSO SSB) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, extending its features with additional settings pages, tabs, and options for social sharing buttons. WPSSO SSB is <strong><em>fast</em></strong>, <strong><em>efficient</em></strong>, and &mdash; using WPSSO as its framework &mdash; provides <strong><em>accurate</em></strong> information about your content to social websites.</p>
 
-<p>WPSSO Social Sharing Buttons (WPSSO SSB) works in conjunction with the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization</a> plugin, extending its features with additional settings pages, tabs, and options for social sharing buttons. WPSSO SSB is <strong><em>fast</em></strong>, <strong><em>efficient</em></strong>, and &mdash; using WPSSO as its framework &mdash; provides <strong><em>accurate</em></strong> information about your content to social websites.</p>
-
-<p>You can download the <a href="https://wordpress.org/plugins/wpsso-ssb/">Free version of WPSSO SSB on wordpress.org</a> and <a href="(http://surniaulula.com/extend/plugins/wpsso-ssb/">purchase Pro license(s) on surniaulula.com</a> (includes a <em>No Risk 30 Day Refund Policy</em>).</p>
-
-</td></tr></table>
+<p>You can download the <a href="https://wordpress.org/plugins/wpsso-ssb/">Free version of WPSSO SSB on wordpress.org</a> and <a href="(http://surniaulula.com/extend/plugins/wpsso-ssb/">purchase Pro license(s) on surniaulula.com</a> (includes a <strong>No Risk 30 Day Refund Policy</strong>).</p>
 
 = Quick List of Features =
 
