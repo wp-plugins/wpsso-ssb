@@ -56,7 +56,7 @@ The [WPSSO SSB Pro version](http://surniaulula.com/extend/plugins/wpsso-ssb/) in
 * Dynamic button language switching based on the current WordPress locale.
 * URL shortening with Bitly or Google for URLs in Tweet texts.
 * Ability to include / exclude sharing buttons by post type.
-* Selection of preset button options by location (content, excerpt, shortcode, widget, etc.).
+* Selection of <em>preset</em> button options by location (content, excerpt, shortcode, widget, etc.).
 * Additional sharing button locations and stylesheets for:
 	* [bbPress](https://wordpress.org/plugins/bbpress/)
 	* [BuddyPress](https://wordpress.org/plugins/buddypress/)
