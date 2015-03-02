@@ -31,15 +31,15 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 
 			$rows[] = $this->p->util->th( 'Social File Cache Expiry', 'highlight', 'plugin_file_cache_hrs' ).
 			'<td nowrap class="blank">'.$form->get_no_input( 'plugin_file_cache_hrs', 'short' ).' hours</td>'.
-			( $network === false ? '' : $this->p->util->th( 'Site Use', 'site_use' ).
-				'<td class="site_use blank">'.$form->get_select( 'plugin_file_cache_hrs:use', 
+			( $network === false ? '' : $this->p->util->th( 'Site Use', 'narrow' ).
+				'<td class="blank">'.$form->get_select( 'plugin_file_cache_hrs:use', 
 					$this->p->cf['form']['site_option_use'], 'site_use', null, true, true ).'</td>' );
 
 			if ( $this->p->options['plugin_display'] == 'all' ) {
 				$rows[] = $this->p->util->th( 'Verify SSL Certificates', null, 'plugin_verify_certs' ).
 				'<td class="blank">'.$form->get_no_checkbox( 'plugin_verify_certs' ).'</td>'.
-				( $network === false ? '' : $this->p->util->th( 'Site Use', 'site_use' ).
-					'<td class="site_use blank">'.$form->get_select( 'plugin_verify_certs:use', 
+				( $network === false ? '' : $this->p->util->th( 'Site Use', 'narrow' ).
+					'<td class="blank">'.$form->get_select( 'plugin_verify_certs:use', 
 						$this->p->cf['form']['site_option_use'], 'site_use', null, true, true ).'</td>' );
 			}
 
