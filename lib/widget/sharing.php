@@ -65,7 +65,7 @@ if ( ! class_exists( 'WpssoSsbWidgetSharing' ) && class_exists( 'WP_Widget' ) ) 
 			$sorted_ids = array();
 			foreach ( $this->p->cf['opt']['pre'] as $id => $pre )
 				if ( array_key_exists( $id, $instance ) && (int) $instance[$id] )
-					$sorted_ids[$this->p->options[$pre.'_order'].'-'.$id] = $id;
+					$sorted_ids[ zeroise( $this->p->options[$pre.'_order'], 3 ).'-'.$id] = $id;
 			ksort( $sorted_ids );
 
 			$atts = array( 
