@@ -119,7 +119,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 = Version 1.1.9 =
 
 * **Bugfixes**
-	* Improved the validation of dependencies by checking for the Wpsso class only.
+	* Fixed validation of network-activated plugin dependencies by checking for the Wpsso class only.
 * **Improvements**
 	* *None*
 * **New Features**
@@ -129,5 +129,5 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 = 1.1.9 =
 
-Improved the validation of dependencies by checking for the Wpsso class only.
+Fixed validation of network-activated plugin dependencies by checking for the Wpsso class only.
 
