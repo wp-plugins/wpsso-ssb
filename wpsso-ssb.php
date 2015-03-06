@@ -9,7 +9,7 @@
  * Description: WPSSO extension to provide fast and accurate Social Sharing Buttons - with support for hashtags, shortening, bbPress, and BuddyPress.
  * Requires At Least: 3.0
  * Tested Up To: 4.1
- * Version: 1.1.8
+ * Version: 1.1.9
  * 
  * Copyright 2014 - Jean-Sebastien Morisset - http://surniaulula.com/
 */
@@ -60,8 +60,7 @@ if ( ! class_exists( 'WpssoSsb' ) ) {
 		}
 
 		public function check_for_wpsso() {
-			$active_plugins = get_option( 'active_plugins', array() );
-			if ( ! class_exists( 'Wpsso' ) || ! in_array( 'wpsso/wpsso.php', $active_plugins ) ) {
+			if ( ! class_exists( 'Wpsso' ) ) {
 				require_once( ABSPATH.'wp-admin/includes/plugin.php' );
 				deactivate_plugins( WPSSOSSB_PLUGINBASE );
 				wp_die( '<p>'. sprintf( __( 'WPSSO SSB requires the use of WPSSO &mdash; Please install and activate the WPSSO plugin before re-activating this extension.', WPSSOSSB_TEXTDOM ) ).'</p>' );
