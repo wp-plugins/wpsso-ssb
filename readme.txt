@@ -121,7 +121,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * **Bugfixes**
 	* *None*
 * **Improvements**
-	* Refactored code for WPSSO v2.8.3.
+	* Refactored code for WPSSO v2.8.3's new WpssoUser::show_opts() method.
 * **New Features**
 	* *None*
 
@@ -136,7 +136,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 
 == Upgrade Notice ==
 
-= 1.1.9 =
+= 1.1.10 =
 
-Fixed validation of network-activated plugin dependencies by checking for the Wpsso class only.
+Refactored code for WPSSO v2.8.3's new WpssoUser::show_opts() method.
 
