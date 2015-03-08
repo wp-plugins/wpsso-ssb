@@ -301,7 +301,7 @@ jQuery("#wpsso-sidebar").click( function(){
 					'td_class' => $aop ? '' : 'blank',
 				);
 				$features['Sharing Styles Editor'] = array( 
-					'status' => $this->p->options['plugin_display'] === 'all' ? ( $aop ? 'on' : 'rec' ) : 'off',
+					'status' => WpssoUser::show_opts( 'all' ) ? ( $aop ? 'on' : 'rec' ) : 'off',
 					'td_class' => $aop ? '' : 'blank',
 				);
 			}
@@ -340,7 +340,7 @@ jQuery("#wpsso-sidebar").click( function(){
 				case 'tooltip-side-social-file-cache':
 					$text = $short_pro.' can save social sharing images and JavaScript to a cache folder, 
 					and provide URLs to these cached files instead of the originals. The current \'Social File Cache Expiry\'
-					value, as defined on the '.$this->p->util->get_admin_url( 'advanced#sucom-tab_plugin_cache', 'Advanced' ).' settings page, is '.
+					value, as defined on the '.$this->p->util->get_admin_url( 'advanced#sucom-tabset_plugin-tab_cache', 'Advanced' ).' settings page, is '.
 					$this->p->options['plugin_file_cache_hrs'].' hours (the default value of 0 hours disables the 
 					file caching feature).';
 					break;

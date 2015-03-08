@@ -101,7 +101,8 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 			$row = 0;
 
 			// add_meta_box( $id, $title, $callback, $post_type, $context, $priority, $callback_args );
-			add_meta_box( $this->pagehook.'_sharing', 'Social Sharing Buttons', array( &$this, 'show_metabox_sharing' ), $this->pagehook, 'normal' );
+			add_meta_box( $this->pagehook.'_sharing', 'Social Sharing Buttons', 
+				array( &$this, 'show_metabox_sharing' ), $this->pagehook, 'normal' );
 
 			foreach ( $this->p->cf['plugin']['wpssossb']['lib']['website'] as $id => $name ) {
 				$classname = __CLASS__.$id;
@@ -110,19 +111,22 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 					$row = $col == 1 ? $row + 1 : $row;
 					$pos_id = 'website-row-'.$row.'-col-'.$col;
 					$name = $name == 'GooglePlus' ? 'Google+' : $name;
-					add_meta_box( $this->pagehook.'_'.$id, $name, array( &$this->website[$id], 'show_metabox_website' ), $this->pagehook, $pos_id );
-					add_filter( 'postbox_classes_'.$this->pagehook.'_'.$this->pagehook.'_'.$id, array( &$this, 'add_class_postbox_website' ) );
+					add_meta_box( $this->pagehook.'_'.$id, $name, 
+						array( &$this->website[$id], 'show_metabox_website' ), $this->pagehook, $pos_id );
+					add_filter( 'postbox_classes_'.$this->pagehook.'_'.$this->pagehook.'_'.$id, 
+						array( &$this, 'add_class_postbox_website' ) );
 					$this->website[$id]->form = &$this->get_form_reference();
 				}
 			}
 
 			// these metabox ids should be closed by default (array_diff() selects everything except those listed)
-			$ids = array_diff( array_keys( $this->p->cf['plugin']['wpssossb']['lib']['website'] ), array( 'facebook', 'gplus', 'twitter' ) );
+			$ids = array_diff( array_keys( $this->p->cf['plugin']['wpssossb']['lib']['website'] ), 
+				array( 'facebook', 'gplus', 'twitter' ) );
 			$this->p->mods['util']['user']->reset_metabox_prefs( $this->pagehook, $ids, 'closed' );
 		}
 
 		public function add_class_postbox_website( $classes ) {
-			array_push( $classes, 'display_'.$this->p->options['plugin_display'] );
+			array_push( $classes, 'display_'.WpssoUser::show_opts() );
 			array_push( $classes, 'admin_postbox_website' );
 			return $classes;
 		}
@@ -134,7 +138,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharing' ) && class_exists( 'WpssoAdmin' ) 
 				'position' => 'Buttons Position' 
 			);
 
-			if ( $this->p->options['plugin_display'] == 'all' )
+			if ( WpssoUser::show_opts( 'all' ) )
 				$tabs['preset'] = 'Preset Options';
 
 			$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', $tabs );

@@ -168,7 +168,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuStyle' ) && class_exists( 'WpssoAdmin' ) ) 
 			echo '<td>'.$this->form->get_checkbox( 'buttons_enqueue_social_css' ).'</td>';
 			echo '</tr></table>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$metabox = 'style';
 				$tabs = apply_filters( $this->p->cf['lca'].'_'.$metabox.'_tabs', 
 					WpssoSsbSharing::$cf['sharing']['style'] );

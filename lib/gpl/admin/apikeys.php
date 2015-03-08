@@ -29,7 +29,8 @@ if ( ! class_exists( 'WpssoSsbGplAdminApikeys' ) ) {
 
 			$rows[] = '<td colspan="2" align="center">'.$this->p->msgs->get( 'pro-feature-msg', array( 'lca' => 'wpssossb' ) ).'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
+
 				if ( ! isset( $rows['plugin_min_shorten'] ) )
 					$rows['plugin_min_shorten'] = $this->p->util->th( 'Minimum URL Length to Shorten', null, 'plugin_min_shorten' ). 
 					'<td class="blank">'.$form->get_hidden( 'plugin_min_shorten' ).

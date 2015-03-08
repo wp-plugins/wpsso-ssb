@@ -31,7 +31,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingPinterest' ) && class_exists( 'Wpsso
 				range( 1, count( $this->p->admin->submenu['sharing']->website ) ), 
 					'short' ).'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'JavaScript in', 'short' ).'<td>'.
 				$this->form->get_select( 'pin_js_loc', $this->p->cf['form']['js_locations'] ).'</td>';
 			}
@@ -58,12 +58,12 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingPinterest' ) && class_exists( 'Wpsso
 			).'</td>';
 
 			$rows[] = $this->p->util->th( 'Image Dimensions', 'short' ).
-			'<td>'.$this->form->get_image_dimensions_input( 'pin_img', false, true, $this->p->options['plugin_display'] ).'</td>';
+			'<td>'.$this->form->get_image_dimensions_input( 'pin_img', false, true ).'</td>';
 
 			$rows[] = $this->p->util->th( 'Image Caption Text', 'short' ).'<td>'.
 			$this->form->get_select( 'pin_caption', $this->p->cf['form']['caption_types'] ).'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'Caption Length', 'short' ).'<td>'.
 				$this->form->get_input( 'pin_cap_len', 'short' ).' characters or less</td>';
 			}

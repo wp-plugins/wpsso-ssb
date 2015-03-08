@@ -41,7 +41,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingFacebook' ) && class_exists( 'WpssoS
 					'<td>'.$this->form->get_select( 'fb_order', 
 						range( 1, count( $this->p->admin->submenu['sharing']->website ) ), 'short' ).'</td>';
 	
-					if ( $this->p->options['plugin_display'] == 'all' ) {
+					if ( WpssoUser::show_opts( 'all' ) ) {
 						$rows[] = $this->p->util->th( 'JavaScript in', 'short' ).
 						'<td>'. $this->form->get_select( 'fb_js_loc', $this->p->cf['form']['js_locations'] ).'</td>';
 					}

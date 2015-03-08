@@ -28,7 +28,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingGplus' ) && class_exists( 'WpssoSsbS
 				range( 1, count( $this->p->admin->submenu['sharing']->website ) ), 
 					'short' ).'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'JavaScript in', 'short' ).'<td>'.
 				$this->form->get_select( 'gp_js_loc', $this->p->cf['form']['js_locations'] ).'</td>';
 			}
@@ -58,7 +58,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingGplus' ) && class_exists( 'WpssoSsbS
 				'vertical-bubble' => 'Vertical Bubble',
 			) ).'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'Expand to', 'short' ).'<td>'.
 				$this->form->get_select( 'gp_expandto', array( 
 					'none' => '',

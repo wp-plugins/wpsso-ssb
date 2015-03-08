@@ -35,7 +35,8 @@ if ( ! class_exists( 'WpssoSsbGplAdminSharing' ) ) {
 				'<td class="blank">'.$form->get_select( 'plugin_file_cache_hrs:use', 
 					$this->p->cf['form']['site_option_use'], 'site_use', null, true, true ).'</td>' );
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
+
 				$rows[] = $this->p->util->th( 'Verify SSL Certificates', null, 'plugin_verify_certs' ).
 				'<td class="blank">'.$form->get_no_checkbox( 'plugin_verify_certs' ).'</td>'.
 				( $network === false ? '' : $this->p->util->th( 'Site Use', 'narrow' ).

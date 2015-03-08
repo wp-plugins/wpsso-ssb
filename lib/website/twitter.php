@@ -27,7 +27,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTwitter' ) && class_exists( 'WpssoSs
 			$this->form->get_select( 'twitter_order', 
 				range( 1, count( $this->p->admin->submenu['sharing']->website ) ), 'short' ).'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'JavaScript in', 'short' ).'<td>'.
 				$this->form->get_select( 'twitter_js_loc', $this->p->cf['form']['js_locations'] ).'</td>';
 			}
@@ -45,7 +45,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTwitter' ) && class_exists( 'WpssoSs
 			$rows[] = $this->p->util->th( 'Tweet Text Source', 'short' ).'<td>'.
 			$this->form->get_select( 'twitter_caption', $this->p->cf['form']['caption_types'] ).'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'Tweet Text Length', 'short' ).'<td>'.
 				$this->form->get_input( 'twitter_cap_len', 'short' ).' characters or less</td>';
 

@@ -54,25 +54,25 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTumblr' ) && class_exists( 'WpssoSsb
 				range( 1, count( $this->p->admin->submenu['sharing']->website ) ), 
 					'short' ).'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'JavaScript in', 'short' ).'<td>'.
 				$this->form->get_select( 'tumblr_js_loc', $this->p->cf['form']['js_locations'] ).'</td>';
 			}
 
 			$rows[] = $this->p->util->th( 'Button Style', 'short' ).'<td>'.$buttons_html.'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'Use Attached as Photo', 'short' ).'<td>'.
 				$this->form->get_checkbox( 'tumblr_photo' ).'</td>';
 			}
 
 			$rows[] = $this->p->util->th( 'Image Dimensions', 'short' ).
-			'<td>'.$this->form->get_image_dimensions_input( 'tumblr_img', false, true, $this->p->options['plugin_display'] ).'</td>';
+			'<td>'.$this->form->get_image_dimensions_input( 'tumblr_img', false, true ).'</td>';
 
 			$rows[] = $this->p->util->th( 'Media Caption', 'short' ).'<td>'.
 			$this->form->get_select( 'tumblr_caption', $this->p->cf['form']['caption_types'] ).'</td>';
 
-			if ( $this->p->options['plugin_display'] == 'all' ) {
+			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'Caption Length', 'short' ).'<td>'.
 				$this->form->get_input( 'tumblr_cap_len', 'short' ).' characters or less</td>';
 	
