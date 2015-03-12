@@ -49,9 +49,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingBuffer' ) && class_exists( 'WpssoSsb
 			}
 
 			$rows[] = $this->p->util->th( 'Add via @username', 'short', null,
-			'Append the website\'s @username to the tweet (see the '.
-			$this->p->util->get_admin_url( 'general#sucom-tab_pub_twitter', 'Twitter' ).
-			' options tab on the General settings page).' ).
+			'Append the website\'s @username to the tweet (see the '.$this->p->util->get_admin_url( 'general#sucom-tabset_pub-tab_twitter', 'Twitter options tab' ).' on the General settings page).' ).
 			( $this->p->check->aop() == true ? 
 				'<td>'.$this->form->get_checkbox( 'buffer_via' ).'</td>' :
 				'<td class="blank">'.$this->form->get_no_checkbox( 'buffer_via' ).'</td>' );

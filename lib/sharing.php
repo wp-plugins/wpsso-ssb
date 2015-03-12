@@ -116,8 +116,8 @@ jQuery("#wpsso-sidebar").click( function(){
 				'show_on' => array( 
 					'content' => 'Content', 
 					'excerpt' => 'Excerpt', 
-					'sidebar' => 'CSS Sidebar', 
-					'admin_edit' => 'Admin Edit',
+					'sidebar' => 'Sidebar', 
+					'admin_edit' => 'Adm Edit',
 				),
 				'style' => array(
 					'sharing' => 'All Buttons',

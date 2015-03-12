@@ -28,11 +28,7 @@ if ( ! class_exists( 'WpssoSsbGplAdminStyle' ) ) {
 		public function filter_style_common_rows( &$rows, &$form, $idx ) {
 			$text = $this->p->msgs->get( 'info-style-'.$idx );
 			if ( isset( $this->p->options['buttons_preset_'.$idx] ) ) {
-				$text .= '<p><strong>The social sharing button options for the '.$idx.
-				' style are subject to preset values, selected on the '.
-				$this->p->util->get_admin_url( 'sharing#sucom-tab_sharing_preset', 'Sharing Buttons settings page' ).
-				', to modify their action (share vs like), size, and counter orientation.</strong> '.
-				'The width and height values in your CSS should reflect these presets (if any).</p>';
+				$text .= '<p><strong>The social sharing button options for the '.$idx.' style are subject to preset values, selected on the '.$this->p->util->get_admin_url( 'sharing#sucom-tabset_sharing-tab_preset', 'Sharing Buttons settings page' ).', to modify their action (share vs like), size, and counter orientation.</strong> The width and height values in your CSS should reflect these presets (if any).</p>';
 				$text .= '<p><strong>Selected preset:</strong> '.
 					( empty( $this->p->options['buttons_preset_'.$idx] ) ? '[none]' :
 						$this->p->options['buttons_preset_'.$idx] ).'</p>';
