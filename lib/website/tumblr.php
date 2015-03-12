@@ -28,12 +28,8 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTumblr' ) && class_exists( 'WpssoSsb
 					$buttons_html .= '
 						<div class="btn_wizard_example clearfix">
 						<label for="share_'.$i.$t.'">
-						<input type="radio" id="share_'.$i.$t.'" 
-							name="'.$this->form->options_name.'[tumblr_button_style]" 
-							value="share_'.$i.$t.'" '.
-							checked( 'share_'.$i.$t, $buttons_style, false ).'/>
-						<img src="'.$this->p->util->get_cache_url( 'http://platform.tumblr.com/v1/share_'.$i.$t.'.png' ).'" 
-							height="20" class="share_button_image"/>
+						<input type="radio" id="share_'.$i.$t.'" name="'.$this->form->options_name.'[tumblr_button_style]" value="share_'.$i.$t.'" '.  checked( 'share_'.$i.$t, $buttons_style, false ).'/>
+						<img src="'.$this->p->util->get_cache_url( 'http://platform.tumblr.com/v1/share_'.$i.$t.'.png' ).'" height="20" class="share_button_image"/>
 						</label>
 						</div>
 					';
@@ -42,11 +38,7 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTumblr' ) && class_exists( 'WpssoSsb
 			}
 			$buttons_html .= '</div>';
 
-			$rows[] = $this->p->util->th( 'Show Button in', 'short highlight', null,
-			'The Tumblr button shares a <em>custom image ID</em>, a <em>featured</em> image, 
-			or an <em>attached</em> image that is equal to (or larger) than the \'Image Dimensions\' 
-			you have chosen (when the <em>Use Attached Image</em> option is checked), embedded video, 
-			the content of <em>quote</em> custom Posts, or the webpage link.' ).'<td>'.
+			$rows[] = $this->p->util->th( 'Show Button in', 'short highlight', null, 'The Tumblr button shares a <em>custom image ID</em>, a <em>featured</em> image, or an <em>attached</em> image that is equal to (or larger) than the \'Image Dimensions\' you have chosen (when the <em>Use Attached Image</em> option is checked), embedded video, the content of <em>quote</em> custom Posts, or the webpage link.' ).'<td>'.
 			( $this->show_on_checkboxes( 'tumblr' ) ).'</td>';
 
 			$rows[] = $this->p->util->th( 'Preferred Order', 'short' ).'<td>'.
@@ -59,7 +51,8 @@ if ( ! class_exists( 'WpssoSsbSubmenuSharingTumblr' ) && class_exists( 'WpssoSsb
 				$this->form->get_select( 'tumblr_js_loc', $this->p->cf['form']['js_locations'] ).'</td>';
 			}
 
-			$rows[] = $this->p->util->th( 'Button Style', 'short' ).'<td>'.$buttons_html.'</td>';
+			$rows[] = $this->p->util->th( 'Button Style', 'short' ).
+				'<td class="btn_wizard">'.$buttons_html.'</td>';
 
 			if ( WpssoUser::show_opts( 'all' ) ) {
 				$rows[] = $this->p->util->th( 'Use Attached as Photo', 'short' ).'<td>'.
