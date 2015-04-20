@@ -8,7 +8,7 @@
 <strong>License URI</strong>: http://www.gnu.org/licenses/gpl.txt<br/>
 <strong>Requires At Least</strong>: 3.0<br/>
 <strong>Tested Up To</strong>: 4.2<br/>
-<strong>Stable Tag</strong>: 1.3<br/>
+<strong>Stable Tag</strong>: 1.3.1<br/>
 </blockquote>
 
 <p>
@@ -160,6 +160,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* *None*
 
 <h3>Upgrade Notice</h3>
+
+<h4>1.3.1</h4>
+
+Minor CSS improvements for settings pages and metaboxes.
 
 <h4>1.3</h4>
 
