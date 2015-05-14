@@ -867,7 +867,6 @@ jQuery("#wpsso-sidebar").click( function(){
 		}
 
 		public function get_css( $css_name, &$atts = array(), $css_class_extra = '' ) {
-			global $post;
 
 			foreach ( array( 'css_class', 'css_id' ) as $key )
 				if ( empty( $atts[$key] ) )
@@ -876,14 +875,10 @@ jQuery("#wpsso-sidebar").click( function(){
 			$css_class = $css_name.'-'.$atts['css_class'];
 			$css_id = $css_name.'-'.$atts['css_id'];
 
-			switch ( $atts['css_id'] ) {
-				case 'sidebar-buttons':
-				case 'widget-buttons':
-					break;
-				default:
-					if ( ! empty( $post->ID ) )
-						$css_id .= '-post-'.$post->ID;
-					break;
+			if ( is_singular() || in_the_loop() ) {
+				global $post;
+				if ( ! empty( $post->ID ) )
+					$css_id .= '-post-'.$post->ID;
 			}
 
 			if ( ! empty( $css_class_extra ) ) 
