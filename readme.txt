@@ -124,7 +124,7 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 * [GitHub](https://github.com/SurniaUlula/wpsso-ssb)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-ssb/developers/)
 
-= Version 1.6.3 =
+= Version 1.6.3 (2015/08/02) =
 
 * **New Features**
 	* *None*
@@ -172,6 +172,10 @@ WPSSO and WPSSO SSB are *fast and coded for performance*, making full use of all
 	* Refactored the Buffer, Pinterest, and Tumblr sharing button code to use the new NgfbOpengraph get_the_media_urls() method.
 
 == Upgrade Notice ==
+
+= 1.6.3 =
+
+Refactored the update_sharing_css() method, fixed a problem writing minimized CSS file for paths containing symbolic links, fixed bbPress and BuddyPress example CSS (Free version).
 
 = 1.6.2 =
 
